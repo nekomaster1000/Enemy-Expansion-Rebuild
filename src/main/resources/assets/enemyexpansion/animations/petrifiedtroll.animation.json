@@ -1,0 +1,31 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"idle": {
+			"loop": "hold_on_last_frame",
+			"bones": {
+				"body": {
+					"rotation": {
+						"vector": [-22.5, 0, 0]
+					}
+				},
+				"head": {
+					"rotation": {
+						"vector": [-67.5, 0, 0]
+					}
+				},
+				"jaw": {
+					"rotation": {
+						"vector": [90, 0, 0]
+					}
+				},
+				"botharms": {
+					"rotation": {
+						"vector": [22.5, 0, 0]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

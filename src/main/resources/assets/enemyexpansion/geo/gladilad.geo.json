@@ -1,0 +1,144 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.gladilad",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "all",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "botharms",
+					"parent": "all",
+					"pivot": [0, 24, -3.5]
+				},
+				{
+					"name": "leftarm",
+					"parent": "botharms",
+					"pivot": [4, 24, -3.5],
+					"rotation": [0, 0, -32.5],
+					"cubes": [
+						{"origin": [1, 9, -6], "size": [5, 19, 6], "uv": [0, 57], "mirror": true}
+					]
+				},
+				{
+					"name": "leftarm2",
+					"parent": "leftarm",
+					"pivot": [1, 9, -4],
+					"cubes": [
+						{"origin": [6, -6, -6], "size": [5, 15, 6], "inflate": 0.01, "pivot": [6, 9, -4], "rotation": [0, 0, 90], "uv": [0, 107], "mirror": true}
+					]
+				},
+				{
+					"name": "rightarm",
+					"parent": "botharms",
+					"pivot": [-4, 24, -3.5],
+					"rotation": [0, 0, 32.5],
+					"cubes": [
+						{"origin": [-6, 9, -6], "size": [5, 19, 6], "uv": [0, 57]}
+					]
+				},
+				{
+					"name": "rightarm2",
+					"parent": "rightarm",
+					"pivot": [-6, 9, -4],
+					"cubes": [
+						{"origin": [-11, -6, -6], "size": [5, 15, 6], "inflate": 0.01, "pivot": [-6, 9, -4], "rotation": [0, 0, -90], "uv": [0, 107]}
+					]
+				},
+				{
+					"name": "head",
+					"parent": "all",
+					"pivot": [-0.1, 27, -2],
+					"cubes": [
+						{"origin": [-6, 24, -8], "size": [12, 15, 12], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "tentacle",
+					"parent": "head",
+					"pivot": [-0.1, 27, -5],
+					"rotation": [-45, 0, 0]
+				},
+				{
+					"name": "lt1",
+					"parent": "tentacle",
+					"pivot": [2.5, 23.4, -4.8],
+					"cubes": [
+						{"origin": [0.4, 18.5, -6.7], "size": [4, 6, 3], "inflate": 0.01, "uv": [36, 3], "mirror": true}
+					]
+				},
+				{
+					"name": "lt2",
+					"parent": "tentacle",
+					"pivot": [4.9, 23.41329, -4.78248],
+					"cubes": [
+						{"origin": [2.77868, 18.53461, -5.78248], "size": [4, 6, 3], "inflate": 0.01, "pivot": [4.9, 23.41329, -4.78248], "rotation": [0, 0, -45], "uv": [36, 3], "mirror": true}
+					]
+				},
+				{
+					"name": "l3",
+					"parent": "tentacle",
+					"pivot": [5.9, 27.5, -4],
+					"cubes": [
+						{"origin": [3.80502, 21.67737, -4.10507], "size": [4, 6, 3], "inflate": 0.01, "pivot": [5.9, 27.5, -4], "rotation": [22.5, -45, -90], "uv": [36, 3], "mirror": true}
+					]
+				},
+				{
+					"name": "l4",
+					"parent": "tentacle",
+					"pivot": [6, 30.9, -0.75],
+					"cubes": [
+						{"origin": [4.10276, 24.94207, -0.77592], "size": [4, 6, 3], "inflate": 0.01, "pivot": [6, 30.9, -0.75], "rotation": [0, -45, -90], "uv": [36, 3], "mirror": true}
+					]
+				},
+				{
+					"name": "tentacle2",
+					"parent": "head",
+					"pivot": [0.1, 27, -5],
+					"rotation": [-45, 0, 0]
+				},
+				{
+					"name": "lt3",
+					"parent": "tentacle2",
+					"pivot": [-2.5, 23.4, -4.8],
+					"cubes": [
+						{"origin": [-4.4, 18.5, -6.7], "size": [4, 6, 3], "inflate": 0.01, "uv": [36, 3]}
+					]
+				},
+				{
+					"name": "lt4",
+					"parent": "tentacle2",
+					"pivot": [-4.9, 23.41329, -4.78248],
+					"cubes": [
+						{"origin": [-6.77868, 18.53461, -5.78248], "size": [4, 6, 3], "inflate": 0.01, "pivot": [-4.9, 23.41329, -4.78248], "rotation": [0, 0, 45], "uv": [36, 3]}
+					]
+				},
+				{
+					"name": "l2",
+					"parent": "tentacle2",
+					"pivot": [-5.9, 27.5, -4],
+					"cubes": [
+						{"origin": [-7.80502, 21.67737, -4.10507], "size": [4, 6, 3], "inflate": 0.01, "pivot": [-5.9, 27.5, -4], "rotation": [22.5, 45, 90], "uv": [36, 3]}
+					]
+				},
+				{
+					"name": "l5",
+					"parent": "tentacle2",
+					"pivot": [-6, 30.9, -0.75],
+					"cubes": [
+						{"origin": [-8.10276, 24.94207, -0.77592], "size": [4, 6, 3], "inflate": 0.01, "pivot": [-6, 30.9, -0.75], "rotation": [0, 45, 90], "uv": [36, 3]}
+					]
+				}
+			]
+		}
+	]
+}
