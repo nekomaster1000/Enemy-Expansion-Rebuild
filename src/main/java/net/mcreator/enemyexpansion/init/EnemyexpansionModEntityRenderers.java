@@ -12,12 +12,22 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.mcreator.enemyexpansion.client.renderer.WaspRenderer;
+import net.mcreator.enemyexpansion.client.renderer.VampireRenderer;
+import net.mcreator.enemyexpansion.client.renderer.VampflyerRenderer;
+import net.mcreator.enemyexpansion.client.renderer.VampbiterRenderer;
+import net.mcreator.enemyexpansion.client.renderer.TrollenragedRenderer;
+import net.mcreator.enemyexpansion.client.renderer.TrollRenderer;
 import net.mcreator.enemyexpansion.client.renderer.TarantulaRenderer;
+import net.mcreator.enemyexpansion.client.renderer.StarvedRenderer;
 import net.mcreator.enemyexpansion.client.renderer.SprinterRenderer;
 import net.mcreator.enemyexpansion.client.renderer.SluggerRenderer;
+import net.mcreator.enemyexpansion.client.renderer.SilverqueendefensiveRenderer;
+import net.mcreator.enemyexpansion.client.renderer.SilverqueenbodilessRenderer;
+import net.mcreator.enemyexpansion.client.renderer.SilverqueenattackingRenderer;
 import net.mcreator.enemyexpansion.client.renderer.ScorpionRenderer;
 import net.mcreator.enemyexpansion.client.renderer.MeatureRenderer;
 import net.mcreator.enemyexpansion.client.renderer.LadybugRenderer;
+import net.mcreator.enemyexpansion.client.renderer.HuntsmanRenderer;
 import net.mcreator.enemyexpansion.client.renderer.HouseflyRenderer;
 import net.mcreator.enemyexpansion.client.renderer.GoblinRenderer;
 import net.mcreator.enemyexpansion.client.renderer.GoblinFearRenderer;
@@ -38,11 +48,21 @@ public class EnemyexpansionModEntityRenderers {
 		event.registerEntityRenderer(EnemyexpansionModEntities.TARANTULA.get(), TarantulaRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.SCORPION.get(), ScorpionRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.LADYBUG.get(), LadybugRenderer::new);
-		event.registerEntityRenderer(EnemyexpansionModEntities.HEALING_EYE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.WASP.get(), WaspRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.DRONE.get(), DroneRenderer::new);
-		event.registerEntityRenderer(EnemyexpansionModEntities.WASP_THORAX.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.HOUSEFLY.get(), HouseflyRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.FLUTTERFLY.get(), FlutterflyRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.HUNTSMAN.get(), HuntsmanRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.STARVED.get(), StarvedRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.VAMPIRE.get(), VampireRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.VAMPFLYER.get(), VampflyerRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.VAMPBITER.get(), VampbiterRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.TROLL.get(), TrollRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.TROLLENRAGED.get(), TrollenragedRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.SILVERQUEENDEFENDING.get(), SilverqueendefensiveRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.SILVERQUEENATTACKING.get(), SilverqueenattackingRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.SILVERQUEENBODILESS.get(), SilverqueenbodilessRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.HEALING_EYE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.WASP_THORAX.get(), ThrownItemRenderer::new);
 	}
 }

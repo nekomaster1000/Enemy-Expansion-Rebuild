@@ -1,0 +1,266 @@
+---- Minecraft Crash Report ----
+// This doesn't make any sense!
+
+Time: 2023-10-31 05:32:44
+Description: Rendering entity in world
+
+software.bernie.geckolib3.geo.exception.GeckoLibException: enemyexpansion:animations/vampflyer.animation.json: Could not find animation file. Please double check name.
+	at software.bernie.geckolib3.model.AnimatedGeoModel.getAnimation(AnimatedGeoModel.java:109) ~[geckolib-forge-1.19-3.1.40_mapped_official_1.19.2.jar%23195!/:3.1.40] {re:classloading}
+	at software.bernie.geckolib3.core.controller.AnimationController.lambda$setAnimation$0(AnimationController.java:202) ~[geckolib-forge-1.19-3.1.40_mapped_official_1.19.2.jar%23195!/:3.1.40] {re:classloading}
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[?:?] {}
+	at it.unimi.dsi.fastutil.objects.ObjectArrayList$Spliterator.forEachRemaining(ObjectArrayList.java:982) ~[fastutil-8.5.6.jar%23159!/:?] {}
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[?:?] {}
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[?:?] {}
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921) ~[?:?] {}
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:?] {}
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682) ~[?:?] {}
+	at software.bernie.geckolib3.core.controller.AnimationController.setAnimation(AnimationController.java:213) ~[geckolib-forge-1.19-3.1.40_mapped_official_1.19.2.jar%23195!/:3.1.40] {re:classloading}
+	at net.mcreator.enemyexpansion.entity.VampflyerEntity.movementPredicate(VampflyerEntity.java:280) ~[%23193!/:?] {re:classloading}
+	at software.bernie.geckolib3.core.controller.AnimationController.testAnimationPredicate(AnimationController.java:542) ~[geckolib-forge-1.19-3.1.40_mapped_official_1.19.2.jar%23195!/:3.1.40] {re:classloading}
+	at software.bernie.geckolib3.core.controller.AnimationController.process(AnimationController.java:409) ~[geckolib-forge-1.19-3.1.40_mapped_official_1.19.2.jar%23195!/:3.1.40] {re:classloading}
+	at software.bernie.geckolib3.core.processor.AnimationProcessor.tickAnimation(AnimationProcessor.java:69) ~[geckolib-forge-1.19-3.1.40_mapped_official_1.19.2.jar%23195!/:3.1.40] {re:classloading}
+	at software.bernie.geckolib3.model.AnimatedGeoModel.setCustomAnimations(AnimatedGeoModel.java:90) ~[geckolib-forge-1.19-3.1.40_mapped_official_1.19.2.jar%23195!/:3.1.40] {re:classloading}
+	at net.mcreator.enemyexpansion.entity.model.VampflyerModel.setCustomAnimations(VampflyerModel.java:32) ~[%23193!/:?] {re:classloading}
+	at net.mcreator.enemyexpansion.entity.model.VampflyerModel.setCustomAnimations(VampflyerModel.java:14) ~[%23193!/:?] {re:classloading}
+	at software.bernie.geckolib3.model.AnimatedGeoModel.setLivingAnimations(AnimatedGeoModel.java:53) ~[geckolib-forge-1.19-3.1.40_mapped_official_1.19.2.jar%23195!/:3.1.40] {re:classloading}
+	at software.bernie.geckolib3.renderers.geo.GeoEntityRenderer.render(GeoEntityRenderer.java:185) ~[geckolib-forge-1.19-3.1.40_mapped_official_1.19.2.jar%23195!/:3.1.40] {re:classloading}
+	at software.bernie.geckolib3.renderers.geo.GeoEntityRenderer.render(GeoEntityRenderer.java:52) ~[geckolib-forge-1.19-3.1.40_mapped_official_1.19.2.jar%23195!/:3.1.40] {re:classloading}
+	at net.minecraft.client.renderer.entity.EntityRenderDispatcher.render(EntityRenderDispatcher.java:136) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.LevelRenderer.renderEntity(LevelRenderer.java:1439) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.LevelRenderer.renderLevel(LevelRenderer.java:1223) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.GameRenderer.renderLevel(GameRenderer.java:1068) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.GameRenderer.render(GameRenderer.java:840) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1115) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:bookshelf.common.mixins.json:client.AccessorMinecraft,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.run(Minecraft.java:700) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:bookshelf.common.mixins.json:client.AccessorMinecraft,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.run(Main.java:212) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:51) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?] {}
+	at net.minecraftforge.fml.loading.targets.ForgeClientUserdevLaunchHandler.lambda$launchService$0(ForgeClientUserdevLaunchHandler.java:25) ~[fmlloader-1.19.2-43.2.0.jar%23101!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) [modlauncher-10.0.9.jar%23114!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-10.0.9.jar%23114!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-10.0.9.jar%23114!/:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:108) [modlauncher-10.0.9.jar%23114!/:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:78) [modlauncher-10.0.9.jar%23114!/:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-10.0.9.jar%23114!/:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-10.0.9.jar%23114!/:?] {}
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) [bootstraplauncher-1.1.2.jar:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at software.bernie.geckolib3.model.AnimatedGeoModel.getAnimation(AnimatedGeoModel.java:109) ~[geckolib-forge-1.19-3.1.40_mapped_official_1.19.2.jar%23195!/:3.1.40] {re:classloading}
+	at software.bernie.geckolib3.core.controller.AnimationController.lambda$setAnimation$0(AnimationController.java:202) ~[geckolib-forge-1.19-3.1.40_mapped_official_1.19.2.jar%23195!/:3.1.40] {re:classloading}
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[?:?] {}
+	at it.unimi.dsi.fastutil.objects.ObjectArrayList$Spliterator.forEachRemaining(ObjectArrayList.java:982) ~[fastutil-8.5.6.jar%23159!/:?] {}
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[?:?] {}
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[?:?] {}
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921) ~[?:?] {}
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:?] {}
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682) ~[?:?] {}
+	at software.bernie.geckolib3.core.controller.AnimationController.setAnimation(AnimationController.java:213) ~[geckolib-forge-1.19-3.1.40_mapped_official_1.19.2.jar%23195!/:3.1.40] {re:classloading}
+	at net.mcreator.enemyexpansion.entity.VampflyerEntity.movementPredicate(VampflyerEntity.java:280) ~[%23193!/:?] {re:classloading}
+	at software.bernie.geckolib3.core.controller.AnimationController.testAnimationPredicate(AnimationController.java:542) ~[geckolib-forge-1.19-3.1.40_mapped_official_1.19.2.jar%23195!/:3.1.40] {re:classloading}
+	at software.bernie.geckolib3.core.controller.AnimationController.process(AnimationController.java:409) ~[geckolib-forge-1.19-3.1.40_mapped_official_1.19.2.jar%23195!/:3.1.40] {re:classloading}
+	at software.bernie.geckolib3.core.processor.AnimationProcessor.tickAnimation(AnimationProcessor.java:69) ~[geckolib-forge-1.19-3.1.40_mapped_official_1.19.2.jar%23195!/:3.1.40] {re:classloading}
+	at software.bernie.geckolib3.model.AnimatedGeoModel.setCustomAnimations(AnimatedGeoModel.java:90) ~[geckolib-forge-1.19-3.1.40_mapped_official_1.19.2.jar%23195!/:3.1.40] {re:classloading}
+	at net.mcreator.enemyexpansion.entity.model.VampflyerModel.setCustomAnimations(VampflyerModel.java:32) ~[%23193!/:?] {re:classloading}
+	at net.mcreator.enemyexpansion.entity.model.VampflyerModel.setCustomAnimations(VampflyerModel.java:14) ~[%23193!/:?] {re:classloading}
+	at software.bernie.geckolib3.model.AnimatedGeoModel.setLivingAnimations(AnimatedGeoModel.java:53) ~[geckolib-forge-1.19-3.1.40_mapped_official_1.19.2.jar%23195!/:3.1.40] {re:classloading}
+	at software.bernie.geckolib3.renderers.geo.GeoEntityRenderer.render(GeoEntityRenderer.java:185) ~[geckolib-forge-1.19-3.1.40_mapped_official_1.19.2.jar%23195!/:3.1.40] {re:classloading}
+	at software.bernie.geckolib3.renderers.geo.GeoEntityRenderer.render(GeoEntityRenderer.java:52) ~[geckolib-forge-1.19-3.1.40_mapped_official_1.19.2.jar%23195!/:3.1.40] {re:classloading}
+	at net.minecraft.client.renderer.entity.EntityRenderDispatcher.render(EntityRenderDispatcher.java:136) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.LevelRenderer.renderEntity(LevelRenderer.java:1439) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.LevelRenderer.renderLevel(LevelRenderer.java:1223) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.GameRenderer.renderLevel(GameRenderer.java:1068) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+-- Entity being rendered --
+Details:
+	Entity Type: enemyexpansion:vampflyer (net.mcreator.enemyexpansion.entity.VampflyerEntity)
+	Entity ID: 578
+	Entity Name: Vampire
+	Entity's Exact location: 168.50, 67.00, -10.50
+	Entity's Block location: World: (168,67,-11), Section: (at 8,3,5 in 10,4,-1; chunk contains blocks 160,-64,-16 to 175,319,-1), Region: (0,-1; contains chunks 0,-32 to 31,-1, blocks 0,-64,-512 to 511,319,-1)
+	Entity's Momentum: 0.00, 0.00, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: null
+Stacktrace:
+	at net.minecraft.client.renderer.entity.EntityRenderDispatcher.render(EntityRenderDispatcher.java:136) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.LevelRenderer.renderEntity(LevelRenderer.java:1439) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.LevelRenderer.renderLevel(LevelRenderer.java:1223) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.GameRenderer.renderLevel(GameRenderer.java:1068) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.GameRenderer.render(GameRenderer.java:840) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1115) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:bookshelf.common.mixins.json:client.AccessorMinecraft,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.run(Minecraft.java:700) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:bookshelf.common.mixins.json:client.AccessorMinecraft,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.run(Main.java:212) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:51) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?] {}
+	at net.minecraftforge.fml.loading.targets.ForgeClientUserdevLaunchHandler.lambda$launchService$0(ForgeClientUserdevLaunchHandler.java:25) ~[fmlloader-1.19.2-43.2.0.jar%23101!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) [modlauncher-10.0.9.jar%23114!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-10.0.9.jar%23114!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-10.0.9.jar%23114!/:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:108) [modlauncher-10.0.9.jar%23114!/:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:78) [modlauncher-10.0.9.jar%23114!/:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-10.0.9.jar%23114!/:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-10.0.9.jar%23114!/:?] {}
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) [bootstraplauncher-1.1.2.jar:?] {}
+
+
+-- Renderer details --
+Details:
+	Assigned renderer: net.mcreator.enemyexpansion.client.renderer.VampflyerRenderer@2e9f3b74
+	Location: -1.85,-2.98,2.17 - World: (-2,-3,2), Section: (at 14,13,2 in -1,-1,0; chunk contains blocks -16,-64,0 to -1,319,15), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,-64,0 to -1,319,511)
+	Rotation: 104.0625
+	Delta: 0.27999672
+Stacktrace:
+	at net.minecraft.client.renderer.entity.EntityRenderDispatcher.render(EntityRenderDispatcher.java:136) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.LevelRenderer.renderEntity(LevelRenderer.java:1439) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.LevelRenderer.renderLevel(LevelRenderer.java:1223) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.GameRenderer.renderLevel(GameRenderer.java:1068) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.renderer.GameRenderer.render(GameRenderer.java:840) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1115) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:bookshelf.common.mixins.json:client.AccessorMinecraft,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.run(Minecraft.java:700) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:bookshelf.common.mixins.json:client.AccessorMinecraft,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.run(Main.java:212) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:51) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?] {}
+	at net.minecraftforge.fml.loading.targets.ForgeClientUserdevLaunchHandler.lambda$launchService$0(ForgeClientUserdevLaunchHandler.java:25) ~[fmlloader-1.19.2-43.2.0.jar%23101!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) [modlauncher-10.0.9.jar%23114!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-10.0.9.jar%23114!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-10.0.9.jar%23114!/:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:108) [modlauncher-10.0.9.jar%23114!/:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:78) [modlauncher-10.0.9.jar%23114!/:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-10.0.9.jar%23114!/:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-10.0.9.jar%23114!/:?] {}
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) [bootstraplauncher-1.1.2.jar:?] {}
+
+
+-- Affected level --
+Details:
+	All players: 1 total; [LocalPlayer['Dev'/165, l='ClientLevel', x=170.31, y=68.36, z=-12.63]]
+	Chunk stats: 961, 612
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (160,67,0), Section: (at 0,3,0 in 10,4,0; chunk contains blocks 160,-64,0 to 175,319,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Level time: 92791 game time, 13724 day time
+	Server brand: forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.ClientLevel.fillReportDetails(ClientLevel.java:450) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.fillReport(Minecraft.java:2278) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:bookshelf.common.mixins.json:client.AccessorMinecraft,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.Minecraft.run(Minecraft.java:717) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:bookshelf.common.mixins.json:client.AccessorMinecraft,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.run(Main.java:212) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.client.main.Main.main(Main.java:51) ~[forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar%23188!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?] {}
+	at net.minecraftforge.fml.loading.targets.ForgeClientUserdevLaunchHandler.lambda$launchService$0(ForgeClientUserdevLaunchHandler.java:25) ~[fmlloader-1.19.2-43.2.0.jar%23101!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) [modlauncher-10.0.9.jar%23114!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-10.0.9.jar%23114!/:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-10.0.9.jar%23114!/:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:108) [modlauncher-10.0.9.jar%23114!/:?] {}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:78) [modlauncher-10.0.9.jar%23114!/:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-10.0.9.jar%23114!/:?] {}
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-10.0.9.jar%23114!/:?] {}
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) [bootstraplauncher-1.1.2.jar:?] {}
+
+
+-- Last reload --
+Details:
+	Reload number: 1
+	Reload reason: initial
+	Finished: Yes
+	Packs: Default, Mod Resources
+
+-- System Details --
+Details:
+	Minecraft Version: 1.19.2
+	Minecraft Version ID: 1.19.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 17.0.5, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 1145571208 bytes (1092 MiB) / 2367684608 bytes (2258 MiB) up to 4278190080 bytes (4080 MiB)
+	CPUs: 16
+	Processor Vendor: AuthenticAMD
+	Processor Name: AMD Ryzen 7 1700 Eight-Core Processor          
+	Identifier: AuthenticAMD Family 23 Model 1 Stepping 1
+	Microarchitecture: Zen
+	Frequency (GHz): 3.64
+	Number of physical packages: 1
+	Number of physical CPUs: 8
+	Number of logical CPUs: 16
+	Graphics card #0 name: Radeon RX 580 Series
+	Graphics card #0 vendor: Advanced Micro Devices, Inc. (0x1002)
+	Graphics card #0 VRAM (MB): 4095.00
+	Graphics card #0 deviceId: 0x67df
+	Graphics card #0 versionInfo: DriverVersion=26.20.15029.27017
+	Memory slot #0 capacity (MB): 8192.00
+	Memory slot #0 clockSpeed (GHz): 3.20
+	Memory slot #0 type: DDR4
+	Memory slot #1 capacity (MB): 8192.00
+	Memory slot #1 clockSpeed (GHz): 3.20
+	Memory slot #1 type: DDR4
+	Virtual memory max (MB): 27578.60
+	Virtual memory used (MB): 20533.15
+	Swap memory total (MB): 11264.00
+	Swap memory used (MB): 58.95
+	JVM Flags: 1 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	Launched Version: MOD_DEV
+	Backend library: LWJGL version 3.3.1 build 7
+	Backend API: Radeon RX 580 Series GL version 3.2.13587 Core Profile Forward-Compatible Context 20.4.2 26.20.15029.27017, ATI Technologies Inc.
+	Window size: 1920x1017
+	GL Caps: Using framebuffer using OpenGL 3.2
+	GL debug messages: 
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'forge'; Server brand changed to 'forge'
+	Type: Integrated Server (map_client.txt)
+	Graphics mode: fancy
+	Resource Packs: 
+	Current Language: English (US)
+	CPU: 16x AMD Ryzen 7 1700 Eight-Core Processor 
+	Server Running: true
+	Player Count: 1 / 8; [ServerPlayer['Dev'/165, l='ServerLevel[New World]', x=170.31, y=68.36, z=-12.63]]
+	Data Packs: vanilla, mod:miningmaster, mod:shieldexp (incompatible), mod:tipsmod, mod:bookshelf (incompatible), mod:forge, mod:jade (incompatible), mod:bettermodsbutton, mod:geckolib3 (incompatible), mod:enemyexpansion
+	World Generation: Experimental
+	ModLauncher: 10.0.9+10.0.9+main.dcd20f30
+	ModLauncher launch target: forgeclientuserdev
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		mixin-0.8.5.jar mixin PLUGINSERVICE 
+		eventbus-6.0.3.jar eventbus PLUGINSERVICE 
+		fmlloader-1.19.2-43.2.0.jar slf4jfixer PLUGINSERVICE 
+		fmlloader-1.19.2-43.2.0.jar object_holder_definalize PLUGINSERVICE 
+		fmlloader-1.19.2-43.2.0.jar runtime_enum_extender PLUGINSERVICE 
+		fmlloader-1.19.2-43.2.0.jar capability_token_subclass PLUGINSERVICE 
+		accesstransformers-8.0.4.jar accesstransformer PLUGINSERVICE 
+		fmlloader-1.19.2-43.2.0.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-10.0.9.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-10.0.9.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		minecraft@1.0
+		lowcodefml@null
+		javafml@null
+	Mod List: 
+		forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.|Minecraft                     |minecraft                     |1.19.2              |DONE      |Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		miningmaster-1.19.2-4.1.4_mapped_official_1.19.2.j|Mining Master                 |miningmaster                  |4.1.4               |DONE      |Manifest: NOSIGNATURE
+		ShieldExpansion-1.19.2-1.1.6_mapped_official_1.19.|Shield Expansion              |shieldexp                     |1.1.6               |DONE      |Manifest: NOSIGNATURE
+		Tips-Forge-1.19.2-8.0.27_mapped_official_1.19.2.ja|Tips                          |tipsmod                       |8.0.27              |DONE      |Manifest: NOSIGNATURE
+		Bookshelf-Forge-1.19.2-16.3.20_mapped_official_1.1|Bookshelf                     |bookshelf                     |16.3.20             |DONE      |Manifest: NOSIGNATURE
+		                                                  |Forge                         |forge                         |43.2.0              |DONE      |Manifest: NOSIGNATURE
+		Jade-1.19.1-forge-8.8.1_mapped_official_1.19.2.jar|Jade                          |jade                          |8.8.1               |DONE      |Manifest: NOSIGNATURE
+		BetterModsButton-v4.2.4-1.19.2-Forge_mapped_offici|Better Mods Button            |bettermodsbutton              |4.2.4               |DONE      |Manifest: NOSIGNATURE
+		geckolib-forge-1.19-3.1.40_mapped_official_1.19.2.|GeckoLib                      |geckolib3                     |3.1.40              |DONE      |Manifest: NOSIGNATURE
+		main                                              |Enemy Expansion               |enemyexpansion                |1.0.0               |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: 52ad0833-52e2-44fc-afe1-7471e69fe455
+	FML: 43.2
+	Forge: net.minecraftforge:43.2.0

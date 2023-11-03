@@ -5,12 +5,22 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
 
 import net.mcreator.enemyexpansion.entity.WaspEntity;
+import net.mcreator.enemyexpansion.entity.VampireEntity;
+import net.mcreator.enemyexpansion.entity.VampflyerEntity;
+import net.mcreator.enemyexpansion.entity.VampbiterEntity;
+import net.mcreator.enemyexpansion.entity.TrollenragedEntity;
+import net.mcreator.enemyexpansion.entity.TrollEntity;
 import net.mcreator.enemyexpansion.entity.TarantulaEntity;
+import net.mcreator.enemyexpansion.entity.StarvedEntity;
 import net.mcreator.enemyexpansion.entity.SprinterEntity;
 import net.mcreator.enemyexpansion.entity.SluggerEntity;
+import net.mcreator.enemyexpansion.entity.SilverqueendefensiveEntity;
+import net.mcreator.enemyexpansion.entity.SilverqueenbodilessEntity;
+import net.mcreator.enemyexpansion.entity.SilverqueenattackingEntity;
 import net.mcreator.enemyexpansion.entity.ScorpionEntity;
 import net.mcreator.enemyexpansion.entity.MeatureEntity;
 import net.mcreator.enemyexpansion.entity.LadybugEntity;
+import net.mcreator.enemyexpansion.entity.HuntsmanEntity;
 import net.mcreator.enemyexpansion.entity.HouseflyEntity;
 import net.mcreator.enemyexpansion.entity.GoblinEntity;
 import net.mcreator.enemyexpansion.entity.FlutterflyEntity;
@@ -100,6 +110,76 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof FlutterflyEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof HuntsmanEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof StarvedEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof VampireEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof VampflyerEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof VampbiterEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof TrollEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof TrollenragedEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof SilverqueendefensiveEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof SilverqueenattackingEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof SilverqueenbodilessEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

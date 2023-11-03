@@ -1,0 +1,56 @@
+{
+  "starved.chomp": {
+    "category": "hostile",
+    "subtitle": "subtitles.starved.chomp",
+    "sounds": [
+      {
+        "name": "enemyexpansion:starved_chomp",
+        "stream": false
+      }
+    ]
+  },
+  "troll.idle": {
+    "category": "hostile",
+    "subtitle": "subtitles.troll.idle",
+    "sounds": [
+      {
+        "name": "enemyexpansion:troll.idle.1",
+        "stream": false
+      }
+    ]
+  },
+  "troll.hurt": {
+    "category": "hostile",
+    "subtitle": "subtitles.troll.hurt",
+    "sounds": [
+      {
+        "name": "enemyexpansion:troll.hurt.1",
+        "stream": false
+      },
+      {
+        "name": "enemyexpansion:troll.hurt.2",
+        "stream": false
+      }
+    ]
+  },
+  "troll.roar": {
+    "category": "neutral",
+    "subtitle": "subtitles.troll.roar",
+    "sounds": [
+      {
+        "name": "enemyexpansion:troll.roar",
+        "stream": false
+      }
+    ]
+  },
+  "troll.death": {
+    "category": "hostile",
+    "subtitle": "subtitles.troll.death",
+    "sounds": [
+      {
+        "name": "enemyexpansion:troll.death",
+        "stream": false
+      }
+    ]
+  }
+}

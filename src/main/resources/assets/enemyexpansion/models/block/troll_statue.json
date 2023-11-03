@@ -1,0 +1,9 @@
+{
+  "parent": "enemyexpansion:custom/troll_statue",
+  "textures": {
+    "all": "enemyexpansion:blocks/troll_stone",
+    "particle": "enemyexpansion:blocks/troll_stone",
+    "0": "enemyexpansion:blocks/troll_stone"
+  },
+  "render_type": "cutout_mipped"
+}

@@ -1,0 +1,3072 @@
+{
+  "mod_elements": [
+    {
+      "name": "EnemyExpansion",
+      "type": "config",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enemy_expansion",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/configuration/EnemyExpansionConfiguration.java"
+        ]
+      }
+    },
+    {
+      "name": "EnemyExpansionAdvancement",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enemy_expansion_advancement",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/enemy_expansion_advancement.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "Sprinter",
+      "type": "animatedentity",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sprinter",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/entity/model/SprinterModel.java",
+          "src/main/java/net/mcreator/enemyexpansion/client/renderer/SprinterRenderer.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/sprinter_biome_modifier.json",
+          "src/main/java/net/mcreator/enemyexpansion/entity/SprinterEntity.java",
+          "src/main/resources/assets/enemyexpansion/models/item/sprinter_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs/Undead"
+    },
+    {
+      "name": "SprinterHurt",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sprinter_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/SprinterHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Undead"
+    },
+    {
+      "name": "NoBabyZombies",
+      "type": "procedure",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "no_baby_zombies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/NoBabyZombiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "Slugger",
+      "type": "animatedentity",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slugger",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/client/renderer/SluggerRenderer.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/slugger_biome_modifier.json",
+          "src/main/java/net/mcreator/enemyexpansion/entity/model/SluggerModel.java",
+          "src/main/resources/assets/enemyexpansion/models/item/slugger_spawn_egg.json",
+          "src/main/java/net/mcreator/enemyexpansion/entity/SluggerEntity.java"
+        ]
+      },
+      "path": "~/Mobs/Undead"
+    },
+    {
+      "name": "SluggerHurt",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slugger_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/SluggerHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Undead"
+    },
+    {
+      "name": "Meature",
+      "type": "animatedentity",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meature",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/meature_biome_modifier.json",
+          "src/main/resources/assets/enemyexpansion/models/item/meature_spawn_egg.json",
+          "src/main/java/net/mcreator/enemyexpansion/client/renderer/MeatureRenderer.java",
+          "src/main/java/net/mcreator/enemyexpansion/entity/MeatureEntity.java",
+          "src/main/java/net/mcreator/enemyexpansion/entity/model/MeatureModel.java"
+        ]
+      },
+      "path": "~/Mobs/Undead"
+    },
+    {
+      "name": "MeatureKills",
+      "type": "procedure",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meature_kills",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/MeatureKillsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Undead"
+    },
+    {
+      "name": "MeaturePanic",
+      "type": "procedure",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meature_panic",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/MeaturePanicProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Mobs/Undead"
+    },
+    {
+      "name": "MeatureTaming",
+      "type": "procedure",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meature_taming",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/MeatureTamingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Undead"
+    },
+    {
+      "name": "Equestrian",
+      "type": "animatedentity",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "equestrian",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/entity/model/EquestrianModel.java",
+          "src/main/java/net/mcreator/enemyexpansion/client/renderer/EquestrianRenderer.java",
+          "src/main/java/net/mcreator/enemyexpansion/entity/EquestrianEntity.java",
+          "src/main/resources/assets/enemyexpansion/models/item/equestrian_spawn_egg.json",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/equestrian_biome_modifier.json"
+        ]
+      },
+      "path": "~/Mobs/Undead"
+    },
+    {
+      "name": "EquestrianReinforcements",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "equestrian_reinforcements",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/EquestrianReinforcementsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Undead"
+    },
+    {
+      "name": "EquestrianHurt",
+      "type": "procedure",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "equestrian_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/EquestrianHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Undead"
+    },
+    {
+      "name": "Goblin",
+      "type": "animatedentity",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/entity/layer/GoblinLayer.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/goblin_biome_modifier.json",
+          "src/main/java/net/mcreator/enemyexpansion/client/renderer/GoblinRenderer.java",
+          "src/main/java/net/mcreator/enemyexpansion/entity/model/GoblinModel.java",
+          "src/main/resources/assets/enemyexpansion/models/item/goblin_spawn_egg.json",
+          "src/main/java/net/mcreator/enemyexpansion/entity/GoblinEntity.java"
+        ]
+      },
+      "path": "~/Mobs/Other"
+    },
+    {
+      "name": "GoblinFear",
+      "type": "livingentity",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_fear",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/entity/GoblinFearEntity.java",
+          "src/main/java/net/mcreator/enemyexpansion/client/renderer/GoblinFearRenderer.java"
+        ]
+      },
+      "path": "~/Mobs/Other"
+    },
+    {
+      "name": "GoblinHurt",
+      "type": "procedure",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/GoblinHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Other"
+    },
+    {
+      "name": "GoblinSteal",
+      "type": "procedure",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_steal",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/GoblinStealProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Other"
+    },
+    {
+      "name": "GoblinFearDespawn",
+      "type": "procedure",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_fear_despawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/GoblinFearDespawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Other"
+    },
+    {
+      "name": "Tarantula",
+      "type": "animatedentity",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tarantula",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/client/renderer/TarantulaRenderer.java",
+          "src/main/java/net/mcreator/enemyexpansion/entity/model/TarantulaModel.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/tarantula_biome_modifier.json",
+          "src/main/resources/assets/enemyexpansion/models/item/tarantula_spawn_egg.json",
+          "src/main/java/net/mcreator/enemyexpansion/entity/TarantulaEntity.java"
+        ]
+      },
+      "path": "~/Mobs/Arthropod"
+    },
+    {
+      "name": "IfTimeIsDay",
+      "type": "procedure",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "if_time_is_day",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/IfTimeIsDayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "IfTimeIsNight",
+      "type": "procedure",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "if_time_is_night",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/IfTimeIsNightProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "TarantulaHurt",
+      "type": "procedure",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tarantula_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/TarantulaHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Arthropod"
+    },
+    {
+      "name": "Scorpion",
+      "type": "animatedentity",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scorpion",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/entity/layer/ScorpionLayer.java",
+          "src/main/java/net/mcreator/enemyexpansion/client/renderer/ScorpionRenderer.java",
+          "src/main/java/net/mcreator/enemyexpansion/entity/ScorpionEntity.java",
+          "src/main/java/net/mcreator/enemyexpansion/entity/model/ScorpionModel.java",
+          "src/main/resources/assets/enemyexpansion/models/item/scorpion_spawn_egg.json",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/scorpion_biome_modifier.json"
+        ]
+      },
+      "path": "~/Mobs/Arthropod"
+    },
+    {
+      "name": "ScorpionHurt",
+      "type": "procedure",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scorpion_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/ScorpionHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Arthropod"
+    },
+    {
+      "name": "Ladybug",
+      "type": "animatedentity",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ladybug",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/entity/model/LadybugModel.java",
+          "src/main/java/net/mcreator/enemyexpansion/entity/LadybugEntity.java",
+          "src/main/java/net/mcreator/enemyexpansion/client/renderer/LadybugRenderer.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/ladybug_biome_modifier.json",
+          "src/main/resources/assets/enemyexpansion/models/item/ladybug_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs/Arthropod"
+    },
+    {
+      "name": "LadybugTick",
+      "type": "procedure",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ladybug_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/LadybugTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Arthropod"
+    },
+    {
+      "name": "HealingEye",
+      "type": "rangeditem",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healing_eye",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/enemyexpansion/models/item/healing_eye.json",
+          "src/main/java/net/mcreator/enemyexpansion/item/HealingEyeItem.java",
+          "src/main/java/net/mcreator/enemyexpansion/entity/HealingEyeEntity.java"
+        ]
+      },
+      "path": "~/Items and Armour"
+    },
+    {
+      "name": "HealingEyeHeals",
+      "type": "procedure",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healing_eye_heals",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/HealingEyeHealsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items and Armour"
+    },
+    {
+      "name": "LadybugTrade",
+      "type": "procedure",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ladybug_trade",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/LadybugTradeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Arthropod"
+    },
+    {
+      "name": "HealingEyePotionRecipe",
+      "type": "recipe",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healing_eye_potion_recipe",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/recipes/brewing/HealingEyePotionRecipeBrewingRecipe.java"
+        ]
+      },
+      "path": "~/Items and Armour"
+    },
+    {
+      "name": "ScorpionTail",
+      "type": "item",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scorpion_tail",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/enemyexpansion/models/item/scorpion_tail.json",
+          "src/main/java/net/mcreator/enemyexpansion/item/ScorpionTailItem.java"
+        ]
+      },
+      "path": "~/Items and Armour"
+    },
+    {
+      "name": "ScorpionTailPotion",
+      "type": "recipe",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scorpion_tail_potion",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/recipes/brewing/ScorpionTailPotionBrewingRecipe.java"
+        ]
+      },
+      "path": "~/Items and Armour"
+    },
+    {
+      "name": "Meathead",
+      "type": "armor",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meathead",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/enemyexpansion/models/item/meathead_helmet.json",
+          "src/main/java/net/mcreator/enemyexpansion/item/MeatheadItem.java"
+        ]
+      },
+      "path": "~/Items and Armour/Armour"
+    },
+    {
+      "name": "MeatheadDeath",
+      "type": "procedure",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meathead_death",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/MeatheadDeathProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items and Armour/Armour"
+    },
+    {
+      "name": "Horsehead",
+      "type": "armor",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "horsehead",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/enemyexpansion/models/item/horsehead_helmet.json",
+          "src/main/java/net/mcreator/enemyexpansion/item/HorseheadItem.java"
+        ]
+      },
+      "path": "~/Items and Armour/Armour"
+    },
+    {
+      "name": "HorseheadDeath",
+      "type": "procedure",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "horsehead_death",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/HorseheadDeathProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items and Armour/Armour"
+    },
+    {
+      "name": "ScorpionTailHit",
+      "type": "procedure",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scorpion_tail_hit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/ScorpionTailHitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items and Armour"
+    },
+    {
+      "name": "SwiftFlight",
+      "type": "potioneffect",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "swift_flight",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/potion/SwiftFlightMobEffect.java"
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "SwiftFlightActive",
+      "type": "procedure",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "swift_flight_active",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/SwiftFlightActiveProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "Wasp",
+      "type": "animatedentity",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wasp",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/entity/model/WaspModel.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/wasp_biome_modifier.json",
+          "src/main/java/net/mcreator/enemyexpansion/entity/WaspEntity.java",
+          "src/main/resources/assets/enemyexpansion/models/item/wasp_spawn_egg.json",
+          "src/main/java/net/mcreator/enemyexpansion/client/renderer/WaspRenderer.java"
+        ]
+      },
+      "path": "~/Mobs/Arthropod"
+    },
+    {
+      "name": "WaspHurt",
+      "type": "procedure",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wasp_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/WaspHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Arthropod"
+    },
+    {
+      "name": "WaspHostileSet",
+      "type": "procedure",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wasp_hostile_set",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/WaspHostileSetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Arthropod"
+    },
+    {
+      "name": "WaspTick",
+      "type": "procedure",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wasp_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/WaspTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Arthropod"
+    },
+    {
+      "name": "LadybugHurt",
+      "type": "procedure",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ladybug_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/LadybugHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Arthropod"
+    },
+    {
+      "name": "Drone",
+      "type": "animatedentity",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drone",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/entity/model/DroneModel.java",
+          "src/main/java/net/mcreator/enemyexpansion/entity/DroneEntity.java",
+          "src/main/java/net/mcreator/enemyexpansion/client/renderer/DroneRenderer.java",
+          "src/main/resources/assets/enemyexpansion/models/item/drone_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs/Arthropod"
+    },
+    {
+      "name": "MeatureSpawn",
+      "type": "procedure",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meature_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/MeatureSpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Undead"
+    },
+    {
+      "name": "DroneSpawn",
+      "type": "procedure",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drone_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/DroneSpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Arthropod"
+    },
+    {
+      "name": "WaspThorax",
+      "type": "rangeditem",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wasp_thorax",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/enemyexpansion/models/item/wasp_thorax.json",
+          "src/main/java/net/mcreator/enemyexpansion/item/WaspThoraxItem.java",
+          "src/main/java/net/mcreator/enemyexpansion/entity/WaspThoraxEntity.java"
+        ]
+      },
+      "path": "~/Items and Armour"
+    },
+    {
+      "name": "WaspThoraxExplode",
+      "type": "procedure",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wasp_thorax_explode",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/WaspThoraxExplodeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items and Armour"
+    },
+    {
+      "name": "TarantulaRide",
+      "type": "procedure",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tarantula_ride",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/TarantulaRideProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Arthropod"
+    },
+    {
+      "name": "TarantulaTick",
+      "type": "procedure",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tarantula_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/TarantulaTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Arthropod"
+    },
+    {
+      "name": "IfNightOrUntamed",
+      "type": "procedure",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "if_night_or_untamed",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/IfNightOrUntamedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "Housefly",
+      "type": "animatedentity",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "housefly",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/enemyexpansion/models/item/housefly_spawn_egg.json",
+          "src/main/java/net/mcreator/enemyexpansion/entity/HouseflyEntity.java",
+          "src/main/java/net/mcreator/enemyexpansion/client/renderer/HouseflyRenderer.java",
+          "src/main/java/net/mcreator/enemyexpansion/entity/model/HouseflyModel.java"
+        ]
+      },
+      "path": "~/Mobs/Arthropod"
+    },
+    {
+      "name": "SpawnsFliesOnDeath",
+      "type": "procedure",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawns_flies_on_death",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/SpawnsFliesOnDeathProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Arthropod"
+    },
+    {
+      "name": "HouseflyHurt",
+      "type": "procedure",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "housefly_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/HouseflyHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Arthropod"
+    },
+    {
+      "name": "RareAttackGoal",
+      "type": "procedure",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rare_attack_goal",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/RareAttackGoalProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "HouseflyTick",
+      "type": "procedure",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "housefly_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/HouseflyTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Arthropod"
+    },
+    {
+      "name": "Flutterfly",
+      "type": "animatedentity",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flutterfly",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/flutterfly_biome_modifier.json",
+          "src/main/java/net/mcreator/enemyexpansion/client/renderer/FlutterflyRenderer.java",
+          "src/main/java/net/mcreator/enemyexpansion/entity/model/FlutterflyModel.java",
+          "src/main/resources/assets/enemyexpansion/models/item/flutterfly_spawn_egg.json",
+          "src/main/java/net/mcreator/enemyexpansion/entity/FlutterflyEntity.java"
+        ]
+      },
+      "path": "~/Mobs/Arthropod"
+    },
+    {
+      "name": "FlutterRightClicked",
+      "type": "procedure",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flutter_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/FlutterRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Arthropod"
+    },
+    {
+      "name": "FlutterflyHurt",
+      "type": "procedure",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flutterfly_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/FlutterflyHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Arthropod"
+    },
+    {
+      "name": "SwiftFlightPotion",
+      "type": "potion",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "swift_flight_potion",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "FlutterflyKilled",
+      "type": "procedure",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flutterfly_killed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/FlutterflyKilledProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Arthropod"
+    },
+    {
+      "name": "HuntsmanHurt",
+      "type": "procedure",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "huntsman_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/HuntsmanHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Undead"
+    },
+    {
+      "name": "Huntsman",
+      "type": "animatedentity",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "huntsman",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/client/renderer/HuntsmanRenderer.java",
+          "src/main/java/net/mcreator/enemyexpansion/entity/HuntsmanEntity.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/huntsman_biome_modifier.json",
+          "src/main/resources/assets/enemyexpansion/models/item/huntsman_spawn_egg.json",
+          "src/main/java/net/mcreator/enemyexpansion/entity/model/HuntsmanModel.java"
+        ]
+      },
+      "path": "~/Mobs/Undead"
+    },
+    {
+      "name": "Starved",
+      "type": "animatedentity",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starved",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/entity/StarvedEntity.java",
+          "src/main/java/net/mcreator/enemyexpansion/client/renderer/StarvedRenderer.java",
+          "src/main/java/net/mcreator/enemyexpansion/entity/model/StarvedModel.java",
+          "src/main/resources/assets/enemyexpansion/models/item/starved_spawn_egg.json",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/starved_biome_modifier.json"
+        ]
+      },
+      "path": "~/Mobs/Undead"
+    },
+    {
+      "name": "StarvedGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starved_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/network/StarvedGUISlotMessage.java",
+          "src/main/java/net/mcreator/enemyexpansion/client/gui/StarvedGUIScreen.java",
+          "src/main/java/net/mcreator/enemyexpansion/world/inventory/StarvedGUIMenu.java"
+        ]
+      },
+      "path": "~/Mobs/Undead"
+    },
+    {
+      "name": "OpenStarvedGUI",
+      "type": "procedure",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_starved_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/OpenStarvedGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Undead"
+    },
+    {
+      "name": "StarvedGUIStolenFrom",
+      "type": "procedure",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starved_gui_stolen_from",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/StarvedGUIStolenFromProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Undead"
+    },
+    {
+      "name": "StarvedHostility",
+      "type": "procedure",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starved_hostility",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/StarvedHostilityProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Mobs/Undead"
+    },
+    {
+      "name": "StarvedSpawn",
+      "type": "procedure",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starved_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/StarvedSpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Undead"
+    },
+    {
+      "name": "StarvedHurt",
+      "type": "procedure",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starved_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/StarvedHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Undead"
+    },
+    {
+      "name": "Vampire",
+      "type": "animatedentity",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vampire",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/vampire_biome_modifier.json",
+          "src/main/java/net/mcreator/enemyexpansion/entity/layer/VampireLayer.java",
+          "src/main/java/net/mcreator/enemyexpansion/client/renderer/VampireRenderer.java",
+          "src/main/java/net/mcreator/enemyexpansion/entity/VampireEntity.java",
+          "src/main/resources/assets/enemyexpansion/models/item/vampire_spawn_egg.json",
+          "src/main/java/net/mcreator/enemyexpansion/entity/model/VampireModel.java"
+        ]
+      },
+      "path": "~/Mobs/MultiForm"
+    },
+    {
+      "name": "VampireSpawn",
+      "type": "procedure",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vampire_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/VampireSpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/MultiForm"
+    },
+    {
+      "name": "VampireHurt",
+      "type": "procedure",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vampire_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/VampireHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/MultiForm"
+    },
+    {
+      "name": "VampireIgnition",
+      "type": "procedure",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vampire_ignition",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/VampireIgnitionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/MultiForm"
+    },
+    {
+      "name": "VampireLands",
+      "type": "procedure",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vampire_lands",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/VampireLandsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/MultiForm"
+    },
+    {
+      "name": "Vampflyer",
+      "type": "animatedentity",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vampflyer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/entity/VampflyerEntity.java",
+          "src/main/java/net/mcreator/enemyexpansion/client/renderer/VampflyerRenderer.java",
+          "src/main/java/net/mcreator/enemyexpansion/entity/model/VampflyerModel.java",
+          "src/main/java/net/mcreator/enemyexpansion/entity/layer/VampflyerLayer.java",
+          "src/main/resources/assets/enemyexpansion/models/item/vampflyer_spawn_egg.json",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/vampflyer_biome_modifier.json"
+        ]
+      },
+      "path": "~/Mobs/MultiForm"
+    },
+    {
+      "name": "VampflyerHurt",
+      "type": "procedure",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vampflyer_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/VampflyerHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/MultiForm"
+    },
+    {
+      "name": "VampireTick",
+      "type": "procedure",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vampire_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/VampireTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/MultiForm"
+    },
+    {
+      "name": "BittenConversion",
+      "type": "procedure",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bitten_conversion",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/BittenConversionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "Bitten",
+      "type": "potioneffect",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bitten",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/potion/BittenMobEffect.java"
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "BittenActive",
+      "type": "procedure",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bitten_active",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/BittenActiveProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "Vampbiter",
+      "type": "animatedentity",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vampbiter",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/vampbiter_biome_modifier.json",
+          "src/main/resources/assets/enemyexpansion/models/item/vampbiter_spawn_egg.json",
+          "src/main/java/net/mcreator/enemyexpansion/client/renderer/VampbiterRenderer.java",
+          "src/main/java/net/mcreator/enemyexpansion/entity/VampbiterEntity.java",
+          "src/main/java/net/mcreator/enemyexpansion/entity/model/VampbiterModel.java",
+          "src/main/java/net/mcreator/enemyexpansion/entity/layer/VampbiterLayer.java"
+        ]
+      },
+      "path": "~/Mobs/MultiForm"
+    },
+    {
+      "name": "Headbiter",
+      "type": "armor",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "headbiter",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/enemyexpansion/models/item/headbiter_helmet.json",
+          "src/main/java/net/mcreator/enemyexpansion/item/HeadbiterItem.java"
+        ]
+      },
+      "path": "~/Items and Armour/Armour"
+    },
+    {
+      "name": "HeadbiterDeath",
+      "type": "procedure",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "headbiter_death",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/HeadbiterDeathProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items and Armour/Armour"
+    },
+    {
+      "name": "Troll",
+      "type": "animatedentity",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "troll",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/entity/layer/TrollLayer.java",
+          "src/main/java/net/mcreator/enemyexpansion/client/renderer/TrollRenderer.java",
+          "src/main/java/net/mcreator/enemyexpansion/entity/TrollEntity.java",
+          "src/main/java/net/mcreator/enemyexpansion/entity/model/TrollModel.java",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/troll_biome_modifier.json",
+          "src/main/resources/assets/enemyexpansion/models/item/troll_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs/MultiForm"
+    },
+    {
+      "name": "TrollHurt",
+      "type": "procedure",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "troll_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/TrollHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/MultiForm"
+    },
+    {
+      "name": "Trollenraged",
+      "type": "animatedentity",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trollenraged",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/entity/layer/TrollenragedLayer.java",
+          "src/main/java/net/mcreator/enemyexpansion/entity/TrollenragedEntity.java",
+          "src/main/java/net/mcreator/enemyexpansion/client/renderer/TrollenragedRenderer.java",
+          "src/main/resources/assets/enemyexpansion/models/item/trollenraged_spawn_egg.json",
+          "src/main/java/net/mcreator/enemyexpansion/entity/model/TrollenragedModel.java"
+        ]
+      },
+      "path": "~/Mobs/MultiForm"
+    },
+    {
+      "name": "TrollEnragedHurt",
+      "type": "procedure",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "troll_enraged_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/TrollEnragedHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/MultiForm"
+    },
+    {
+      "name": "SpawnTrollEnraged",
+      "type": "procedure",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawn_troll_enraged",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/SpawnTrollEnragedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/MultiForm"
+    },
+    {
+      "name": "TrollsSpawn",
+      "type": "procedure",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trolls_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/TrollsSpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/MultiForm"
+    },
+    {
+      "name": "TrollKills",
+      "type": "procedure",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "troll_kills",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/TrollKillsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/MultiForm"
+    },
+    {
+      "name": "TrollStatue",
+      "type": "block",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "troll_statue",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/enemyexpansion/models/block/troll_statue.json",
+          "src/main/java/net/mcreator/enemyexpansion/block/TrollStatueBlock.java",
+          "src/main/resources/assets/enemyexpansion/models/item/troll_statue.json",
+          "src/main/resources/assets/enemyexpansion/blockstates/troll_statue.json"
+        ]
+      },
+      "path": "~/Mobs/MultiForm"
+    },
+    {
+      "name": "TrollPetrification",
+      "type": "procedure",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "troll_petrification",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/TrollPetrificationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/MultiForm"
+    },
+    {
+      "name": "PetriTrollPlaceableCondition",
+      "type": "procedure",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "petri_troll_placeable_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/PetriTrollPlaceableConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/MultiForm"
+    },
+    {
+      "name": "BottledFlutterfly",
+      "type": "item",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bottled_flutterfly",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/enemyexpansion/models/item/bottled_flutterfly.json",
+          "src/main/java/net/mcreator/enemyexpansion/item/BottledFlutterflyItem.java"
+        ]
+      },
+      "path": "~/Items and Armour"
+    },
+    {
+      "name": "BottledFlutterflyEaten",
+      "type": "procedure",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bottled_flutterfly_eaten",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/BottledFlutterflyEatenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items and Armour"
+    },
+    {
+      "name": "BottledFlutterflyReleased",
+      "type": "procedure",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bottled_flutterfly_released",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/BottledFlutterflyReleasedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items and Armour"
+    },
+    {
+      "name": "BottledFlutterflySmashed",
+      "type": "procedure",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bottled_flutterfly_smashed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/BottledFlutterflySmashedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items and Armour"
+    },
+    {
+      "name": "Silverqueendefensive",
+      "type": "animatedentity",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silverqueendefending",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/entity/SilverqueendefensiveEntity.java",
+          "src/main/resources/assets/enemyexpansion/models/item/silverqueendefending_spawn_egg.json",
+          "src/main/java/net/mcreator/enemyexpansion/entity/model/SilverqueendefensiveModel.java",
+          "src/main/java/net/mcreator/enemyexpansion/client/renderer/SilverqueendefensiveRenderer.java"
+        ]
+      },
+      "path": "~/Mobs/MultiForm"
+    },
+    {
+      "name": "SilverqueenParry",
+      "type": "procedure",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silverqueen_parry",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/SilverqueenParryProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/MultiForm"
+    },
+    {
+      "name": "SilverqueenBlock",
+      "type": "procedure",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silverqueen_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/SilverqueenBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/MultiForm"
+    },
+    {
+      "name": "SpawnSilverfish",
+      "type": "procedure",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawn_silverfish",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/SpawnSilverfishProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/MultiForm"
+    },
+    {
+      "name": "SilverqueenModeSwitch",
+      "type": "procedure",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silverqueen_mode_switch",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/SilverqueenModeSwitchProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/MultiForm"
+    },
+    {
+      "name": "SilverqueenSweep",
+      "type": "procedure",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silverqueen_sweep",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/SilverqueenSweepProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/MultiForm"
+    },
+    {
+      "name": "Silverqueenattacking",
+      "type": "animatedentity",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silverqueenattacking",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/silverqueenattacking_biome_modifier.json",
+          "src/main/java/net/mcreator/enemyexpansion/client/renderer/SilverqueenattackingRenderer.java",
+          "src/main/resources/assets/enemyexpansion/models/item/silverqueenattacking_spawn_egg.json",
+          "src/main/java/net/mcreator/enemyexpansion/entity/model/SilverqueenattackingModel.java",
+          "src/main/java/net/mcreator/enemyexpansion/entity/SilverqueenattackingEntity.java"
+        ]
+      },
+      "path": "~/Mobs/MultiForm"
+    },
+    {
+      "name": "Silverqueenbodiless",
+      "type": "animatedentity",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silverqueenbodiless",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/entity/SilverqueenbodilessEntity.java",
+          "src/main/java/net/mcreator/enemyexpansion/client/renderer/SilverqueenbodilessRenderer.java",
+          "src/main/java/net/mcreator/enemyexpansion/entity/model/SilverqueenbodilessModel.java",
+          "src/main/resources/assets/enemyexpansion/models/item/silverqueenbodiless_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs/MultiForm"
+    },
+    {
+      "name": "SilverqueenBodilessSpawn",
+      "type": "procedure",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silverqueen_bodiless_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/SilverqueenBodilessSpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/MultiForm"
+    },
+    {
+      "name": "SpawnSilverfishX5",
+      "type": "procedure",
+      "sortid": 117,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawn_silverfish_x_5",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/SpawnSilverfishX5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/MultiForm"
+    },
+    {
+      "name": "Silverhead",
+      "type": "armor",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silverhead",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/enemyexpansion/models/item/silverhead_helmet.json",
+          "src/main/java/net/mcreator/enemyexpansion/item/SilverheadItem.java"
+        ]
+      },
+      "path": "~/Items and Armour/Armour"
+    },
+    {
+      "name": "SilverheadDeath",
+      "type": "procedure",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silverhead_death",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/SilverheadDeathProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items and Armour/Armour"
+    },
+    {
+      "name": "SilverheadHat",
+      "type": "procedure",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silverhead_hat",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/SilverheadHatProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items and Armour/Armour"
+    },
+    {
+      "name": "Silverfriends",
+      "type": "function",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silverfriends",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/functions/silverfriends.mcfunction"
+        ]
+      },
+      "path": "~/Mobs/MultiForm"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [
+    {
+      "name": "starved.chomp",
+      "files": [
+        "starved_chomp"
+      ],
+      "category": "hostile",
+      "subtitle": "Starved chomps"
+    },
+    {
+      "name": "troll.idle",
+      "files": [
+        "troll.idle.1"
+      ],
+      "category": "hostile",
+      "subtitle": "Troll growls"
+    },
+    {
+      "name": "troll.hurt",
+      "files": [
+        "troll.hurt.1",
+        "troll.hurt.2"
+      ],
+      "category": "hostile",
+      "subtitle": "Troll grunts"
+    },
+    {
+      "name": "troll.roar",
+      "files": [
+        "troll.roar"
+      ],
+      "category": "neutral",
+      "subtitle": "Troll bellows"
+    },
+    {
+      "name": "troll.death",
+      "files": [
+        "troll.death"
+      ],
+      "category": "hostile",
+      "subtitle": "Troll groans"
+    }
+  ],
+  "language_map": {
+    "en_us": {
+      "item.enemyexpansion.healing_eye": "Healing Eye",
+      "entity.enemyexpansion.scorpion": "Scorpion",
+      "entity.enemyexpansion.slugger": "Slugger",
+      "item.enemyexpansion.equestrian_spawn_egg": "Equestrian Spawn Egg",
+      "subtitles.troll.hurt": "Troll grunts",
+      "entity.enemyexpansion.wasp": "Wasp",
+      "item.enemyexpansion.headbiter_helmet": "Headbiter",
+      "entity.enemyexpansion.silverqueenbodiless": "Bodiless Silverqueen",
+      "item.enemyexpansion.horsehead_boots": "-",
+      "item.enemyexpansion.silverqueenbodiless_spawn_egg": "Bodiless Silverqueen Spawn Egg",
+      "entity.enemyexpansion.huntsman": "Huntsman",
+      "item.enemyexpansion.meature_spawn_egg": "Meature Spawn Egg",
+      "item.enemyexpansion.meathead_leggings": "-",
+      "entity.enemyexpansion.tarantula": "Tarantula",
+      "item.enemyexpansion.sprinter_spawn_egg": "Sprinter Spawn Egg",
+      "advancements.enemy_expansion_advancement.title": "Enemy Expansion",
+      "item.enemyexpansion.silverqueenattacking_spawn_egg": "Attacking Silverqueen Spawn Egg",
+      "item.enemyexpansion.troll_spawn_egg": "Troll Spawn Egg",
+      "subtitles.troll.roar": "Troll bellows",
+      "item.enemyexpansion.goblin_fear_spawn_egg": "Goblin Fear Spawn Egg",
+      "item.enemyexpansion.meathead_boots": "-",
+      "item.enemyexpansion.headbiter_boots": "-",
+      "entity.enemyexpansion.silverqueenattacking": "Attacking Silverqueen",
+      "item.enemyexpansion.scorpion_tail": "Scorpion Tail",
+      "item.enemyexpansion.silverhead_boots": "-",
+      "item.enemyexpansion.silverhead_chestplate": "-",
+      "entity.enemyexpansion.troll": "Troll",
+      "item.enemyexpansion.wasp_thorax": "Wasp Thorax",
+      "entity.enemyexpansion.vampire": "Vampire",
+      "item.enemyexpansion.headbiter_chestplate": "-",
+      "item.enemyexpansion.horsehead_helmet": "Horsehead",
+      "item.enemyexpansion.housefly_spawn_egg": "Housefly Spawn Egg",
+      "item.enemyexpansion.starved_spawn_egg": "Starved Spawn Egg",
+      "entity.enemyexpansion.vampbiter": "Vampire Biter",
+      "config.enemyexpansion.enemy_expansion": "enemyexpansion",
+      "entity.enemyexpansion.trollenraged": "Enraged Troll",
+      "effect.enemyexpansion.bitten": "Bitten",
+      "item.enemyexpansion.silverhead_helmet": "Silverhat",
+      "entity.enemyexpansion.flutterfly": "Flutteryfly",
+      "entity.enemyexpansion.starved": "Starved",
+      "item.enemyexpansion.horsehead_leggings": "-",
+      "item.minecraft.lingering_potion.effect.swift_flight_potion": "Lingering Potion of Swift Flight",
+      "item.enemyexpansion.bottled_flutterfly": "Bottled Flutterfly",
+      "item.enemyexpansion.ladybug_spawn_egg": "Ladybug Spawn Egg",
+      "entity.enemyexpansion.equestrian": "Equestrian",
+      "entity.enemyexpansion.goblin": "Goblin Thief",
+      "entity.enemyexpansion.silverqueendefending": "Defending Silverqueen",
+      "subtitles.troll.death": "Troll groans",
+      "item.minecraft.tipped_arrow.effect.swift_flight_potion": "Arrow of Swift Flight",
+      "item.enemyexpansion.headbiter_leggings": "-",
+      "item.enemyexpansion.flutterfly_spawn_egg": "Flutteryfly Spawn Egg",
+      "item.enemyexpansion.trollenraged_spawn_egg": "Enraged Troll Spawn Egg",
+      "item.enemyexpansion.horsehead_chestplate": "-",
+      "entity.enemyexpansion.vampflyer": "Vampire in Flight",
+      "item.enemyexpansion.huntsman_spawn_egg": "Huntsman Spawn Egg",
+      "advancements.enemy_expansion_advancement.descr": "Expand enemies!",
+      "item.enemyexpansion.meathead_helmet": "Meathead",
+      "subtitles.starved.chomp": "Starved chomps",
+      "item.enemyexpansion.drone_spawn_egg": "Drone Spawn Egg",
+      "item.enemyexpansion.silverqueendefending_spawn_egg": "Defending Silverqueen Spawn Egg",
+      "entity.enemyexpansion.goblin_fear": "Goblin Fear",
+      "item.enemyexpansion.meathead_chestplate": "-",
+      "block.enemyexpansion.troll_statue": "Troll Statue",
+      "entity.enemyexpansion.ladybug": "Ladybug",
+      "entity.enemyexpansion.housefly": "Housefly",
+      "item.enemyexpansion.silverhead_leggings": "-",
+      "item.enemyexpansion.goblin_spawn_egg": "Goblin Thief Spawn Egg",
+      "item.enemyexpansion.vampire_spawn_egg": "Vampire Spawn Egg",
+      "item.enemyexpansion.wasp_spawn_egg": "Wasp Spawn Egg",
+      "item.enemyexpansion.slugger_spawn_egg": "Slugger Spawn Egg",
+      "subtitles.troll.idle": "Troll growls",
+      "entity.enemyexpansion.sprinter": "Sprinter",
+      "item.enemyexpansion.tarantula_spawn_egg": "Tarantula Spawn Egg",
+      "effect.enemyexpansion.swift_flight": "Swift Flight",
+      "item.minecraft.potion.effect.swift_flight_potion": "Potion of Swift Flight",
+      "item.enemyexpansion.scorpion_spawn_egg": "Scorpion Spawn Egg",
+      "entity.enemyexpansion.drone": "Drone",
+      "entity.enemyexpansion.meature": "Meature",
+      "item.minecraft.splash_potion.effect.swift_flight_potion": "Splash Potion of Swift Flight",
+      "item.enemyexpansion.vampflyer_spawn_egg": "Vampire in Flight Spawn Egg",
+      "item.enemyexpansion.vampbiter_spawn_egg": "Vampire Biter Spawn Egg"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Mobs",
+        "children": [
+          {
+            "name": "Undead",
+            "children": []
+          },
+          {
+            "name": "MultiForm",
+            "children": []
+          },
+          {
+            "name": "Other",
+            "children": []
+          },
+          {
+            "name": "Arthropod",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Effects",
+        "children": []
+      },
+      {
+        "name": "Spawning",
+        "children": []
+      },
+      {
+        "name": "Items and Armour",
+        "children": [
+          {
+            "name": "Armour",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Config",
+        "children": []
+      },
+      {
+        "name": "Advancements",
+        "children": []
+      },
+      {
+        "name": "Behaviour",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "enemyexpansion",
+    "modName": "Enemy Expansion",
+    "version": "1.0.0",
+    "author": "nekoz, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [
+      "geckolib3"
+    ],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "geckolib",
+      "allmods"
+    ],
+    "currentGenerator": "forge-1.19.2",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.enemyexpansion",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202300110610
+}

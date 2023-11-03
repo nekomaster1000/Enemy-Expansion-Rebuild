@@ -31,10 +31,13 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.enemyexpansion.init.EnemyexpansionModSounds;
 import net.mcreator.enemyexpansion.init.EnemyexpansionModPotions;
 import net.mcreator.enemyexpansion.init.EnemyexpansionModMobEffects;
+import net.mcreator.enemyexpansion.init.EnemyexpansionModMenus;
 import net.mcreator.enemyexpansion.init.EnemyexpansionModItems;
 import net.mcreator.enemyexpansion.init.EnemyexpansionModEntities;
+import net.mcreator.enemyexpansion.init.EnemyexpansionModBlocks;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -54,12 +57,15 @@ public class EnemyexpansionMod {
 		MinecraftForge.EVENT_BUS.register(this);
 
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-
+		EnemyexpansionModSounds.REGISTRY.register(bus);
+		EnemyexpansionModBlocks.REGISTRY.register(bus);
 		EnemyexpansionModItems.REGISTRY.register(bus);
 		EnemyexpansionModEntities.REGISTRY.register(bus);
 
 		EnemyexpansionModMobEffects.REGISTRY.register(bus);
 		EnemyexpansionModPotions.REGISTRY.register(bus);
+
+		EnemyexpansionModMenus.REGISTRY.register(bus);
 
 		GeckoLib.initialize();
 	}

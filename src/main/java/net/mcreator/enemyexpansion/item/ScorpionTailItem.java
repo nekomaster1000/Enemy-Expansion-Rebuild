@@ -19,7 +19,7 @@ import com.google.common.collect.ImmutableMultimap;
 
 public class ScorpionTailItem extends Item {
 	public ScorpionTailItem() {
-		super(new Item.Properties().tab(CreativeModeTab.TAB_MISC).stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(4).saturationMod(0.3f)
+		super(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(4).saturationMod(0.3f)
 
 				.meat().build()));
 	}

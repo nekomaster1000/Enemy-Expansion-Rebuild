@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "enemyexpansion:block/troll_statue"
+    },
+    "facing=east": {
+      "model": "enemyexpansion:block/troll_statue",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "enemyexpansion:block/troll_statue",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "enemyexpansion:block/troll_statue",
+      "y": 270
+    }
+  }
+}

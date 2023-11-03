@@ -1,0 +1,23 @@
+{
+  "_fv": 39,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Bitten",
+    "icon": "bitten.png",
+    "color": {
+      "value": -12241793,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": true,
+    "isBenefitical": false,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onActiveTick": {
+      "name": "BittenActive"
+    },
+    "onExpired": {
+      "name": "BittenConversion"
+    }
+  }
+}

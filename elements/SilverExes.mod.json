@@ -1,0 +1,9 @@
+{
+  "_fv": 39,
+  "_type": "function",
+  "definition": {
+    "code": "/team leave Silverfriends",
+    "name": "silver_exes",
+    "namespace": "mod"
+  }
+}

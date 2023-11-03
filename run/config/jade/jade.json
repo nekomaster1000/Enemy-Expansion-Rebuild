@@ -1,8 +1,8 @@
 {
   "general": {
-    "displayTooltip": true,
+    "displayTooltip": false,
     "displayBlocks": true,
-    "displayEntities": false,
+    "displayEntities": true,
     "displayMode": "TOGGLE",
     "hideFromDebug": true,
     "hideFromTabList": true,
@@ -13,7 +13,7 @@
     "debug": false,
     "itemModNameTooltip": true,
     "bossBarOverlapMode": "PUSH_DOWN",
-    "hintOverlayToggle": true
+    "hintOverlayToggle": false
   },
   "overlay": {
     "overlayPosX": 0.5,
