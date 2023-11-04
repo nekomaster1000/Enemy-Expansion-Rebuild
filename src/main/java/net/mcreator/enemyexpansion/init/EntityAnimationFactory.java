@@ -32,14 +32,14 @@ public class EntityAnimationFactory {
 	@SubscribeEvent
 	public static void onEntityTick(LivingEvent.LivingTickEvent event) {
 		if (event != null && event.getEntity() != null) {
-			if (event.getEntity() instanceof SluggerEntity syncable) {
+			if (event.getEntity() instanceof SprinterEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");
 					syncable.animationprocedure = animation;
 				}
 			}
-			if (event.getEntity() instanceof SprinterEntity syncable) {
+			if (event.getEntity() instanceof SluggerEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");
@@ -165,14 +165,14 @@ public class EntityAnimationFactory {
 					syncable.animationprocedure = animation;
 				}
 			}
-			if (event.getEntity() instanceof SilverqueendefensiveEntity syncable) {
+			if (event.getEntity() instanceof SilverqueenattackingEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");
 					syncable.animationprocedure = animation;
 				}
 			}
-			if (event.getEntity() instanceof SilverqueenattackingEntity syncable) {
+			if (event.getEntity() instanceof SilverqueendefensiveEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

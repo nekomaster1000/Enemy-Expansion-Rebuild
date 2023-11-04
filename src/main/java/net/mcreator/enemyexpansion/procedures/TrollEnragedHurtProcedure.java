@@ -32,7 +32,7 @@ public class TrollEnragedHurtProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
-		TrollPetrificationProcedure.execute(world, x, y, z, entity);
+		TrollPetrificationProcedure.execute(world, x, y, z, entity, sourceentity);
 		if (entity instanceof TrollenragedEntity) {
 			if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.DAMAGE_RESISTANCE) : false)) {
 				if (entity instanceof LivingEntity _entity)

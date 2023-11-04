@@ -114,16 +114,6 @@ public class TrollStatueBlock extends Block implements SimpleWaterloggedBlock {
 	}
 
 	@Override
-	public boolean isSignalSource(BlockState state) {
-		return true;
-	}
-
-	@Override
-	public int getSignal(BlockState blockstate, BlockGetter blockAccess, BlockPos pos, Direction direction) {
-		return 15;
-	}
-
-	@Override
 	public boolean canHarvestBlock(BlockState state, BlockGetter world, BlockPos pos, Player player) {
 		if (player.getInventory().getSelected().getItem() instanceof PickaxeItem tieredItem)
 			return tieredItem.getTier().getLevel() >= 1;

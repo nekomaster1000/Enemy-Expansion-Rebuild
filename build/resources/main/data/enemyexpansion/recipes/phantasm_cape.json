@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:bone"
+    },
+    "2": {
+      "item": "minecraft:bone"
+    },
+    "3": {
+      "item": "minecraft:phantom_membrane"
+    },
+    "4": {
+      "item": "minecraft:bone"
+    },
+    "5": {
+      "item": "minecraft:phantom_membrane"
+    },
+    "6": {
+      "item": "minecraft:phantom_membrane"
+    },
+    "7": {
+      "item": "minecraft:phantom_membrane"
+    },
+    "8": {
+      "item": "minecraft:phantom_membrane"
+    }
+  },
+  "result": {
+    "item": "enemyexpansion:phantasm_chestplate",
+    "count": 1
+  }
+}

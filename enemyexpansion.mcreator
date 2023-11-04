@@ -1,22 +1,9 @@
 {
   "mod_elements": [
     {
-      "name": "EnemyExpansion",
-      "type": "config",
-      "sortid": 33,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "enemy_expansion",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/enemyexpansion/configuration/EnemyExpansionConfiguration.java"
-        ]
-      }
-    },
-    {
       "name": "EnemyExpansionAdvancement",
       "type": "achievement",
-      "sortid": 34,
+      "sortid": 35,
       "compiles": true,
       "locked_code": false,
       "registry_name": "enemy_expansion_advancement",
@@ -30,7 +17,7 @@
     {
       "name": "Sprinter",
       "type": "animatedentity",
-      "sortid": 2,
+      "sortid": 1,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sprinter",
@@ -48,7 +35,7 @@
     {
       "name": "SprinterHurt",
       "type": "procedure",
-      "sortid": 35,
+      "sortid": 36,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sprinter_hurt",
@@ -76,7 +63,7 @@
     {
       "name": "NoBabyZombies",
       "type": "procedure",
-      "sortid": 36,
+      "sortid": 37,
       "compiles": true,
       "locked_code": false,
       "registry_name": "no_baby_zombies",
@@ -100,7 +87,7 @@
     {
       "name": "Slugger",
       "type": "animatedentity",
-      "sortid": 1,
+      "sortid": 2,
       "compiles": true,
       "locked_code": false,
       "registry_name": "slugger",
@@ -118,7 +105,7 @@
     {
       "name": "SluggerHurt",
       "type": "procedure",
-      "sortid": 37,
+      "sortid": 38,
       "compiles": true,
       "locked_code": false,
       "registry_name": "slugger_hurt",
@@ -164,7 +151,7 @@
     {
       "name": "MeatureKills",
       "type": "procedure",
-      "sortid": 38,
+      "sortid": 39,
       "compiles": true,
       "locked_code": false,
       "registry_name": "meature_kills",
@@ -188,7 +175,7 @@
     {
       "name": "MeaturePanic",
       "type": "procedure",
-      "sortid": 39,
+      "sortid": 40,
       "compiles": true,
       "locked_code": false,
       "registry_name": "meature_panic",
@@ -204,7 +191,7 @@
     {
       "name": "MeatureTaming",
       "type": "procedure",
-      "sortid": 40,
+      "sortid": 41,
       "compiles": true,
       "locked_code": false,
       "registry_name": "meature_taming",
@@ -242,7 +229,7 @@
     {
       "name": "EquestrianReinforcements",
       "type": "procedure",
-      "sortid": 41,
+      "sortid": 42,
       "compiles": true,
       "locked_code": false,
       "registry_name": "equestrian_reinforcements",
@@ -282,7 +269,7 @@
     {
       "name": "EquestrianHurt",
       "type": "procedure",
-      "sortid": 42,
+      "sortid": 43,
       "compiles": true,
       "locked_code": false,
       "registry_name": "equestrian_hurt",
@@ -356,7 +343,7 @@
     {
       "name": "GoblinHurt",
       "type": "procedure",
-      "sortid": 43,
+      "sortid": 44,
       "compiles": true,
       "locked_code": false,
       "registry_name": "goblin_hurt",
@@ -396,7 +383,7 @@
     {
       "name": "GoblinSteal",
       "type": "procedure",
-      "sortid": 44,
+      "sortid": 45,
       "compiles": true,
       "locked_code": false,
       "registry_name": "goblin_steal",
@@ -436,7 +423,7 @@
     {
       "name": "GoblinFearDespawn",
       "type": "procedure",
-      "sortid": 45,
+      "sortid": 46,
       "compiles": true,
       "locked_code": false,
       "registry_name": "goblin_fear_despawn",
@@ -478,7 +465,7 @@
     {
       "name": "IfTimeIsDay",
       "type": "procedure",
-      "sortid": 46,
+      "sortid": 47,
       "compiles": true,
       "locked_code": false,
       "registry_name": "if_time_is_day",
@@ -499,7 +486,7 @@
     {
       "name": "IfTimeIsNight",
       "type": "procedure",
-      "sortid": 47,
+      "sortid": 48,
       "compiles": true,
       "locked_code": false,
       "registry_name": "if_time_is_night",
@@ -520,7 +507,7 @@
     {
       "name": "TarantulaHurt",
       "type": "procedure",
-      "sortid": 48,
+      "sortid": 49,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tarantula_hurt",
@@ -532,6 +519,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -559,7 +550,7 @@
     {
       "name": "ScorpionHurt",
       "type": "procedure",
-      "sortid": 49,
+      "sortid": 50,
       "compiles": true,
       "locked_code": false,
       "registry_name": "scorpion_hurt",
@@ -601,7 +592,7 @@
     {
       "name": "LadybugTick",
       "type": "procedure",
-      "sortid": 50,
+      "sortid": 51,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ladybug_tick",
@@ -637,7 +628,7 @@
     {
       "name": "HealingEye",
       "type": "rangeditem",
-      "sortid": 26,
+      "sortid": 28,
       "compiles": true,
       "locked_code": false,
       "registry_name": "healing_eye",
@@ -653,7 +644,7 @@
     {
       "name": "HealingEyeHeals",
       "type": "procedure",
-      "sortid": 51,
+      "sortid": 52,
       "compiles": true,
       "locked_code": false,
       "registry_name": "healing_eye_heals",
@@ -677,7 +668,7 @@
     {
       "name": "LadybugTrade",
       "type": "procedure",
-      "sortid": 52,
+      "sortid": 53,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ladybug_trade",
@@ -721,7 +712,7 @@
     {
       "name": "HealingEyePotionRecipe",
       "type": "recipe",
-      "sortid": 53,
+      "sortid": 54,
       "compiles": true,
       "locked_code": false,
       "registry_name": "healing_eye_potion_recipe",
@@ -750,7 +741,7 @@
     {
       "name": "ScorpionTailPotion",
       "type": "recipe",
-      "sortid": 54,
+      "sortid": 55,
       "compiles": true,
       "locked_code": false,
       "registry_name": "scorpion_tail_potion",
@@ -764,7 +755,7 @@
     {
       "name": "Meathead",
       "type": "armor",
-      "sortid": 29,
+      "sortid": 30,
       "compiles": true,
       "locked_code": false,
       "registry_name": "meathead",
@@ -779,7 +770,7 @@
     {
       "name": "MeatheadDeath",
       "type": "procedure",
-      "sortid": 55,
+      "sortid": 56,
       "compiles": true,
       "locked_code": false,
       "registry_name": "meathead_death",
@@ -819,7 +810,7 @@
     {
       "name": "Horsehead",
       "type": "armor",
-      "sortid": 30,
+      "sortid": 31,
       "compiles": true,
       "locked_code": false,
       "registry_name": "horsehead",
@@ -834,7 +825,7 @@
     {
       "name": "HorseheadDeath",
       "type": "procedure",
-      "sortid": 56,
+      "sortid": 57,
       "compiles": true,
       "locked_code": false,
       "registry_name": "horsehead_death",
@@ -854,7 +845,7 @@
     {
       "name": "ScorpionTailHit",
       "type": "procedure",
-      "sortid": 57,
+      "sortid": 58,
       "compiles": true,
       "locked_code": false,
       "registry_name": "scorpion_tail_hit",
@@ -866,6 +857,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -874,7 +881,7 @@
     {
       "name": "SwiftFlight",
       "type": "potioneffect",
-      "sortid": 58,
+      "sortid": 59,
       "compiles": true,
       "locked_code": false,
       "registry_name": "swift_flight",
@@ -888,7 +895,7 @@
     {
       "name": "SwiftFlightActive",
       "type": "procedure",
-      "sortid": 59,
+      "sortid": 60,
       "compiles": true,
       "locked_code": false,
       "registry_name": "swift_flight_active",
@@ -926,7 +933,7 @@
     {
       "name": "WaspHurt",
       "type": "procedure",
-      "sortid": 60,
+      "sortid": 61,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wasp_hurt",
@@ -962,7 +969,7 @@
     {
       "name": "WaspHostileSet",
       "type": "procedure",
-      "sortid": 61,
+      "sortid": 62,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wasp_hostile_set",
@@ -982,7 +989,7 @@
     {
       "name": "WaspTick",
       "type": "procedure",
-      "sortid": 62,
+      "sortid": 63,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wasp_tick",
@@ -1002,7 +1009,7 @@
     {
       "name": "LadybugHurt",
       "type": "procedure",
-      "sortid": 63,
+      "sortid": 64,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ladybug_hurt",
@@ -1059,7 +1066,7 @@
     {
       "name": "MeatureSpawn",
       "type": "procedure",
-      "sortid": 64,
+      "sortid": 65,
       "compiles": true,
       "locked_code": false,
       "registry_name": "meature_spawn",
@@ -1079,7 +1086,7 @@
     {
       "name": "DroneSpawn",
       "type": "procedure",
-      "sortid": 65,
+      "sortid": 66,
       "compiles": true,
       "locked_code": false,
       "registry_name": "drone_spawn",
@@ -1115,7 +1122,7 @@
     {
       "name": "WaspThorax",
       "type": "rangeditem",
-      "sortid": 28,
+      "sortid": 29,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wasp_thorax",
@@ -1131,7 +1138,7 @@
     {
       "name": "WaspThoraxExplode",
       "type": "procedure",
-      "sortid": 66,
+      "sortid": 67,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wasp_thorax_explode",
@@ -1163,7 +1170,7 @@
     {
       "name": "TarantulaRide",
       "type": "procedure",
-      "sortid": 67,
+      "sortid": 68,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tarantula_ride",
@@ -1199,26 +1206,6 @@
           {
             "name": "world",
             "type": "world"
-          }
-        ]
-      },
-      "path": "~/Mobs/Arthropod"
-    },
-    {
-      "name": "TarantulaTick",
-      "type": "procedure",
-      "sortid": 68,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "tarantula_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/enemyexpansion/procedures/TarantulaTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -1657,22 +1644,6 @@
       "path": "~/Mobs/Undead"
     },
     {
-      "name": "StarvedHostility",
-      "type": "procedure",
-      "sortid": 82,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "starved_hostility",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/enemyexpansion/procedures/StarvedHostilityProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Mobs/Undead"
-    },
-    {
       "name": "StarvedSpawn",
       "type": "procedure",
       "sortid": 83,
@@ -1903,6 +1874,10 @@
             "type": "entity"
           },
           {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -2029,7 +2004,6 @@
       "registry_name": "vampbiter",
       "metadata": {
         "files": [
-          "src/main/resources/data/enemyexpansion/forge/biome_modifier/vampbiter_biome_modifier.json",
           "src/main/resources/assets/enemyexpansion/models/item/vampbiter_spawn_egg.json",
           "src/main/java/net/mcreator/enemyexpansion/client/renderer/VampbiterRenderer.java",
           "src/main/java/net/mcreator/enemyexpansion/entity/VampbiterEntity.java",
@@ -2042,7 +2016,7 @@
     {
       "name": "Headbiter",
       "type": "armor",
-      "sortid": 31,
+      "sortid": 32,
       "compiles": true,
       "locked_code": false,
       "registry_name": "headbiter",
@@ -2325,6 +2299,10 @@
             "type": "entity"
           },
           {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -2380,7 +2358,7 @@
     {
       "name": "BottledFlutterfly",
       "type": "item",
-      "sortid": 27,
+      "sortid": 26,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bottled_flutterfly",
@@ -2491,7 +2469,7 @@
     {
       "name": "Silverqueendefensive",
       "type": "animatedentity",
-      "sortid": 21,
+      "sortid": 22,
       "compiles": true,
       "locked_code": false,
       "registry_name": "silverqueendefending",
@@ -2499,6 +2477,7 @@
         "files": [
           "src/main/java/net/mcreator/enemyexpansion/entity/SilverqueendefensiveEntity.java",
           "src/main/resources/assets/enemyexpansion/models/item/silverqueendefending_spawn_egg.json",
+          "src/main/resources/data/enemyexpansion/forge/biome_modifier/silverqueendefending_biome_modifier.json",
           "src/main/java/net/mcreator/enemyexpansion/entity/model/SilverqueendefensiveModel.java",
           "src/main/java/net/mcreator/enemyexpansion/client/renderer/SilverqueendefensiveRenderer.java"
         ]
@@ -2676,13 +2655,12 @@
     {
       "name": "Silverqueenattacking",
       "type": "animatedentity",
-      "sortid": 22,
+      "sortid": 21,
       "compiles": true,
       "locked_code": false,
       "registry_name": "silverqueenattacking",
       "metadata": {
         "files": [
-          "src/main/resources/data/enemyexpansion/forge/biome_modifier/silverqueenattacking_biome_modifier.json",
           "src/main/java/net/mcreator/enemyexpansion/client/renderer/SilverqueenattackingRenderer.java",
           "src/main/resources/assets/enemyexpansion/models/item/silverqueenattacking_spawn_egg.json",
           "src/main/java/net/mcreator/enemyexpansion/entity/model/SilverqueenattackingModel.java",
@@ -2759,7 +2737,7 @@
     {
       "name": "Silverhead",
       "type": "armor",
-      "sortid": 32,
+      "sortid": 33,
       "compiles": true,
       "locked_code": false,
       "registry_name": "silverhead",
@@ -2862,8 +2840,7 @@
         "files": [
           "src/main/resources/data/enemyexpansion/functions/silverfriends.mcfunction"
         ]
-      },
-      "path": "~/Items and Armour/Armour"
+      }
     },
     {
       "name": "SilverExes",
@@ -2876,8 +2853,690 @@
         "files": [
           "src/main/resources/data/enemyexpansion/functions/silver_exes.mcfunction"
         ]
+      }
+    },
+    {
+      "name": "PhantomEye",
+      "type": "rangeditem",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phantom_eye",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/item/PhantomEyeItem.java",
+          "src/main/java/net/mcreator/enemyexpansion/entity/PhantomEyeEntity.java",
+          "src/main/resources/assets/enemyexpansion/models/item/phantom_eye.json"
+        ]
+      },
+      "path": "~/Items and Armour"
+    },
+    {
+      "name": "PhantomEyeOpens",
+      "type": "procedure",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phantom_eye_opens",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/PhantomEyeOpensProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items and Armour"
+    },
+    {
+      "name": "PhantomEyeRecipe",
+      "type": "recipe",
+      "sortid": 117,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phantom_eye_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/recipes/phantom_eye.json"
+        ]
+      },
+      "path": "~/Items and Armour"
+    },
+    {
+      "name": "NightVisionPotion",
+      "type": "recipe",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "night_vision_potion",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/recipes/brewing/NightVisionPotionBrewingRecipe.java"
+        ]
+      },
+      "path": "~/Items and Armour"
+    },
+    {
+      "name": "Phantasm",
+      "type": "armor",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phantasm",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/enemyexpansion/models/item/phantasm_boots.json",
+          "src/main/resources/assets/enemyexpansion/models/item/phantasm_chestplate.json",
+          "src/main/java/net/mcreator/enemyexpansion/item/PhantasmItem.java",
+          "src/main/resources/assets/enemyexpansion/models/item/phantasm_leggings.json",
+          "src/main/resources/assets/enemyexpansion/models/item/phantasm_helmet.json"
+        ]
       },
       "path": "~/Items and Armour/Armour"
+    },
+    {
+      "name": "PhantasmCowlVision",
+      "type": "procedure",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phantasm_cowl_vision",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/PhantasmCowlVisionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items and Armour/Armour"
+    },
+    {
+      "name": "PhantasmCowlRecipe",
+      "type": "recipe",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phantasm_cowl_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/recipes/phantasm_cowl.json"
+        ]
+      },
+      "path": "~/Items and Armour/Armour"
+    },
+    {
+      "name": "PhantasmCapeRecipe",
+      "type": "recipe",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phantasm_cape_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/recipes/phantasm_cape.json"
+        ]
+      },
+      "path": "~/Items and Armour/Armour"
+    },
+    {
+      "name": "PhantasmBootsSpeed",
+      "type": "procedure",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phantasm_boots_speed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/PhantasmBootsSpeedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items and Armour/Armour"
+    },
+    {
+      "name": "PhantasmLeggingsJump",
+      "type": "procedure",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phantasm_leggings_jump",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/PhantasmLeggingsJumpProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items and Armour/Armour"
+    },
+    {
+      "name": "PhantasmCapeResistance",
+      "type": "procedure",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phantasm_cape_resistance",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/PhantasmCapeResistanceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items and Armour/Armour"
+    },
+    {
+      "name": "PhantasmLeggingsRecipe",
+      "type": "recipe",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phantasm_leggings_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/recipes/phantasm_leggings.json"
+        ]
+      },
+      "path": "~/Items and Armour/Armour"
+    },
+    {
+      "name": "PhantasmBootsRecipe",
+      "type": "recipe",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phantasm_boots_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/recipes/phantasm_boots.json"
+        ]
+      },
+      "path": "~/Items and Armour/Armour"
+    },
+    {
+      "name": "Trollface",
+      "type": "item",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trollface",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/item/TrollfaceItem.java",
+          "src/main/resources/assets/enemyexpansion/models/item/trollface.json"
+        ]
+      },
+      "path": "~/Items and Armour"
+    },
+    {
+      "name": "TrollPetrified",
+      "type": "achievement",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "troll_petrified",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/troll_petrified.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "VampireSlayer",
+      "type": "achievement",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vampire_slayer",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/vampire_slayer.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "TrollHunter",
+      "type": "achievement",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "troll_hunter",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/troll_hunter.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "KillMobAdvancement",
+      "type": "procedure",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kill_mob_advancement",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/KillMobAdvancementProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "Regicide",
+      "type": "achievement",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "regicide",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/regicide.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "LadybugFeeding",
+      "type": "achievement",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ladybug_feeding",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/ladybug_feeding.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "WaspDroneSummon",
+      "type": "achievement",
+      "sortid": 134,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wasp_drone_summon",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/wasp_drone_summon.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "UseThorax",
+      "type": "procedure",
+      "sortid": 135,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_thorax",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/UseThoraxProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "FlutterflyCollection",
+      "type": "achievement",
+      "sortid": 136,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flutterfly_collection",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/flutterfly_collection.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "GoblinVillagerReversion",
+      "type": "achievement",
+      "sortid": 137,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_villager_reversion",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/goblin_villager_reversion.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "StarvedSteal",
+      "type": "achievement",
+      "sortid": 138,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starved_steal",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/starved_steal.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "StarvedTaken",
+      "type": "procedure",
+      "sortid": 139,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "starved_taken",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/StarvedTakenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Undead"
+    },
+    {
+      "name": "Tarancher",
+      "type": "achievement",
+      "sortid": 140,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tarancher",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/tarancher.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "Hunted",
+      "type": "achievement",
+      "sortid": 141,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hunted",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/enemyexpansion/advancements/hunted.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "IfCantSeeSky",
+      "type": "procedure",
+      "sortid": 142,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "if_cant_see_sky",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/IfCantSeeSkyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "VampireAttack",
+      "type": "procedure",
+      "sortid": 143,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vampire_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/VampireAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/MultiForm"
+    },
+    {
+      "name": "IfBelowY50",
+      "type": "procedure",
+      "sortid": 144,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "if_below_y_50",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/IfBelowY50Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "y",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "FliesFromZombies",
+      "type": "procedure",
+      "sortid": 145,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flies_from_zombies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/FliesFromZombiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning"
+    },
+    {
+      "name": "BetterConfig",
+      "type": "config",
+      "sortid": 146,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "better_config",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/configuration/BetterConfigConfiguration.java"
+        ]
+      }
+    },
+    {
+      "name": "IfCanSeeSky",
+      "type": "procedure",
+      "sortid": 147,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "if_can_see_sky",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/IfCanSeeSkyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Spawning"
     }
   ],
   "variable_elements": [],
@@ -2928,83 +3587,111 @@
     "en_us": {
       "item.enemyexpansion.healing_eye": "Healing Eye",
       "entity.enemyexpansion.scorpion": "Scorpion",
-      "entity.enemyexpansion.slugger": "Slugger",
-      "item.enemyexpansion.equestrian_spawn_egg": "Equestrian Spawn Egg",
       "subtitles.troll.hurt": "Troll grunts",
       "entity.enemyexpansion.wasp": "Wasp",
       "item.enemyexpansion.headbiter_helmet": "Headbiter",
+      "item.enemyexpansion.phantasm_chestplate": "Phantasm Cape",
+      "advancements.goblin_villager_reversion.descr": "Release a Villager from their Goblified curse.",
       "entity.enemyexpansion.silverqueenbodiless": "Bodiless Silverqueen",
-      "item.enemyexpansion.horsehead_boots": "-",
       "item.enemyexpansion.silverqueenbodiless_spawn_egg": "Bodiless Silverqueen Spawn Egg",
       "entity.enemyexpansion.huntsman": "Huntsman",
-      "item.enemyexpansion.meature_spawn_egg": "Meature Spawn Egg",
       "item.enemyexpansion.meathead_leggings": "-",
-      "entity.enemyexpansion.tarantula": "Tarantula",
       "item.enemyexpansion.sprinter_spawn_egg": "Sprinter Spawn Egg",
-      "advancements.enemy_expansion_advancement.title": "Enemy Expansion",
+      "item.enemyexpansion.phantom_eye": "Phantom Eye",
       "item.enemyexpansion.silverqueenattacking_spawn_egg": "Attacking Silverqueen Spawn Egg",
-      "item.enemyexpansion.troll_spawn_egg": "Troll Spawn Egg",
       "subtitles.troll.roar": "Troll bellows",
       "item.enemyexpansion.goblin_fear_spawn_egg": "Goblin Fear Spawn Egg",
       "item.enemyexpansion.meathead_boots": "-",
       "item.enemyexpansion.headbiter_boots": "-",
-      "entity.enemyexpansion.silverqueenattacking": "Attacking Silverqueen",
+      "advancements.hunted.title": "Hunted",
       "item.enemyexpansion.scorpion_tail": "Scorpion Tail",
-      "item.enemyexpansion.silverhead_boots": "-",
-      "item.enemyexpansion.silverhead_chestplate": "-",
-      "entity.enemyexpansion.troll": "Troll",
-      "item.enemyexpansion.wasp_thorax": "Wasp Thorax",
-      "entity.enemyexpansion.vampire": "Vampire",
       "item.enemyexpansion.headbiter_chestplate": "-",
-      "item.enemyexpansion.horsehead_helmet": "Horsehead",
-      "item.enemyexpansion.housefly_spawn_egg": "Housefly Spawn Egg",
-      "item.enemyexpansion.starved_spawn_egg": "Starved Spawn Egg",
+      "item.enemyexpansion.wasp_thorax": "Wasp Thorax",
+      "advancements.ladybug_feeding.descr": "Recieving a Healing Eye from a Ladybug",
       "entity.enemyexpansion.vampbiter": "Vampire Biter",
-      "config.enemyexpansion.enemy_expansion": "enemyexpansion",
+      "item.enemyexpansion.starved_spawn_egg": "Starved Spawn Egg",
+      "advancements.tarancher.title": "Tarancher",
       "entity.enemyexpansion.trollenraged": "Enraged Troll",
-      "effect.enemyexpansion.bitten": "Bitten",
-      "item.enemyexpansion.silverhead_helmet": "Silverhat",
-      "entity.enemyexpansion.flutterfly": "Flutteryfly",
       "entity.enemyexpansion.starved": "Starved",
       "item.enemyexpansion.horsehead_leggings": "-",
       "item.minecraft.lingering_potion.effect.swift_flight_potion": "Lingering Potion of Swift Flight",
-      "item.enemyexpansion.bottled_flutterfly": "Bottled Flutterfly",
       "item.enemyexpansion.ladybug_spawn_egg": "Ladybug Spawn Egg",
+      "advancements.regicide.title": "Regicide",
       "entity.enemyexpansion.equestrian": "Equestrian",
-      "entity.enemyexpansion.goblin": "Goblin Thief",
       "entity.enemyexpansion.silverqueendefending": "Defending Silverqueen",
-      "subtitles.troll.death": "Troll groans",
-      "item.minecraft.tipped_arrow.effect.swift_flight_potion": "Arrow of Swift Flight",
+      "advancements.regicide.descr": "Kill a Bodiless Silverqueen!",
       "item.enemyexpansion.headbiter_leggings": "-",
       "item.enemyexpansion.flutterfly_spawn_egg": "Flutteryfly Spawn Egg",
       "item.enemyexpansion.trollenraged_spawn_egg": "Enraged Troll Spawn Egg",
+      "advancements.troll_hunter.title": "Troll Hunter",
       "item.enemyexpansion.horsehead_chestplate": "-",
-      "entity.enemyexpansion.vampflyer": "Vampire in Flight",
       "item.enemyexpansion.huntsman_spawn_egg": "Huntsman Spawn Egg",
-      "advancements.enemy_expansion_advancement.descr": "Expand enemies!",
-      "item.enemyexpansion.meathead_helmet": "Meathead",
-      "subtitles.starved.chomp": "Starved chomps",
-      "item.enemyexpansion.drone_spawn_egg": "Drone Spawn Egg",
-      "item.enemyexpansion.silverqueendefending_spawn_egg": "Defending Silverqueen Spawn Egg",
-      "entity.enemyexpansion.goblin_fear": "Goblin Fear",
+      "advancements.troll_petrified.title": "Trolled!",
+      "advancements.wasp_drone_summon.descr": "Hatch a Wasp Drone from a Wasp Thorax!",
       "item.enemyexpansion.meathead_chestplate": "-",
       "block.enemyexpansion.troll_statue": "Troll Statue",
-      "entity.enemyexpansion.ladybug": "Ladybug",
       "entity.enemyexpansion.housefly": "Housefly",
       "item.enemyexpansion.silverhead_leggings": "-",
       "item.enemyexpansion.goblin_spawn_egg": "Goblin Thief Spawn Egg",
       "item.enemyexpansion.vampire_spawn_egg": "Vampire Spawn Egg",
-      "item.enemyexpansion.wasp_spawn_egg": "Wasp Spawn Egg",
       "item.enemyexpansion.slugger_spawn_egg": "Slugger Spawn Egg",
       "subtitles.troll.idle": "Troll growls",
       "entity.enemyexpansion.sprinter": "Sprinter",
+      "item.minecraft.potion.effect.swift_flight_potion": "Potion of Swift Flight",
+      "advancements.flutterfly_collection.title": "Butterfly Collection",
+      "item.enemyexpansion.scorpion_spawn_egg": "Scorpion Spawn Egg",
+      "advancements.tarancher.descr": "Ride a Tarantula!",
+      "item.minecraft.splash_potion.effect.swift_flight_potion": "Splash Potion of Swift Flight",
+      "item.enemyexpansion.phantasm_boots": "Phantom Boots",
+      "item.enemyexpansion.phantasm_leggings": "Phantom Leggings",
+      "entity.enemyexpansion.slugger": "Slugger",
+      "advancements.ladybug_feeding.title": "Ladybug\u0027s Gift",
+      "item.enemyexpansion.trollface": "Trollface",
+      "item.enemyexpansion.equestrian_spawn_egg": "Equestrian Spawn Egg",
+      "item.enemyexpansion.horsehead_boots": "-",
+      "advancements.hunted.descr": "Defeat a Huntsman!",
+      "item.enemyexpansion.meature_spawn_egg": "Meature Spawn Egg",
+      "advancements.troll_petrified.descr": "Petrify a Troll",
+      "entity.enemyexpansion.tarantula": "Tarantula",
+      "advancements.goblin_villager_reversion.title": "Freedom!",
+      "advancements.troll_hunter.descr": "Defeat a Troll!",
+      "advancements.enemy_expansion_advancement.title": "Enemy Expansion",
+      "item.enemyexpansion.troll_spawn_egg": "Troll Spawn Egg",
+      "entity.enemyexpansion.silverqueenattacking": "Attacking Silverqueen",
+      "item.enemyexpansion.silverhead_boots": "-",
+      "item.enemyexpansion.silverhead_chestplate": "-",
+      "entity.enemyexpansion.troll": "Troll",
+      "entity.enemyexpansion.vampire": "Vampire",
+      "item.enemyexpansion.housefly_spawn_egg": "Housefly Spawn Egg",
+      "item.enemyexpansion.horsehead_helmet": "Horsehead",
+      "config.enemyexpansion.better_config": "enemyexpansion",
+      "effect.enemyexpansion.bitten": "Bitten",
+      "item.enemyexpansion.silverhead_helmet": "Silverhat",
+      "advancements.starved_steal.descr": "Steal from the mouth of a Starved!",
+      "entity.enemyexpansion.flutterfly": "Flutteryfly",
+      "advancements.flutterfly_collection.descr": "Catch a Flutterfly in a Bottle!",
+      "item.enemyexpansion.bottled_flutterfly": "Bottled Flutterfly",
+      "entity.enemyexpansion.goblin": "Goblin Thief",
+      "advancements.wasp_drone_summon.title": "Wasp Business",
+      "subtitles.troll.death": "Troll groans",
+      "item.minecraft.tipped_arrow.effect.swift_flight_potion": "Arrow of Swift Flight",
+      "item.enemyexpansion.phantasm_helmet": "Phantasm Cowl",
+      "advancements.vampire_slayer.title": "Vampire Slayer",
+      "entity.enemyexpansion.vampflyer": "Vampire in Flight",
+      "advancements.enemy_expansion_advancement.descr": "Expand enemies!",
+      "item.enemyexpansion.meathead_helmet": "Meathead",
+      "subtitles.starved.chomp": "Starved chomps",
+      "advancements.vampire_slayer.descr": "Slay a Vampire!",
+      "item.enemyexpansion.drone_spawn_egg": "Drone Spawn Egg",
+      "item.enemyexpansion.silverqueendefending_spawn_egg": "Defending Silverqueen Spawn Egg",
+      "entity.enemyexpansion.goblin_fear": "Goblin Fear",
+      "entity.enemyexpansion.ladybug": "Ladybug",
+      "item.enemyexpansion.wasp_spawn_egg": "Wasp Spawn Egg",
       "item.enemyexpansion.tarantula_spawn_egg": "Tarantula Spawn Egg",
       "effect.enemyexpansion.swift_flight": "Swift Flight",
-      "item.minecraft.potion.effect.swift_flight_potion": "Potion of Swift Flight",
-      "item.enemyexpansion.scorpion_spawn_egg": "Scorpion Spawn Egg",
       "entity.enemyexpansion.drone": "Drone",
+      "advancements.starved_steal.title": "Thief!",
       "entity.enemyexpansion.meature": "Meature",
-      "item.minecraft.splash_potion.effect.swift_flight_potion": "Splash Potion of Swift Flight",
       "item.enemyexpansion.vampflyer_spawn_egg": "Vampire in Flight Spawn Egg",
       "item.enemyexpansion.vampbiter_spawn_egg": "Vampire Biter Spawn Egg"
     }
@@ -3067,12 +3754,14 @@
   "workspaceSettings": {
     "modid": "enemyexpansion",
     "modName": "Enemy Expansion",
-    "version": "1.0.0",
-    "author": "nekoz, MCreator",
-    "websiteURL": "https://mcreator.net",
-    "license": "Academic Free License v3.0",
+    "version": "1.20.0",
+    "description": "Adds more enemies to Minecraft!",
+    "author": "nekomaster1000",
+    "websiteURL": "https://infernalstudios.org/",
+    "license": "All Rights Reserved",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
+    "modPicture": "meature",
     "requiredMods": [
       "geckolib3"
     ],
@@ -3083,7 +3772,7 @@
       "allmods"
     ],
     "currentGenerator": "forge-1.19.2",
-    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "credits": "Made with MCreator!",
     "modElementsPackage": "net.mcreator.enemyexpansion",
     "lockBaseModFiles": false
   },

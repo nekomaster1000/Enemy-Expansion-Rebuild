@@ -49,7 +49,6 @@ import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.DifficultyInstance;
-import net.minecraft.world.Difficulty;
 import net.minecraft.util.RandomSource;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
@@ -62,6 +61,8 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.enemyexpansion.procedures.VampireSpawnProcedure;
 import net.mcreator.enemyexpansion.procedures.VampireLandsProcedure;
+import net.mcreator.enemyexpansion.procedures.VampireHurtProcedure;
+import net.mcreator.enemyexpansion.procedures.IfBelowY50Procedure;
 import net.mcreator.enemyexpansion.init.EnemyexpansionModEntities;
 
 import javax.annotation.Nullable;
@@ -215,6 +216,7 @@ public class VampflyerEntity extends Monster implements IAnimatable {
 
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
+		VampireHurtProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this, source.getEntity());
 		if (source == DamageSource.FALL)
 			return false;
 		if (source == DamageSource.WITHER)
@@ -257,8 +259,12 @@ public class VampflyerEntity extends Monster implements IAnimatable {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(EnemyexpansionModEntities.VAMPFLYER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
+		SpawnPlacements.register(EnemyexpansionModEntities.VAMPFLYER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			return IfBelowY50Procedure.execute(y);
+		});
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {

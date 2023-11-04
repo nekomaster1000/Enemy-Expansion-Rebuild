@@ -145,6 +145,9 @@
     "height": 1.0,
     "spawnThisMob": false,
     "doesDespawnWhenIdle": true,
+    "spawningCondition": {
+      "name": "IfBelowY50"
+    },
     "spawningProbability": 20,
     "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 1,

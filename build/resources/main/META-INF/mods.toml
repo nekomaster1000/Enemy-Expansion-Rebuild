@@ -1,14 +1,15 @@
 modLoader="javafml"
 loaderVersion="[43,)"
-license="Academic Free License v3.0"
+license="All Rights Reserved"
 
 [[mods]]
 modId="enemyexpansion"
-version="1.0.0"
+version="1.20.0"
 displayName="Enemy Expansion"
 credits="Created using mod maker MCreator - https://mcreator.net/about"
-displayURL="https://mcreator.net"
-authors="nekoz, MCreator"
+displayURL="https://infernalstudios.org/"
+logoFile="logo.png"
+authors="nekomaster1000"
 
 [[dependencies.enemyexpansion]]
     modId="minecraft"

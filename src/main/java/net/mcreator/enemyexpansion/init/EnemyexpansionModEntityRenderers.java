@@ -39,8 +39,8 @@ import net.mcreator.enemyexpansion.client.renderer.DroneRenderer;
 public class EnemyexpansionModEntityRenderers {
 	@SubscribeEvent
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
-		event.registerEntityRenderer(EnemyexpansionModEntities.SLUGGER.get(), SluggerRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.SPRINTER.get(), SprinterRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.SLUGGER.get(), SluggerRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.MEATURE.get(), MeatureRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.EQUESTRIAN.get(), EquestrianRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.GOBLIN.get(), GoblinRenderer::new);
@@ -59,9 +59,10 @@ public class EnemyexpansionModEntityRenderers {
 		event.registerEntityRenderer(EnemyexpansionModEntities.VAMPBITER.get(), VampbiterRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.TROLL.get(), TrollRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.TROLLENRAGED.get(), TrollenragedRenderer::new);
-		event.registerEntityRenderer(EnemyexpansionModEntities.SILVERQUEENDEFENDING.get(), SilverqueendefensiveRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.SILVERQUEENATTACKING.get(), SilverqueenattackingRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.SILVERQUEENDEFENDING.get(), SilverqueendefensiveRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.SILVERQUEENBODILESS.get(), SilverqueenbodilessRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.PHANTOM_EYE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.HEALING_EYE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.WASP_THORAX.get(), ThrownItemRenderer::new);
 	}

@@ -55,7 +55,6 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.enemyexpansion.procedures.TarantulaTickProcedure;
 import net.mcreator.enemyexpansion.procedures.TarantulaRideProcedure;
 import net.mcreator.enemyexpansion.procedures.TarantulaHurtProcedure;
 import net.mcreator.enemyexpansion.procedures.IfTimeIsNightProcedure;
@@ -159,7 +158,7 @@ public class TarantulaEntity extends Spider implements IAnimatable {
 
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
-		TarantulaHurtProcedure.execute(this);
+		TarantulaHurtProcedure.execute(this.level, this);
 		return super.hurt(source, amount);
 	}
 
@@ -182,7 +181,6 @@ public class TarantulaEntity extends Spider implements IAnimatable {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		TarantulaTickProcedure.execute(this);
 		this.refreshDimensions();
 	}
 

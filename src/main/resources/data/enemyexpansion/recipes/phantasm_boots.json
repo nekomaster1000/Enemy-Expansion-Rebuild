@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "3 5",
+    "6 8"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:phantom_membrane"
+    },
+    "2": {
+      "item": "minecraft:phantom_membrane"
+    },
+    "3": {
+      "item": "minecraft:bone"
+    },
+    "5": {
+      "item": "minecraft:bone"
+    },
+    "6": {
+      "item": "minecraft:phantom_membrane"
+    },
+    "8": {
+      "item": "minecraft:phantom_membrane"
+    }
+  },
+  "result": {
+    "item": "enemyexpansion:phantasm_boots",
+    "count": 1
+  }
+}

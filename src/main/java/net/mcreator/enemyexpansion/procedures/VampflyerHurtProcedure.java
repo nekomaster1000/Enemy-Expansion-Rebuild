@@ -26,16 +26,16 @@ public class VampflyerHurtProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
 		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity().level, event.getEntity(), event.getSource().getDirectEntity());
+			execute(event, event.getEntity().level, event.getEntity(), event.getSource().getDirectEntity(), event.getSource().getEntity());
 		}
 	}
 
-	public static void execute(LevelAccessor world, Entity entity, Entity immediatesourceentity) {
-		execute(null, world, entity, immediatesourceentity);
+	public static void execute(LevelAccessor world, Entity entity, Entity immediatesourceentity, Entity sourceentity) {
+		execute(null, world, entity, immediatesourceentity, sourceentity);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity, Entity immediatesourceentity) {
-		if (entity == null || immediatesourceentity == null)
+	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity, Entity immediatesourceentity, Entity sourceentity) {
+		if (entity == null || immediatesourceentity == null || sourceentity == null)
 			return;
 		if (entity instanceof VampflyerEntity) {
 			if (entity instanceof LivingEntity _entity)
@@ -45,9 +45,13 @@ public class VampflyerHurtProcedure {
 				if (entity instanceof LivingEntity _entity)
 					_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get(), (int) Mth.nextDouble(RandomSource.create(), 40, 80), (int) Mth.nextDouble(RandomSource.create(), 0, 2), (false), (false)));
 			});
+		} else if (sourceentity instanceof VampflyerEntity) {
+			if (sourceentity instanceof LivingEntity _entity)
+				_entity.removeEffect(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get());
+			sourceentity.setDeltaMovement(new Vec3((Mth.nextDouble(RandomSource.create(), -1.5, 1.5)), (Mth.nextInt(RandomSource.create(), (int) (-0.1), (int) 0.1)), (Mth.nextDouble(RandomSource.create(), -1.5, 1.5))));
 		}
 		if (immediatesourceentity instanceof ThrownTrident) {
-			entity.hurt((new DamageSource("trident")), 12);
+			entity.hurt((new DamageSource("trident")), 16);
 		}
 	}
 }

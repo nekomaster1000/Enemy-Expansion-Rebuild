@@ -1,0 +1,241 @@
+{
+  "enemyexpansion:wasp_drone_summon": {
+    "criteria": {
+      "wasp_drone_summon": "2023-11-04 00:59:32 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/diamond_block": {
+    "criteria": {
+      "has_diamond": "2023-11-04 00:42:15 +0000"
+    },
+    "done": true
+  },
+  "enemyexpansion:ladybug_feeding": {
+    "criteria": {
+      "ladybug_feeding": "2023-11-04 00:58:16 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/dark_oak_boat": {
+    "criteria": {
+      "in_water": "2023-11-04 00:19:34 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/diamond_pickaxe": {
+    "criteria": {
+      "has_diamond": "2023-11-04 00:42:15 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/diamond_hoe": {
+    "criteria": {
+      "has_diamond": "2023-11-04 00:42:15 +0000"
+    },
+    "done": true
+  },
+  "enemyexpansion:troll_petrified": {
+    "criteria": {
+      "troll_petrified": "2023-11-04 00:58:21 +0000"
+    },
+    "done": true
+  },
+  "minecraft:adventure/kill_a_mob": {
+    "criteria": {
+      "minecraft:skeleton": "2023-11-04 00:23:03 +0000"
+    },
+    "done": true
+  },
+  "minecraft:adventure/kill_all_mobs": {
+    "criteria": {
+      "minecraft:pillager": "2023-11-04 00:33:26 +0000",
+      "minecraft:skeleton": "2023-11-04 00:23:03 +0000",
+      "minecraft:zombie": "2023-11-04 01:00:03 +0000"
+    },
+    "done": false
+  },
+  "minecraft:recipes/tools/diamond_shovel": {
+    "criteria": {
+      "has_diamond": "2023-11-04 00:42:15 +0000"
+    },
+    "done": true
+  },
+  "enemyexpansion:regicide": {
+    "criteria": {
+      "regicide": "2023-11-04 00:59:16 +0000"
+    },
+    "done": true
+  },
+  "shieldexp:recipes/diamond_shield": {
+    "criteria": {
+      "has_diamond": "2023-11-04 00:42:15 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/diamond_chestplate": {
+    "criteria": {
+      "has_diamond": "2023-11-04 00:42:15 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/diamond_axe": {
+    "criteria": {
+      "has_diamond": "2023-11-04 00:42:15 +0000"
+    },
+    "done": true
+  },
+  "miningmaster:miningmaster/root": {
+    "criteria": {
+      "tick": "2023-11-04 00:18:27 +0000"
+    },
+    "done": true
+  },
+  "enemyexpansion:vampire_slayer": {
+    "criteria": {
+      "vampire_slayer": "2023-11-04 00:59:11 +0000"
+    },
+    "done": true
+  },
+  "enemyexpansion:troll_hunter": {
+    "criteria": {
+      "troll_hunter": "2023-11-04 00:59:05 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/raw_gold_block": {
+    "criteria": {
+      "has_raw_gold": "2023-11-04 00:42:09 +0000"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:snowy_slopes": "2023-11-04 00:25:16 +0000",
+      "minecraft:taiga": "2023-11-04 00:31:02 +0000",
+      "minecraft:deep_ocean": "2023-11-04 00:23:29 +0000",
+      "minecraft:birch_forest": "2023-11-04 00:30:14 +0000",
+      "minecraft:beach": "2023-11-04 00:21:09 +0000",
+      "minecraft:lukewarm_ocean": "2023-11-04 00:24:26 +0000",
+      "minecraft:river": "2023-11-04 00:21:24 +0000",
+      "minecraft:stony_shore": "2023-11-04 00:28:28 +0000",
+      "minecraft:dripstone_caves": "2023-11-04 00:30:55 +0000",
+      "minecraft:forest": "2023-11-04 00:29:59 +0000",
+      "minecraft:ocean": "2023-11-04 00:23:17 +0000",
+      "minecraft:old_growth_birch_forest": "2023-11-04 00:30:30 +0000",
+      "minecraft:meadow": "2023-11-04 00:29:12 +0000",
+      "minecraft:savanna": "2023-11-04 00:24:28 +0000",
+      "minecraft:plains": "2023-11-04 00:18:29 +0000"
+    },
+    "done": false
+  },
+  "minecraft:recipes/misc/bone_meal": {
+    "criteria": {
+      "has_bone": "2023-11-04 00:42:12 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/diamond_leggings": {
+    "criteria": {
+      "has_diamond": "2023-11-04 00:42:15 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/birch_boat": {
+    "criteria": {
+      "in_water": "2023-11-04 00:19:34 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2023-11-04 00:34:44 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/gold_ingot_from_blasting_raw_gold": {
+    "criteria": {
+      "has_raw_gold": "2023-11-04 00:42:09 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/diamond_boots": {
+    "criteria": {
+      "has_diamond": "2023-11-04 00:42:15 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/mangrove_boat": {
+    "criteria": {
+      "in_water": "2023-11-04 00:19:34 +0000"
+    },
+    "done": true
+  },
+  "minecraft:story/mine_diamond": {
+    "criteria": {
+      "diamond": "2023-11-04 00:42:15 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/diamond_helmet": {
+    "criteria": {
+      "has_diamond": "2023-11-04 00:42:15 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/acacia_boat": {
+    "criteria": {
+      "in_water": "2023-11-04 00:19:34 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/brewing/fermented_spider_eye": {
+    "criteria": {
+      "has_spider_eye": "2023-11-04 00:58:08 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/oak_boat": {
+    "criteria": {
+      "in_water": "2023-11-04 00:19:34 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/combat/diamond_sword": {
+    "criteria": {
+      "has_diamond": "2023-11-04 00:42:15 +0000"
+    },
+    "done": true
+  },
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_something": "2023-11-04 00:23:03 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/jungle_boat": {
+    "criteria": {
+      "in_water": "2023-11-04 00:19:34 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/gold_ingot_from_smelting_raw_gold": {
+    "criteria": {
+      "has_raw_gold": "2023-11-04 00:42:09 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/spruce_boat": {
+    "criteria": {
+      "in_water": "2023-11-04 00:19:34 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/jukebox": {
+    "criteria": {
+      "has_diamond": "2023-11-04 00:42:15 +0000"
+    },
+    "done": true
+  },
+  "DataVersion": 3120
+}

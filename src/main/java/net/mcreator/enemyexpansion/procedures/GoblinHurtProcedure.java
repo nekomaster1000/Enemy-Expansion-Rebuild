@@ -15,15 +15,20 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
+import net.minecraft.advancements.AdvancementProgress;
+import net.minecraft.advancements.Advancement;
 
 import net.mcreator.enemyexpansion.init.EnemyexpansionModEntities;
 import net.mcreator.enemyexpansion.entity.GoblinFearEntity;
 import net.mcreator.enemyexpansion.entity.GoblinEntity;
 import net.mcreator.enemyexpansion.EnemyexpansionMod;
+
+import java.util.Iterator;
 
 public class GoblinHurtProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
@@ -107,6 +112,15 @@ public class GoblinHurtProcedure {
 							}
 							if (!entity.level.isClientSide())
 								entity.discard();
+							if (sourceentity instanceof ServerPlayer _player) {
+								Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("enemyexpansion:goblin_villager_reversion"));
+								AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+								if (!_ap.isDone()) {
+									Iterator _iterator = _ap.getRemainingCriteria().iterator();
+									while (_iterator.hasNext())
+										_player.getAdvancements().award(_adv, (String) _iterator.next());
+								}
+							}
 							if (_entityForSpawning instanceof Mob _mobForSpawning)
 								_mobForSpawning.finalizeSpawn(_serverLevelForEntitySpawn, world.getCurrentDifficultyAt(_entityForSpawning.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
 							world.addFreshEntity(_entityForSpawning);

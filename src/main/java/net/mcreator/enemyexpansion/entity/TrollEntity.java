@@ -41,7 +41,6 @@ import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.DifficultyInstance;
-import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -53,6 +52,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.mcreator.enemyexpansion.procedures.TrollsSpawnProcedure;
 import net.mcreator.enemyexpansion.procedures.TrollKillsProcedure;
 import net.mcreator.enemyexpansion.procedures.TrollHurtProcedure;
+import net.mcreator.enemyexpansion.procedures.IfBelowY50Procedure;
 import net.mcreator.enemyexpansion.init.EnemyexpansionModEntities;
 
 import javax.annotation.Nullable;
@@ -146,8 +146,6 @@ public class TrollEntity extends Monster implements IAnimatable {
 			return false;
 		if (source.isExplosion())
 			return false;
-		if (source.getMsgId().equals("trident"))
-			return false;
 		return super.hurt(source, amount);
 	}
 
@@ -176,8 +174,12 @@ public class TrollEntity extends Monster implements IAnimatable {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(EnemyexpansionModEntities.TROLL.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
+		SpawnPlacements.register(EnemyexpansionModEntities.TROLL.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			return IfBelowY50Procedure.execute(y);
+		});
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {

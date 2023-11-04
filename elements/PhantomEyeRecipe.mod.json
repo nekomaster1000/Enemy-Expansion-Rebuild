@@ -1,0 +1,46 @@
+{
+  "_fv": 39,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "Items.PHANTOM_MEMBRANE"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Items.PHANTOM_MEMBRANE"
+      },
+      {
+        "value": "CUSTOM:HealingEye"
+      },
+      {
+        "value": "Items.PHANTOM_MEMBRANE"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Items.PHANTOM_MEMBRANE"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:PhantomEye"
+    },
+    "name": "phantom_eye",
+    "namespace": "mod"
+  }
+}

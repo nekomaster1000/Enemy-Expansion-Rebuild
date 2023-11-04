@@ -15,6 +15,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerPlayer;
 
+import net.mcreator.enemyexpansion.procedures.UseThoraxProcedure;
 import net.mcreator.enemyexpansion.init.EnemyexpansionModItems;
 import net.mcreator.enemyexpansion.entity.WaspThoraxEntity;
 
@@ -75,6 +76,7 @@ public class WaspThoraxItem extends Item {
 								entity.getInventory().removeItem(stack);
 						}
 					}
+					UseThoraxProcedure.execute(world, entity);
 				}
 			}
 		}

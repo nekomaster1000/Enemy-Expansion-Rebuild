@@ -72,7 +72,6 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.enemyexpansion.world.inventory.StarvedGUIMenu;
 import net.mcreator.enemyexpansion.procedures.StarvedSpawnProcedure;
 import net.mcreator.enemyexpansion.procedures.StarvedHurtProcedure;
-import net.mcreator.enemyexpansion.procedures.StarvedHostilityProcedure;
 import net.mcreator.enemyexpansion.procedures.OpenStarvedGUIProcedure;
 import net.mcreator.enemyexpansion.init.EnemyexpansionModEntities;
 
@@ -131,29 +130,8 @@ public class StarvedEntity extends Monster implements IAnimatable {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
 			}
 		});
-		this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
-		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, Player.class, false, false) {
-			@Override
-			public boolean canUse() {
-				double x = StarvedEntity.this.getX();
-				double y = StarvedEntity.this.getY();
-				double z = StarvedEntity.this.getZ();
-				Entity entity = StarvedEntity.this;
-				Level world = StarvedEntity.this.level;
-				return super.canUse() && StarvedHostilityProcedure.execute();
-			}
-		});
-		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, Husk.class, false, false) {
-			@Override
-			public boolean canUse() {
-				double x = StarvedEntity.this.getX();
-				double y = StarvedEntity.this.getY();
-				double z = StarvedEntity.this.getZ();
-				Entity entity = StarvedEntity.this;
-				Level world = StarvedEntity.this.level;
-				return super.canUse() && StarvedHostilityProcedure.execute();
-			}
-		});
+		this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setAlertOthers());
+		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, Husk.class, false, false));
 	}
 
 	@Override

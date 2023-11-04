@@ -1,0 +1,52 @@
+{
+  "_fv": 39,
+  "_type": "config",
+  "definition": {
+    "pools": [
+      {
+        "category": "mobSpawning",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 50.0,
+            "textDefault": "",
+            "comment": "Range: -64 to 318",
+            "vardisplay": "Topmost Y-level at which Cave Mobs can spawn",
+            "varname": "cavemobspawndepth",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Drone"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 5.0,
+            "textDefault": "",
+            "comment": "Range: 0 to 100 (Percent)",
+            "vardisplay": "Chance Houseflies will spawn from a slain Zombie",
+            "varname": "spawnfliesondeath",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Drone"
+          }
+        ]
+      }
+    ],
+    "file": "enemyexpansion",
+    "configType": 0,
+    "name": "better_config"
+  }
+}

@@ -31,6 +31,7 @@ import net.mcreator.enemyexpansion.entity.SilverqueendefensiveEntity;
 import net.mcreator.enemyexpansion.entity.SilverqueenbodilessEntity;
 import net.mcreator.enemyexpansion.entity.SilverqueenattackingEntity;
 import net.mcreator.enemyexpansion.entity.ScorpionEntity;
+import net.mcreator.enemyexpansion.entity.PhantomEyeEntity;
 import net.mcreator.enemyexpansion.entity.MeatureEntity;
 import net.mcreator.enemyexpansion.entity.LadybugEntity;
 import net.mcreator.enemyexpansion.entity.HuntsmanEntity;
@@ -46,14 +47,14 @@ import net.mcreator.enemyexpansion.EnemyexpansionMod;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class EnemyexpansionModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, EnemyexpansionMod.MODID);
-	public static final RegistryObject<EntityType<SluggerEntity>> SLUGGER = register("slugger",
-			EntityType.Builder.<SluggerEntity>of(SluggerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SluggerEntity::new)
-
-					.sized(0.6f, 2.3f));
 	public static final RegistryObject<EntityType<SprinterEntity>> SPRINTER = register("sprinter",
 			EntityType.Builder.<SprinterEntity>of(SprinterEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SprinterEntity::new)
 
 					.sized(0.6f, 1.95f));
+	public static final RegistryObject<EntityType<SluggerEntity>> SLUGGER = register("slugger",
+			EntityType.Builder.<SluggerEntity>of(SluggerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SluggerEntity::new)
+
+					.sized(0.6f, 2.3f));
 	public static final RegistryObject<EntityType<MeatureEntity>> MEATURE = register("meature",
 			EntityType.Builder.<MeatureEntity>of(MeatureEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MeatureEntity::new)
 
@@ -122,20 +123,22 @@ public class EnemyexpansionModEntities {
 			EntityType.Builder.<TrollEntity>of(TrollEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TrollEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<TrollenragedEntity>> TROLLENRAGED = register("trollenraged", EntityType.Builder.<TrollenragedEntity>of(TrollenragedEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TrollenragedEntity::new).fireImmune().sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<SilverqueendefensiveEntity>> SILVERQUEENDEFENDING = register("silverqueendefending",
-			EntityType.Builder.<SilverqueendefensiveEntity>of(SilverqueendefensiveEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
-					.setCustomClientFactory(SilverqueendefensiveEntity::new)
-
-					.sized(0.6f, 1.6f));
 	public static final RegistryObject<EntityType<SilverqueenattackingEntity>> SILVERQUEENATTACKING = register("silverqueenattacking",
 			EntityType.Builder.<SilverqueenattackingEntity>of(SilverqueenattackingEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 					.setCustomClientFactory(SilverqueenattackingEntity::new)
+
+					.sized(0.6f, 1.6f));
+	public static final RegistryObject<EntityType<SilverqueendefensiveEntity>> SILVERQUEENDEFENDING = register("silverqueendefending",
+			EntityType.Builder.<SilverqueendefensiveEntity>of(SilverqueendefensiveEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+					.setCustomClientFactory(SilverqueendefensiveEntity::new)
 
 					.sized(0.6f, 1.6f));
 	public static final RegistryObject<EntityType<SilverqueenbodilessEntity>> SILVERQUEENBODILESS = register("silverqueenbodiless",
 			EntityType.Builder.<SilverqueenbodilessEntity>of(SilverqueenbodilessEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SilverqueenbodilessEntity::new)
 
 					.sized(0.6f, 0.8f));
+	public static final RegistryObject<EntityType<PhantomEyeEntity>> PHANTOM_EYE = register("projectile_phantom_eye",
+			EntityType.Builder.<PhantomEyeEntity>of(PhantomEyeEntity::new, MobCategory.MISC).setCustomClientFactory(PhantomEyeEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<HealingEyeEntity>> HEALING_EYE = register("projectile_healing_eye",
 			EntityType.Builder.<HealingEyeEntity>of(HealingEyeEntity::new, MobCategory.MISC).setCustomClientFactory(HealingEyeEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<WaspThoraxEntity>> WASP_THORAX = register("projectile_wasp_thorax",
@@ -148,8 +151,8 @@ public class EnemyexpansionModEntities {
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
-			SluggerEntity.init();
 			SprinterEntity.init();
+			SluggerEntity.init();
 			MeatureEntity.init();
 			EquestrianEntity.init();
 			GoblinEntity.init();
@@ -168,16 +171,16 @@ public class EnemyexpansionModEntities {
 			VampbiterEntity.init();
 			TrollEntity.init();
 			TrollenragedEntity.init();
-			SilverqueendefensiveEntity.init();
 			SilverqueenattackingEntity.init();
+			SilverqueendefensiveEntity.init();
 			SilverqueenbodilessEntity.init();
 		});
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
-		event.put(SLUGGER.get(), SluggerEntity.createAttributes().build());
 		event.put(SPRINTER.get(), SprinterEntity.createAttributes().build());
+		event.put(SLUGGER.get(), SluggerEntity.createAttributes().build());
 		event.put(MEATURE.get(), MeatureEntity.createAttributes().build());
 		event.put(EQUESTRIAN.get(), EquestrianEntity.createAttributes().build());
 		event.put(GOBLIN.get(), GoblinEntity.createAttributes().build());
@@ -196,8 +199,8 @@ public class EnemyexpansionModEntities {
 		event.put(VAMPBITER.get(), VampbiterEntity.createAttributes().build());
 		event.put(TROLL.get(), TrollEntity.createAttributes().build());
 		event.put(TROLLENRAGED.get(), TrollenragedEntity.createAttributes().build());
-		event.put(SILVERQUEENDEFENDING.get(), SilverqueendefensiveEntity.createAttributes().build());
 		event.put(SILVERQUEENATTACKING.get(), SilverqueenattackingEntity.createAttributes().build());
+		event.put(SILVERQUEENDEFENDING.get(), SilverqueendefensiveEntity.createAttributes().build());
 		event.put(SILVERQUEENBODILESS.get(), SilverqueenbodilessEntity.createAttributes().build());
 	}
 }

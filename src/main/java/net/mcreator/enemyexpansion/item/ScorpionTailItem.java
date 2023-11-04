@@ -39,7 +39,7 @@ public class ScorpionTailItem extends Item {
 	@Override
 	public boolean hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
 		boolean retval = super.hurtEnemy(itemstack, entity, sourceentity);
-		ScorpionTailHitProcedure.execute(entity);
+		ScorpionTailHitProcedure.execute(entity.level, entity.getX(), entity.getY(), entity.getZ(), entity);
 		return retval;
 	}
 }

@@ -1,0 +1,90 @@
+{
+  "_fv": 39,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "phantasm_cowl",
+    "enableBody": true,
+    "textureBody": "phantasm_cape",
+    "enableLeggings": true,
+    "textureLeggings": "phantasm_leggings",
+    "enableBoots": true,
+    "textureBoots": "phantasm_boots",
+    "onHelmetTick": {
+      "name": "PhantasmCowlVision"
+    },
+    "onBodyTick": {
+      "name": "PhantasmCapeResistance"
+    },
+    "onLeggingsTick": {
+      "name": "PhantasmLeggingsJump"
+    },
+    "onBootsTick": {
+      "name": "PhantasmBootsSpeed"
+    },
+    "creativeTab": {
+      "value": "COMBAT"
+    },
+    "armorTextureFile": "phantasm",
+    "helmetName": "Phantasm Cowl",
+    "bodyName": "Phantasm Cape",
+    "leggingsName": "Phantom Leggings",
+    "bootsName": "Phantom Boots",
+    "helmetSpecialInfo": [
+      "See clearly in the dark!"
+    ],
+    "bodySpecialInfo": [
+      "Become stronger in the dark!"
+    ],
+    "leggingsSpecialInfo": [
+      "Jump higher in the dark!"
+    ],
+    "bootsSpecialInfo": [
+      "Move faster in the dark!"
+    ],
+    "helmetModelName": "Default",
+    "helmetModelPart": "Helmet",
+    "helmetModelTexture": "From armor",
+    "bodyModelName": "Default",
+    "bodyModelPart": "Body",
+    "armsModelPartL": "Arms L",
+    "armsModelPartR": "Arms R",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "helmetItemRenderType": 0,
+    "helmetItemCustomModelName": "Normal",
+    "bodyItemRenderType": 0,
+    "bodyItemCustomModelName": "Normal",
+    "leggingsItemRenderType": 0,
+    "leggingsItemCustomModelName": "Normal",
+    "bootsItemRenderType": 0,
+    "bootsItemCustomModelName": "Normal",
+    "helmetImmuneToFire": false,
+    "bodyImmuneToFire": false,
+    "leggingsImmuneToFire": false,
+    "bootsImmuneToFire": false,
+    "maxDamage": 23,
+    "damageValueHelmet": 2,
+    "damageValueBody": 6,
+    "damageValueLeggings": 5,
+    "damageValueBoots": 2,
+    "enchantability": 20,
+    "toughness": 0.0,
+    "knockbackResistance": 0.0,
+    "equipSound": {
+      "value": "entity.phantom.flap"
+    },
+    "repairItems": [
+      {
+        "value": "Items.PHANTOM_MEMBRANE"
+      }
+    ]
+  }
+}

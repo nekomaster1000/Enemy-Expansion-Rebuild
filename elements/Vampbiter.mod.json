@@ -99,6 +99,9 @@
     "stepSound": {
       "value": ""
     },
+    "whenMobIsHurt": {
+      "name": "VampireHurt"
+    },
     "onInitialSpawn": {
       "name": "VampireSpawn"
     },
@@ -140,8 +143,11 @@
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,
     "height": 1.0,
-    "spawnThisMob": true,
+    "spawnThisMob": false,
     "doesDespawnWhenIdle": true,
+    "spawningCondition": {
+      "name": "IfBelowY50"
+    },
     "spawningProbability": 10,
     "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 1,

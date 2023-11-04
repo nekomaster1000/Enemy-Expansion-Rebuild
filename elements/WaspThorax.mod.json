@@ -23,6 +23,9 @@
     "animation": "none",
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
+    "onRangedItemUsed": {
+      "name": "UseThorax"
+    },
     "bulletPower": 1.0,
     "bulletDamage": 2.0,
     "bulletKnockback": 0,

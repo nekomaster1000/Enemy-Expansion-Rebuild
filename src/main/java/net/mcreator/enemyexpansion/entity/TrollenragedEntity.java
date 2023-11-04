@@ -17,7 +17,6 @@ import net.minecraftforge.network.NetworkHooks;
 
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.monster.Monster;
@@ -135,8 +134,6 @@ public class TrollenragedEntity extends Monster implements IAnimatable {
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
 		TrollEnragedHurtProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this, source.getEntity());
-		if (source.getDirectEntity() instanceof AbstractArrow)
-			return false;
 		if (source == DamageSource.FALL)
 			return false;
 		if (source == DamageSource.CACTUS)

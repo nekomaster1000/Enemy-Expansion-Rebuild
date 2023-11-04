@@ -15,8 +15,11 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.enemyexpansion.item.WaspThoraxItem;
+import net.mcreator.enemyexpansion.item.TrollfaceItem;
 import net.mcreator.enemyexpansion.item.SilverheadItem;
 import net.mcreator.enemyexpansion.item.ScorpionTailItem;
+import net.mcreator.enemyexpansion.item.PhantomEyeItem;
+import net.mcreator.enemyexpansion.item.PhantasmItem;
 import net.mcreator.enemyexpansion.item.MeatheadItem;
 import net.mcreator.enemyexpansion.item.HorseheadItem;
 import net.mcreator.enemyexpansion.item.HealingEyeItem;
@@ -26,8 +29,8 @@ import net.mcreator.enemyexpansion.EnemyexpansionMod;
 
 public class EnemyexpansionModItems {
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, EnemyexpansionMod.MODID);
-	public static final RegistryObject<Item> SLUGGER_SPAWN_EGG = REGISTRY.register("slugger_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.SLUGGER, -12244867, -10910598, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> SPRINTER_SPAWN_EGG = REGISTRY.register("sprinter_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.SPRINTER, -14269861, -9273797, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> SLUGGER_SPAWN_EGG = REGISTRY.register("slugger_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.SLUGGER, -12244867, -10910598, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> MEATURE_SPAWN_EGG = REGISTRY.register("meature_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.MEATURE, -9359573, -6730933, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> EQUESTRIAN_SPAWN_EGG = REGISTRY.register("equestrian_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.EQUESTRIAN, -7359613, -4269373, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> GOBLIN_SPAWN_EGG = REGISTRY.register("goblin_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.GOBLIN, -12038042, -11433587, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
@@ -47,21 +50,27 @@ public class EnemyexpansionModItems {
 	public static final RegistryObject<Item> TROLL_SPAWN_EGG = REGISTRY.register("troll_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.TROLL, -2172995, -2902212, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> TROLLENRAGED_SPAWN_EGG = REGISTRY.register("trollenraged_spawn_egg",
 			() -> new ForgeSpawnEggItem(EnemyexpansionModEntities.TROLLENRAGED, -4020081, -2902212, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
-	public static final RegistryObject<Item> SILVERQUEENDEFENDING_SPAWN_EGG = REGISTRY.register("silverqueendefending_spawn_egg",
-			() -> new ForgeSpawnEggItem(EnemyexpansionModEntities.SILVERQUEENDEFENDING, -14342875, -5921371, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> SILVERQUEENATTACKING_SPAWN_EGG = REGISTRY.register("silverqueenattacking_spawn_egg",
 			() -> new ForgeSpawnEggItem(EnemyexpansionModEntities.SILVERQUEENATTACKING, -12434878, -5921371, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> SILVERQUEENDEFENDING_SPAWN_EGG = REGISTRY.register("silverqueendefending_spawn_egg",
+			() -> new ForgeSpawnEggItem(EnemyexpansionModEntities.SILVERQUEENDEFENDING, -14342875, -5921371, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> SILVERQUEENBODILESS_SPAWN_EGG = REGISTRY.register("silverqueenbodiless_spawn_egg",
 			() -> new ForgeSpawnEggItem(EnemyexpansionModEntities.SILVERQUEENBODILESS, -14342875, -5921371, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> TROLL_STATUE = block(EnemyexpansionModBlocks.TROLL_STATUE, CreativeModeTab.TAB_MISC);
 	public static final RegistryObject<Item> SCORPION_TAIL = REGISTRY.register("scorpion_tail", () -> new ScorpionTailItem());
-	public static final RegistryObject<Item> HEALING_EYE = REGISTRY.register("healing_eye", () -> new HealingEyeItem());
 	public static final RegistryObject<Item> BOTTLED_FLUTTERFLY = REGISTRY.register("bottled_flutterfly", () -> new BottledFlutterflyItem());
+	public static final RegistryObject<Item> PHANTOM_EYE = REGISTRY.register("phantom_eye", () -> new PhantomEyeItem());
+	public static final RegistryObject<Item> HEALING_EYE = REGISTRY.register("healing_eye", () -> new HealingEyeItem());
 	public static final RegistryObject<Item> WASP_THORAX = REGISTRY.register("wasp_thorax", () -> new WaspThoraxItem());
 	public static final RegistryObject<Item> MEATHEAD_HELMET = REGISTRY.register("meathead_helmet", () -> new MeatheadItem.Helmet());
 	public static final RegistryObject<Item> HORSEHEAD_HELMET = REGISTRY.register("horsehead_helmet", () -> new HorseheadItem.Helmet());
 	public static final RegistryObject<Item> HEADBITER_HELMET = REGISTRY.register("headbiter_helmet", () -> new HeadbiterItem.Helmet());
 	public static final RegistryObject<Item> SILVERHEAD_HELMET = REGISTRY.register("silverhead_helmet", () -> new SilverheadItem.Helmet());
+	public static final RegistryObject<Item> PHANTASM_HELMET = REGISTRY.register("phantasm_helmet", () -> new PhantasmItem.Helmet());
+	public static final RegistryObject<Item> PHANTASM_CHESTPLATE = REGISTRY.register("phantasm_chestplate", () -> new PhantasmItem.Chestplate());
+	public static final RegistryObject<Item> PHANTASM_LEGGINGS = REGISTRY.register("phantasm_leggings", () -> new PhantasmItem.Leggings());
+	public static final RegistryObject<Item> PHANTASM_BOOTS = REGISTRY.register("phantasm_boots", () -> new PhantasmItem.Boots());
+	public static final RegistryObject<Item> TROLLFACE = REGISTRY.register("trollface", () -> new TrollfaceItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

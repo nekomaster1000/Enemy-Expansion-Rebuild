@@ -15,6 +15,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.projectile.AbstractArrow;
@@ -28,6 +29,7 @@ import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.Mob;
@@ -46,6 +48,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.enemyexpansion.procedures.SpawnSilverfishX5Procedure;
 import net.mcreator.enemyexpansion.procedures.SilverqueenBlockProcedure;
+import net.mcreator.enemyexpansion.procedures.IfBelowY50Procedure;
 import net.mcreator.enemyexpansion.init.EnemyexpansionModEntities;
 
 public class SilverqueendefensiveEntity extends Monster implements IAnimatable {
@@ -156,6 +159,12 @@ public class SilverqueendefensiveEntity extends Monster implements IAnimatable {
 	}
 
 	public static void init() {
+		SpawnPlacements.register(EnemyexpansionModEntities.SILVERQUEENDEFENDING.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			return IfBelowY50Procedure.execute(y);
+		});
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
