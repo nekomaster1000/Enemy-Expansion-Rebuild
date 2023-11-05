@@ -10,7 +10,7 @@ public class BetterConfigConfiguration {
 	static {
 		BUILDER.push("mobSpawning");
 		CAVEMOBSPAWNDEPTH = BUILDER.comment("Range: -64 to 318").define("Topmost Y-level at which Cave Mobs can spawn", (double) 50);
-		SPAWNFLIESONDEATH = BUILDER.comment("Range: 0 to 100 (Percent)").define("Chance Houseflies will spawn from a slain Zombie", (double) 5);
+		SPAWNFLIESONDEATH = BUILDER.comment("Range: 0 to 100 (Percent)").define("Chance Botflies will spawn from a slain Zombie", (double) 5);
 		BUILDER.pop();
 
 		SPEC = BUILDER.build();

@@ -36,7 +36,7 @@
             "numberField": 5.0,
             "textDefault": "",
             "comment": "Range: 0 to 100 (Percent)",
-            "vardisplay": "Chance Houseflies will spawn from a slain Zombie",
+            "vardisplay": "Chance Botflies will spawn from a slain Zombie",
             "varname": "spawnfliesondeath",
             "enablecomment": true,
             "onlyComment": false,
@@ -46,7 +46,6 @@
       }
     ],
     "file": "enemyexpansion",
-    "configType": 0,
-    "name": "better_config"
+    "configType": 0
   }
 }
