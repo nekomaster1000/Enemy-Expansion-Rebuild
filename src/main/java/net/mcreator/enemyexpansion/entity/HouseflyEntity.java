@@ -66,7 +66,7 @@ public class HouseflyEntity extends Monster implements IAnimatable {
 	public String animationprocedure = "empty";
 
 	public HouseflyEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(EnemyexpansionModEntities.HOUSEFLY.get(), world);
+		this(EnemyexpansionModEntities.BOTFLY.get(), world);
 	}
 
 	public HouseflyEntity(EntityType<HouseflyEntity> type, Level world) {

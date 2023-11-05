@@ -39,7 +39,7 @@ public class EnemyexpansionModItems {
 	public static final RegistryObject<Item> LADYBUG_SPAWN_EGG = REGISTRY.register("ladybug_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.LADYBUG, -7266027, -7373714, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> WASP_SPAWN_EGG = REGISTRY.register("wasp_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.WASP, -1195197, -830911, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> DRONE_SPAWN_EGG = REGISTRY.register("drone_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.DRONE, -4821945, -830911, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
-	public static final RegistryObject<Item> HOUSEFLY_SPAWN_EGG = REGISTRY.register("housefly_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.HOUSEFLY, -12768729, -9948910, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> BOTFLY_SPAWN_EGG = REGISTRY.register("botfly_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.BOTFLY, -12768729, -9948910, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> FLUTTERFLY_SPAWN_EGG = REGISTRY.register("flutterfly_spawn_egg",
 			() -> new ForgeSpawnEggItem(EnemyexpansionModEntities.FLUTTERFLY, -10744820, -1506043, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> HUNTSMAN_SPAWN_EGG = REGISTRY.register("huntsman_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.HUNTSMAN, -8038858, -3421751, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));

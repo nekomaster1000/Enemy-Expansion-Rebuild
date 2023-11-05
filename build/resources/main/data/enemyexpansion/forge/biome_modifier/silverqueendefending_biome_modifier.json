@@ -1,9 +1,11 @@
 {
   "type": "forge:add_spawns",
-  "biomes": "#forge:is_plains",
+  "biomes": {
+    "type": "forge:any"
+  },
   "spawners": {
     "type": "enemyexpansion:silverqueendefending",
-    "weight": 10,
+    "weight": 20,
     "minCount": 1,
     "maxCount": 1
   }

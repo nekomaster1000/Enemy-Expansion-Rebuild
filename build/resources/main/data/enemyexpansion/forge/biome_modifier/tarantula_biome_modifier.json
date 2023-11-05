@@ -1,6 +1,6 @@
 {
   "type": "forge:add_spawns",
-  "biomes": "#forge:is_dripstone",
+  "biomes": "dripstone_caves",
   "spawners": {
     "type": "enemyexpansion:tarantula",
     "weight": 100,

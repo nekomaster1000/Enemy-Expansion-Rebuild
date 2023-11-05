@@ -1,9 +1,11 @@
 {
   "type": "forge:add_spawns",
-  "biomes": "#forge:is_general",
+  "biomes": {
+    "type": "forge:any"
+  },
   "spawners": {
     "type": "enemyexpansion:vampire",
-    "weight": 40,
+    "weight": 20,
     "minCount": 1,
     "maxCount": 1
   }

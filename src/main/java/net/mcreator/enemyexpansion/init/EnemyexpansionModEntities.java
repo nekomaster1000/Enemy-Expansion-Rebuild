@@ -91,7 +91,7 @@ public class EnemyexpansionModEntities {
 			EntityType.Builder.<DroneEntity>of(DroneEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DroneEntity::new)
 
 					.sized(0.45f, 1.6f));
-	public static final RegistryObject<EntityType<HouseflyEntity>> HOUSEFLY = register("housefly",
+	public static final RegistryObject<EntityType<HouseflyEntity>> BOTFLY = register("botfly",
 			EntityType.Builder.<HouseflyEntity>of(HouseflyEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(HouseflyEntity::new)
 
 					.sized(0.45f, 1.6f));
@@ -190,7 +190,7 @@ public class EnemyexpansionModEntities {
 		event.put(LADYBUG.get(), LadybugEntity.createAttributes().build());
 		event.put(WASP.get(), WaspEntity.createAttributes().build());
 		event.put(DRONE.get(), DroneEntity.createAttributes().build());
-		event.put(HOUSEFLY.get(), HouseflyEntity.createAttributes().build());
+		event.put(BOTFLY.get(), HouseflyEntity.createAttributes().build());
 		event.put(FLUTTERFLY.get(), FlutterflyEntity.createAttributes().build());
 		event.put(HUNTSMAN.get(), HuntsmanEntity.createAttributes().build());
 		event.put(STARVED.get(), StarvedEntity.createAttributes().build());

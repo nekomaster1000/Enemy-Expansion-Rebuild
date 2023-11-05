@@ -1,10 +1,12 @@
 {
   "type": "forge:add_spawns",
-  "biomes": "#forge:is_generalnotemp",
+  "biomes": {
+    "type": "forge:any"
+  },
   "spawners": {
     "type": "enemyexpansion:sprinter",
-    "weight": 100,
+    "weight": 70,
     "minCount": 1,
-    "maxCount": 3
+    "maxCount": 1
   }
 }

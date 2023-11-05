@@ -1242,12 +1242,12 @@
       "sortid": 12,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "housefly",
+      "registry_name": "botfly",
       "metadata": {
         "files": [
-          "src/main/resources/assets/enemyexpansion/models/item/housefly_spawn_egg.json",
           "src/main/java/net/mcreator/enemyexpansion/entity/HouseflyEntity.java",
           "src/main/java/net/mcreator/enemyexpansion/client/renderer/HouseflyRenderer.java",
+          "src/main/resources/assets/enemyexpansion/models/item/botfly_spawn_egg.json",
           "src/main/java/net/mcreator/enemyexpansion/entity/model/HouseflyModel.java"
         ]
       },
@@ -3626,11 +3626,11 @@
       "advancements.troll_hunter.title": "Troll Hunter",
       "item.enemyexpansion.horsehead_chestplate": "-",
       "item.enemyexpansion.huntsman_spawn_egg": "Huntsman Spawn Egg",
+      "item.enemyexpansion.botfly_spawn_egg": "Botfly Spawn Egg",
       "advancements.troll_petrified.title": "Trolled!",
       "advancements.wasp_drone_summon.descr": "Hatch a Wasp Drone from a Wasp Thorax!",
       "item.enemyexpansion.meathead_chestplate": "-",
       "block.enemyexpansion.troll_statue": "Troll Statue",
-      "entity.enemyexpansion.housefly": "Housefly",
       "item.enemyexpansion.silverhead_leggings": "-",
       "item.enemyexpansion.goblin_spawn_egg": "Goblin Thief Spawn Egg",
       "item.enemyexpansion.vampire_spawn_egg": "Vampire Spawn Egg",
@@ -3662,7 +3662,6 @@
       "item.enemyexpansion.silverhead_chestplate": "-",
       "entity.enemyexpansion.troll": "Troll",
       "entity.enemyexpansion.vampire": "Vampire",
-      "item.enemyexpansion.housefly_spawn_egg": "Housefly Spawn Egg",
       "item.enemyexpansion.horsehead_helmet": "Horsehead",
       "config.enemyexpansion.better_config": "enemyexpansion",
       "effect.enemyexpansion.bitten": "Bitten",
@@ -3693,7 +3692,8 @@
       "advancements.starved_steal.title": "Thief!",
       "entity.enemyexpansion.meature": "Meature",
       "item.enemyexpansion.vampflyer_spawn_egg": "Vampire in Flight Spawn Egg",
-      "item.enemyexpansion.vampbiter_spawn_egg": "Vampire Biter Spawn Egg"
+      "item.enemyexpansion.vampbiter_spawn_egg": "Vampire Biter Spawn Egg",
+      "entity.enemyexpansion.botfly": "Botfly"
     }
   },
   "foldersRoot": {

@@ -1,10 +1,12 @@
 {
   "type": "forge:add_spawns",
-  "biomes": "#forge:is_goblin",
+  "biomes": {
+    "type": "forge:any"
+  },
   "spawners": {
     "type": "enemyexpansion:goblin",
-    "weight": 65,
+    "weight": 20,
     "minCount": 1,
-    "maxCount": 3
+    "maxCount": 4
   }
 }

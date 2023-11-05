@@ -40,7 +40,7 @@ public class FliesFromZombiesProcedure {
 			if (Math.random() < (double) BetterConfigConfiguration.SPAWNFLIESONDEATH.get() / 100) {
 				for (int index0 = 0; index0 < (int) (5); index0++) {
 					if (world instanceof ServerLevel _level) {
-						Entity entityToSpawn = new HouseflyEntity(EnemyexpansionModEntities.HOUSEFLY.get(), _level);
+						Entity entityToSpawn = new HouseflyEntity(EnemyexpansionModEntities.BOTFLY.get(), _level);
 						entityToSpawn.moveTo(x, y, z, 0, 0);
 						entityToSpawn.setYBodyRot(0);
 						entityToSpawn.setYHeadRot(0);

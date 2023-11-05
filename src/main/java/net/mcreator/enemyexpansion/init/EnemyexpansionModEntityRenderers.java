@@ -50,7 +50,7 @@ public class EnemyexpansionModEntityRenderers {
 		event.registerEntityRenderer(EnemyexpansionModEntities.LADYBUG.get(), LadybugRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.WASP.get(), WaspRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.DRONE.get(), DroneRenderer::new);
-		event.registerEntityRenderer(EnemyexpansionModEntities.HOUSEFLY.get(), HouseflyRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.BOTFLY.get(), HouseflyRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.FLUTTERFLY.get(), FlutterflyRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.HUNTSMAN.get(), HuntsmanRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.STARVED.get(), StarvedRenderer::new);
