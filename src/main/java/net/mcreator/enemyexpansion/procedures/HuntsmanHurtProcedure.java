@@ -45,6 +45,9 @@ public class HuntsmanHurtProcedure {
 						((HuntsmanEntity) entity).setAnimation("punch");
 					}
 					EnemyexpansionMod.queueServerWork(9, () -> {
+						if (entity instanceof HuntsmanEntity) {
+							((HuntsmanEntity) entity).setAnimation("empty");
+						}
 						if (entity.isAlive()) {
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {

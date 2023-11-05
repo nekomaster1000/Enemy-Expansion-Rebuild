@@ -34,6 +34,11 @@ public class SilverqueenBlockProcedure {
 			if (entity instanceof SilverqueendefensiveEntity) {
 				((SilverqueendefensiveEntity) entity).setAnimation("blocking_attack");
 			}
+			EnemyexpansionMod.queueServerWork(20, () -> {
+				if (entity instanceof SilverqueendefensiveEntity) {
+					((SilverqueendefensiveEntity) entity).setAnimation("empty");
+				}
+			});
 			EnemyexpansionMod.queueServerWork(7, () -> {
 				if (sourceentity.isAlive()) {
 					if (world instanceof Level _level) {

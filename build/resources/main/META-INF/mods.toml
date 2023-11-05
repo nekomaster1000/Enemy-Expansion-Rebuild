@@ -4,12 +4,15 @@ license="All Rights Reserved"
 
 [[mods]]
 modId="enemyexpansion"
-version="1.20.0"
+version="2.0.0"
 displayName="Enemy Expansion"
-credits="Created using mod maker MCreator - https://mcreator.net/about"
+credits="Made with MCreator!"
 displayURL="https://infernalstudios.org/"
 logoFile="logo.png"
 authors="nekomaster1000"
+description='''
+Adding more enemies to Minecraft!
+'''
 
 [[dependencies.enemyexpansion]]
     modId="minecraft"

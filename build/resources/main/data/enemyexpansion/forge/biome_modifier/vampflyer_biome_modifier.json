@@ -1,11 +1,9 @@
 {
   "type": "forge:add_spawns",
-  "biomes": {
-    "type": "forge:any"
-  },
+  "biomes": "#forge:is_general",
   "spawners": {
     "type": "enemyexpansion:vampflyer",
-    "weight": 20,
+    "weight": 40,
     "minCount": 1,
     "maxCount": 1
   }

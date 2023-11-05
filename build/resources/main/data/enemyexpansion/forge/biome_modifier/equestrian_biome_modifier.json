@@ -1,11 +1,9 @@
 {
   "type": "forge:add_spawns",
-  "biomes": {
-    "type": "forge:any"
-  },
+  "biomes": "#forge:is_plains",
   "spawners": {
     "type": "enemyexpansion:equestrian",
-    "weight": 20,
+    "weight": 10,
     "minCount": 1,
     "maxCount": 1
   }

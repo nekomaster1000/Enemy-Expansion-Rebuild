@@ -1,11 +1,9 @@
 {
   "type": "forge:add_spawns",
-  "biomes": {
-    "type": "forge:any"
-  },
+  "biomes": "#forge:is_general",
   "spawners": {
     "type": "enemyexpansion:troll",
-    "weight": 20,
+    "weight": 30,
     "minCount": 1,
     "maxCount": 1
   }

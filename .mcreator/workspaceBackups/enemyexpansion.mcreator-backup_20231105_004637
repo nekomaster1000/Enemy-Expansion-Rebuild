@@ -3754,7 +3754,8 @@
   "workspaceSettings": {
     "modid": "enemyexpansion",
     "modName": "Enemy Expansion",
-    "version": "1.20.0",
+    "version": "2.0.0",
+    "description": "Adding more enemies to Minecraft!",
     "author": "nekomaster1000",
     "websiteURL": "https://infernalstudios.org/",
     "license": "All Rights Reserved",
@@ -3771,7 +3772,7 @@
       "allmods"
     ],
     "currentGenerator": "forge-1.19.2",
-    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "credits": "Made with MCreator!",
     "modElementsPackage": "net.mcreator.enemyexpansion",
     "lockBaseModFiles": false
   },

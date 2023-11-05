@@ -31,6 +31,11 @@ public class SilverqueenParryProcedure {
 			if (entity instanceof SilverqueenattackingEntity) {
 				((SilverqueenattackingEntity) entity).setAnimation("attack");
 			}
+			EnemyexpansionMod.queueServerWork(20, () -> {
+				if (entity instanceof SilverqueenattackingEntity) {
+					((SilverqueenattackingEntity) entity).setAnimation("empty");
+				}
+			});
 			EnemyexpansionMod.queueServerWork(7, () -> {
 				if (entity.isAlive()) {
 					{
