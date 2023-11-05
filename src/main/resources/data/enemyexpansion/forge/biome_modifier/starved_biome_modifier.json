@@ -1,11 +1,9 @@
 {
   "type": "forge:add_spawns",
-  "biomes": {
-    "type": "forge:any"
-  },
+  "biomes": "#forge:is_hot/overworld",
   "spawners": {
     "type": "enemyexpansion:starved",
-    "weight": 50,
+    "weight": 100,
     "minCount": 1,
     "maxCount": 1
   }

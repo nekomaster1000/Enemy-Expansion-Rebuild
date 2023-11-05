@@ -3754,8 +3754,8 @@
   "workspaceSettings": {
     "modid": "enemyexpansion",
     "modName": "Enemy Expansion",
-    "version": "1.20.0",
-    "description": "Adds more enemies to Minecraft!",
+    "version": "2.0.0",
+    "description": "Adding more enemies to Minecraft!",
     "author": "nekomaster1000",
     "websiteURL": "https://infernalstudios.org/",
     "license": "All Rights Reserved",

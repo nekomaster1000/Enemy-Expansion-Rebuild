@@ -1,8 +1,6 @@
 {
   "type": "forge:add_spawns",
-  "biomes": {
-    "type": "forge:any"
-  },
+  "biomes": "#forge:is_general",
   "spawners": {
     "type": "enemyexpansion:huntsman",
     "weight": 50,

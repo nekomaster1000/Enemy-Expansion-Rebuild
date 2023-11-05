@@ -1,12 +1,10 @@
 {
   "type": "forge:add_spawns",
-  "biomes": {
-    "type": "forge:any"
-  },
+  "biomes": "#forge:is_generalnotemp",
   "spawners": {
     "type": "enemyexpansion:slugger",
-    "weight": 40,
+    "weight": 100,
     "minCount": 1,
-    "maxCount": 1
+    "maxCount": 2
   }
 }

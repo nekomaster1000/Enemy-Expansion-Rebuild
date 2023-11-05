@@ -1,12 +1,10 @@
 {
   "type": "forge:add_spawns",
-  "biomes": {
-    "type": "forge:any"
-  },
+  "biomes": "#forge:is_dense",
   "spawners": {
     "type": "enemyexpansion:wasp",
     "weight": 100,
     "minCount": 1,
-    "maxCount": 5
+    "maxCount": 4
   }
 }

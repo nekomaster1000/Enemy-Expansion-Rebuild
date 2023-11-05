@@ -1,11 +1,9 @@
 {
   "type": "forge:add_spawns",
-  "biomes": {
-    "type": "forge:any"
-  },
+  "biomes": "#forge:is_lush",
   "spawners": {
     "type": "enemyexpansion:ladybug",
-    "weight": 100,
+    "weight": 80,
     "minCount": 1,
     "maxCount": 1
   }
