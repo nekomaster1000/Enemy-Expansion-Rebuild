@@ -108,7 +108,7 @@ public class EquestrianEntity extends Monster implements IAnimatable {
 
 	@Override
 	public MobType getMobType() {
-		return MobType.UNDEFINED;
+		return MobType.UNDEAD;
 	}
 
 	@Override

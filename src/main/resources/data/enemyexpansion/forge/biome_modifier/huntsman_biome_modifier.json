@@ -1,8 +1,21 @@
 {
   "type": "forge:add_spawns",
-  "biomes": {
-    "type": "forge:any"
-  },
+  "biomes": [
+    "forest",
+    "snowy_plains",
+    "sparse_jungle",
+    "birch_forest",
+    "flower_forest",
+    "snowy_taiga",
+    "old_growth_birch_forest",
+    "bamboo_jungle",
+    "windswept_hills",
+    "dark_forest",
+    "plains",
+    "windswept_forest",
+    "jungle",
+    "snowy_beach"
+  ],
   "spawners": {
     "type": "enemyexpansion:huntsman",
     "weight": 50,

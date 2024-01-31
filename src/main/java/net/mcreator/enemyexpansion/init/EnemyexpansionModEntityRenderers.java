@@ -21,7 +21,6 @@ import net.mcreator.enemyexpansion.client.renderer.TarantulaRenderer;
 import net.mcreator.enemyexpansion.client.renderer.StarvedRenderer;
 import net.mcreator.enemyexpansion.client.renderer.SprinterRenderer;
 import net.mcreator.enemyexpansion.client.renderer.SluggerRenderer;
-import net.mcreator.enemyexpansion.client.renderer.SilverqueendefensiveRenderer;
 import net.mcreator.enemyexpansion.client.renderer.SilverqueenbodilessRenderer;
 import net.mcreator.enemyexpansion.client.renderer.SilverqueenattackingRenderer;
 import net.mcreator.enemyexpansion.client.renderer.ScorpionRenderer;
@@ -59,8 +58,7 @@ public class EnemyexpansionModEntityRenderers {
 		event.registerEntityRenderer(EnemyexpansionModEntities.VAMPBITER.get(), VampbiterRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.TROLL.get(), TrollRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.TROLLENRAGED.get(), TrollenragedRenderer::new);
-		event.registerEntityRenderer(EnemyexpansionModEntities.SILVERQUEENATTACKING.get(), SilverqueenattackingRenderer::new);
-		event.registerEntityRenderer(EnemyexpansionModEntities.SILVERQUEENDEFENDING.get(), SilverqueendefensiveRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.SILVERQUEEN.get(), SilverqueenattackingRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.SILVERQUEENBODILESS.get(), SilverqueenbodilessRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.PHANTOM_EYE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.HEALING_EYE.get(), ThrownItemRenderer::new);

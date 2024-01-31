@@ -43,7 +43,6 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.Difficulty;
 import net.minecraft.util.RandomSource;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
@@ -56,6 +55,7 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.enemyexpansion.procedures.WaspTickProcedure;
 import net.mcreator.enemyexpansion.procedures.WaspHurtProcedure;
 import net.mcreator.enemyexpansion.procedures.IfTimeIsNightProcedure;
+import net.mcreator.enemyexpansion.procedures.IfCanSeeSkyProcedure;
 import net.mcreator.enemyexpansion.init.EnemyexpansionModEntities;
 
 import java.util.EnumSet;
@@ -249,8 +249,12 @@ public class WaspEntity extends Monster implements IAnimatable {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(EnemyexpansionModEntities.WASP.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
+		SpawnPlacements.register(EnemyexpansionModEntities.WASP.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			return IfCanSeeSkyProcedure.execute(world, x, y, z);
+		});
 		DungeonHooks.addDungeonMob(EnemyexpansionModEntities.WASP.get(), 180);
 	}
 

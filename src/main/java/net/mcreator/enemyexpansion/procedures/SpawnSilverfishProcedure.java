@@ -12,12 +12,24 @@ import net.minecraft.util.Mth;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.particles.ParticleTypes;
 
+import net.mcreator.enemyexpansion.init.EnemyexpansionModEntities;
+import net.mcreator.enemyexpansion.entity.GoblinFearEntity;
 import net.mcreator.enemyexpansion.EnemyexpansionMod;
 
 public class SpawnSilverfishProcedure {
-	public static void execute(LevelAccessor world, Entity entity) {
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+		if (world instanceof ServerLevel _level) {
+			Entity entityToSpawn = new GoblinFearEntity(EnemyexpansionModEntities.GOBLIN_FEAR.get(), _level);
+			entityToSpawn.moveTo(x, y, z, 0, 0);
+			entityToSpawn.setYBodyRot(0);
+			entityToSpawn.setYHeadRot(0);
+			entityToSpawn.setDeltaMovement(0, 0, 0);
+			if (entityToSpawn instanceof Mob _mobToSpawn)
+				_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+			world.addFreshEntity(entityToSpawn);
+		}
 		if (world instanceof ServerLevel _serverLevelForEntitySpawn) {
 			Entity _entityForSpawning = new Silverfish(EntityType.SILVERFISH, _serverLevelForEntitySpawn);
 			_entityForSpawning.moveTo((entity.getX()), (entity.getY()), (entity.getZ()), world.getRandom().nextFloat() * 360F, 0);

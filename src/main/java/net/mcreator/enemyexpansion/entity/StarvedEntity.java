@@ -54,7 +54,6 @@ import net.minecraft.world.MenuProvider;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.DifficultyInstance;
-import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
@@ -73,6 +72,7 @@ import net.mcreator.enemyexpansion.world.inventory.StarvedGUIMenu;
 import net.mcreator.enemyexpansion.procedures.StarvedSpawnProcedure;
 import net.mcreator.enemyexpansion.procedures.StarvedHurtProcedure;
 import net.mcreator.enemyexpansion.procedures.OpenStarvedGUIProcedure;
+import net.mcreator.enemyexpansion.procedures.IfCanSeeSkyProcedure;
 import net.mcreator.enemyexpansion.init.EnemyexpansionModEntities;
 
 import javax.annotation.Nullable;
@@ -261,13 +261,17 @@ public class StarvedEntity extends Monster implements IAnimatable {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(EnemyexpansionModEntities.STARVED.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
+		SpawnPlacements.register(EnemyexpansionModEntities.STARVED.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			return IfCanSeeSkyProcedure.execute(world, x, y, z);
+		});
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.32);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.36);
 		builder = builder.add(Attributes.MAX_HEALTH, 16);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 5);

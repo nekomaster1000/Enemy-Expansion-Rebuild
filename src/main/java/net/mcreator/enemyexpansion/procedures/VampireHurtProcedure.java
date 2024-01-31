@@ -26,6 +26,7 @@ import net.mcreator.enemyexpansion.entity.VampireEntity;
 import net.mcreator.enemyexpansion.entity.VampflyerEntity;
 import net.mcreator.enemyexpansion.entity.VampbiterEntity;
 import net.mcreator.enemyexpansion.entity.GoblinFearEntity;
+import net.mcreator.enemyexpansion.configuration.BetterConfigConfiguration;
 import net.mcreator.enemyexpansion.EnemyexpansionMod;
 
 public class VampireHurtProcedure {
@@ -41,7 +42,7 @@ public class VampireHurtProcedure {
 				world.addFreshEntity(entityToSpawn);
 			}
 			VampireIgnitionProcedure.execute(world, x, y, z, entity);
-			if (Math.random() < 0.2) {
+			if (Math.random() < (double) BetterConfigConfiguration.VAMPIRETOFLYER.get() / 100) {
 				EnemyexpansionMod.queueServerWork(1, () -> {
 					if (world instanceof ServerLevel _serverLevelForEntitySpawn) {
 						Entity _entityForSpawning = new VampflyerEntity(EnemyexpansionModEntities.VAMPFLYER.get(), _serverLevelForEntitySpawn);
@@ -75,7 +76,7 @@ public class VampireHurtProcedure {
 						world.addFreshEntity(_entityForSpawning);
 					}
 				});
-			} else if (Math.random() < 0.1) {
+			} else if (Math.random() < (double) BetterConfigConfiguration.VAMPIRETOBITER.get() / 100) {
 				EnemyexpansionMod.queueServerWork(2, () -> {
 					if (world instanceof ServerLevel _serverLevelForEntitySpawn) {
 						Entity _entityForSpawning = new VampbiterEntity(EnemyexpansionModEntities.VAMPBITER.get(), _serverLevelForEntitySpawn);
@@ -90,15 +91,14 @@ public class VampireHurtProcedure {
 			}
 		} else if (entity instanceof VampflyerEntity) {
 			VampireIgnitionProcedure.execute(world, x, y, z, entity);
-			if (Math.random() < 1) {
+			if (entity instanceof LivingEntity _entity)
+				_entity.removeEffect(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get());
+			entity.setDeltaMovement(new Vec3((Mth.nextDouble(RandomSource.create(), -1.5, 1.5)), (Mth.nextInt(RandomSource.create(), (int) (-0.1), (int) 0.1)), (Mth.nextDouble(RandomSource.create(), -1.5, 1.5))));
+			EnemyexpansionMod.queueServerWork((int) Mth.nextDouble(RandomSource.create(), 15, 25), () -> {
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get());
-				entity.setDeltaMovement(new Vec3((Mth.nextDouble(RandomSource.create(), -1.5, 1.5)), (Mth.nextInt(RandomSource.create(), (int) (-0.1), (int) 0.1)), (Mth.nextDouble(RandomSource.create(), -1.5, 1.5))));
-				EnemyexpansionMod.queueServerWork((int) Mth.nextDouble(RandomSource.create(), 15, 25), () -> {
-					if (entity instanceof LivingEntity _entity)
-						_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get(), (int) Mth.nextDouble(RandomSource.create(), 40, 80), (int) Mth.nextDouble(RandomSource.create(), 0, 2), (false), (false)));
-				});
-			} else if (Math.random() < 0.2) {
+					_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get(), (int) Mth.nextDouble(RandomSource.create(), 40, 80), (int) Mth.nextDouble(RandomSource.create(), 0, 2), (false), (false)));
+			});
+			if (Math.random() < (double) BetterConfigConfiguration.FLYERTOVAMPIRE.get() / 100) {
 				EnemyexpansionMod.queueServerWork(1, () -> {
 					if (world instanceof ServerLevel _serverLevelForEntitySpawn) {
 						Entity _entityForSpawning = new VampireEntity(EnemyexpansionModEntities.VAMPIRE.get(), _serverLevelForEntitySpawn);
@@ -122,7 +122,7 @@ public class VampireHurtProcedure {
 						world.addFreshEntity(_entityForSpawning);
 					}
 				});
-			} else if (Math.random() < 0.1) {
+			} else if (Math.random() < (double) BetterConfigConfiguration.VAMPIRETOBITER.get() / 100) {
 				if (world instanceof ServerLevel _serverLevelForEntitySpawn) {
 					Entity _entityForSpawning = new VampbiterEntity(EnemyexpansionModEntities.VAMPBITER.get(), _serverLevelForEntitySpawn);
 					_entityForSpawning.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);

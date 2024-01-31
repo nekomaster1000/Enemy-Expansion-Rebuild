@@ -2,7 +2,7 @@
   "_fv": 39,
   "_type": "animatedentity",
   "definition": {
-    "mobName": "Attacking Silverqueen",
+    "mobName": "Silverqueen",
     "mobLabel": "",
     "mobModelTexture": "silverqueen.png",
     "mobModelGlowTexture": "",
@@ -58,7 +58,7 @@
     "armorBaseValue": 0.0,
     "trackingRange": 64,
     "followRange": 24,
-    "health": 20,
+    "health": 30,
     "xpAmount": 10,
     "waterMob": false,
     "flyingMob": false,
@@ -143,16 +143,23 @@
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,
     "height": 1.0,
-    "spawnThisMob": false,
+    "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
     "spawningCondition": {
       "name": "IfBelowY50"
     },
-    "spawningProbability": 20,
+    "spawningProbability": 10,
     "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 1,
-    "restrictionBiomes": [],
+    "restrictionBiomes": [
+      {
+        "value": "mutated_extreme_hills_with_trees"
+      },
+      {
+        "value": "smaller_extreme_hills"
+      }
+    ],
     "spawnInDungeons": false
   }
 }

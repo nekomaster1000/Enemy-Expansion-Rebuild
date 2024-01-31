@@ -13,9 +13,6 @@ public class PhantasmBootsSpeedProcedure {
 			return;
 		if (world.getMaxLocalRawBrightness(new BlockPos(x, y + 1, z)) == 0) {
 			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 110, 2, (false), (false)));
-		} else if (world.getMaxLocalRawBrightness(new BlockPos(x, y + 1, z)) < 4) {
-			if (entity instanceof LivingEntity _entity)
 				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 110, 1, (false), (false)));
 		} else if (world.getMaxLocalRawBrightness(new BlockPos(x, y + 1, z)) < 8) {
 			if (entity instanceof LivingEntity _entity)

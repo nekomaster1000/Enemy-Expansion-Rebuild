@@ -16,6 +16,7 @@ import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.enemyexpansion.item.WaspThoraxItem;
 import net.mcreator.enemyexpansion.item.TrollfaceItem;
+import net.mcreator.enemyexpansion.item.TrollMolarItem;
 import net.mcreator.enemyexpansion.item.SilverheadItem;
 import net.mcreator.enemyexpansion.item.ScorpionTailItem;
 import net.mcreator.enemyexpansion.item.PhantomEyeItem;
@@ -24,6 +25,7 @@ import net.mcreator.enemyexpansion.item.MeatheadItem;
 import net.mcreator.enemyexpansion.item.HorseheadItem;
 import net.mcreator.enemyexpansion.item.HealingEyeItem;
 import net.mcreator.enemyexpansion.item.HeadbiterItem;
+import net.mcreator.enemyexpansion.item.DeathstickItem;
 import net.mcreator.enemyexpansion.item.BottledFlutterflyItem;
 import net.mcreator.enemyexpansion.EnemyexpansionMod;
 
@@ -50,10 +52,8 @@ public class EnemyexpansionModItems {
 	public static final RegistryObject<Item> TROLL_SPAWN_EGG = REGISTRY.register("troll_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.TROLL, -2172995, -2902212, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> TROLLENRAGED_SPAWN_EGG = REGISTRY.register("trollenraged_spawn_egg",
 			() -> new ForgeSpawnEggItem(EnemyexpansionModEntities.TROLLENRAGED, -4020081, -2902212, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
-	public static final RegistryObject<Item> SILVERQUEENATTACKING_SPAWN_EGG = REGISTRY.register("silverqueenattacking_spawn_egg",
-			() -> new ForgeSpawnEggItem(EnemyexpansionModEntities.SILVERQUEENATTACKING, -12434878, -5921371, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
-	public static final RegistryObject<Item> SILVERQUEENDEFENDING_SPAWN_EGG = REGISTRY.register("silverqueendefending_spawn_egg",
-			() -> new ForgeSpawnEggItem(EnemyexpansionModEntities.SILVERQUEENDEFENDING, -14342875, -5921371, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> SILVERQUEEN_SPAWN_EGG = REGISTRY.register("silverqueen_spawn_egg",
+			() -> new ForgeSpawnEggItem(EnemyexpansionModEntities.SILVERQUEEN, -12434878, -5921371, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> SILVERQUEENBODILESS_SPAWN_EGG = REGISTRY.register("silverqueenbodiless_spawn_egg",
 			() -> new ForgeSpawnEggItem(EnemyexpansionModEntities.SILVERQUEENBODILESS, -14342875, -5921371, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> TROLL_STATUE = block(EnemyexpansionModBlocks.TROLL_STATUE, CreativeModeTab.TAB_MISC);
@@ -71,6 +71,8 @@ public class EnemyexpansionModItems {
 	public static final RegistryObject<Item> PHANTASM_LEGGINGS = REGISTRY.register("phantasm_leggings", () -> new PhantasmItem.Leggings());
 	public static final RegistryObject<Item> PHANTASM_BOOTS = REGISTRY.register("phantasm_boots", () -> new PhantasmItem.Boots());
 	public static final RegistryObject<Item> TROLLFACE = REGISTRY.register("trollface", () -> new TrollfaceItem());
+	public static final RegistryObject<Item> TROLL_MOLAR = REGISTRY.register("troll_molar", () -> new TrollMolarItem());
+	public static final RegistryObject<Item> DEATHSTICK = REGISTRY.register("deathstick", () -> new DeathstickItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

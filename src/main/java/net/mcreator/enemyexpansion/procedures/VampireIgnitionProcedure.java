@@ -15,6 +15,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.enemyexpansion.configuration.BetterConfigConfiguration;
 import net.mcreator.enemyexpansion.EnemyexpansionMod;
 
 public class VampireIgnitionProcedure {
@@ -25,35 +26,37 @@ public class VampireIgnitionProcedure {
 			entity.setSecondsOnFire(10);
 			EnemyexpansionMod.queueServerWork(50, () -> {
 				if (entity.isAlive() && entity.isOnFire()) {
-					if (!entity.level.isClientSide())
-						entity.discard();
-					if (world instanceof Level _level) {
-						if (!_level.isClientSide()) {
-							_level.playSound(null, new BlockPos(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.burn")), SoundSource.HOSTILE, 1, 2);
-						} else {
-							_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.burn")), SoundSource.HOSTILE, 1, 2, false);
+					if (BetterConfigConfiguration.VAMPIRESEXPLODE.get() == true) {
+						if (!entity.level.isClientSide())
+							entity.discard();
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, new BlockPos(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.burn")), SoundSource.HOSTILE, 1, 2);
+							} else {
+								_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.burn")), SoundSource.HOSTILE, 1, 2, false);
+							}
 						}
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, new BlockPos(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.phantom.death")), SoundSource.HOSTILE, 1, 0);
+							} else {
+								_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.phantom.death")), SoundSource.HOSTILE, 1, 0, false);
+							}
+						}
+						if (world instanceof ServerLevel _level)
+							_level.sendParticles(ParticleTypes.SMALL_FLAME, (entity.getX()), (entity.getY()), (entity.getZ()), 20, 0.3, 0.3, 0.3, 1);
+						if (world instanceof ServerLevel _level)
+							_level.sendParticles(ParticleTypes.SQUID_INK, (entity.getX()), (entity.getY()), (entity.getZ()), 20, 0.3, 0.3, 0.3, 1);
+						if (world instanceof Level _level && !_level.isClientSide())
+							_level.explode(null, (entity.getX()), (entity.getY()), (entity.getZ()), 2, Explosion.BlockInteraction.NONE);
+						EnemyexpansionMod.queueServerWork(2, () -> {
+							if (world instanceof Level _level && !_level.isClientSide()) {
+								ItemEntity entityToSpawn = new ItemEntity(_level, (entity.getX()), (entity.getY()), (entity.getZ()), new ItemStack(Items.GUNPOWDER));
+								entityToSpawn.setPickUpDelay(10);
+								_level.addFreshEntity(entityToSpawn);
+							}
+						});
 					}
-					if (world instanceof Level _level) {
-						if (!_level.isClientSide()) {
-							_level.playSound(null, new BlockPos(entity.getX(), entity.getY(), entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.phantom.death")), SoundSource.HOSTILE, 1, 0);
-						} else {
-							_level.playLocalSound((entity.getX()), (entity.getY()), (entity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.phantom.death")), SoundSource.HOSTILE, 1, 0, false);
-						}
-					}
-					if (world instanceof ServerLevel _level)
-						_level.sendParticles(ParticleTypes.SMALL_FLAME, (entity.getX()), (entity.getY()), (entity.getZ()), 20, 0.3, 0.3, 0.3, 1);
-					if (world instanceof ServerLevel _level)
-						_level.sendParticles(ParticleTypes.SQUID_INK, (entity.getX()), (entity.getY()), (entity.getZ()), 20, 0.3, 0.3, 0.3, 1);
-					if (world instanceof Level _level && !_level.isClientSide())
-						_level.explode(null, (entity.getX()), (entity.getY()), (entity.getZ()), 2, Explosion.BlockInteraction.NONE);
-					EnemyexpansionMod.queueServerWork(2, () -> {
-						if (world instanceof Level _level && !_level.isClientSide()) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, (entity.getX()), (entity.getY()), (entity.getZ()), new ItemStack(Items.GUNPOWDER));
-							entityToSpawn.setPickUpDelay(10);
-							_level.addFreshEntity(entityToSpawn);
-						}
-					});
 				}
 			});
 		}

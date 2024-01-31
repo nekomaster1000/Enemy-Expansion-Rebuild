@@ -1,8 +1,17 @@
 {
   "type": "forge:add_spawns",
-  "biomes": {
-    "type": "forge:any"
-  },
+  "biomes": [
+    "old_growth_birch_forest",
+    "forest",
+    "bamboo_jungle",
+    "dark_forest",
+    "sparse_jungle",
+    "plains",
+    "birch_forest",
+    "flower_forest",
+    "windswept_forest",
+    "jungle"
+  ],
   "spawners": {
     "type": "enemyexpansion:sprinter",
     "weight": 70,

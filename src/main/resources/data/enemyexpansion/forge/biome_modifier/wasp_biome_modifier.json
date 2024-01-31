@@ -1,12 +1,17 @@
 {
   "type": "forge:add_spawns",
-  "biomes": {
-    "type": "forge:any"
-  },
+  "biomes": [
+    "old_growth_birch_forest",
+    "forest",
+    "dark_forest",
+    "birch_forest",
+    "flower_forest",
+    "windswept_forest"
+  ],
   "spawners": {
     "type": "enemyexpansion:wasp",
     "weight": 100,
     "minCount": 1,
-    "maxCount": 5
+    "maxCount": 4
   }
 }

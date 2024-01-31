@@ -1,8 +1,6 @@
 {
   "type": "forge:add_spawns",
-  "biomes": {
-    "type": "forge:any"
-  },
+  "biomes": "lush_caves",
   "spawners": {
     "type": "enemyexpansion:ladybug",
     "weight": 100,

@@ -47,7 +47,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -59,6 +58,7 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.enemyexpansion.procedures.RareAttackGoalProcedure;
 import net.mcreator.enemyexpansion.procedures.LadybugTradeProcedure;
 import net.mcreator.enemyexpansion.procedures.LadybugTickProcedure;
+import net.mcreator.enemyexpansion.procedures.IfCantSeeSkyProcedure;
 import net.mcreator.enemyexpansion.init.EnemyexpansionModEntities;
 
 public class LadybugEntity extends Monster implements IAnimatable {
@@ -192,8 +192,12 @@ public class LadybugEntity extends Monster implements IAnimatable {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(EnemyexpansionModEntities.LADYBUG.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
+		SpawnPlacements.register(EnemyexpansionModEntities.LADYBUG.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			return IfCantSeeSkyProcedure.execute(world, x, y, z);
+		});
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {

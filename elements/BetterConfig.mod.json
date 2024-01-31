@@ -4,7 +4,7 @@
   "definition": {
     "pools": [
       {
-        "category": "mobSpawning",
+        "category": "mobs",
         "entries": [
           {
             "item": {
@@ -21,6 +21,137 @@
             "vardisplay": "Topmost Y-level at which Cave Mobs can spawn",
             "varname": "cavemobspawndepth",
             "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Drone"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 20.0,
+            "textDefault": "",
+            "comment": "Range: 0 to 100 (Percent)",
+            "vardisplay": "Chance Vampires will start flying when hurt",
+            "varname": "vampiretoflyer",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Drone"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 30.0,
+            "textDefault": "",
+            "comment": "Range: 0 to 100 (Percent)",
+            "vardisplay": "Chance Vampires will stop flying when hurt",
+            "varname": "flyertovampire",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Drone"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 10.0,
+            "textDefault": "",
+            "comment": "Range: 0 to 100 (Percent)",
+            "vardisplay": "Chance Vampire will turn into a Biter, regenerating it's health",
+            "varname": "vampiretobiter",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Drone"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 20.0,
+            "textDefault": "",
+            "comment": "Range: 0 to 100 (Percent)",
+            "vardisplay": "Chance Troll will become enraged when hurt",
+            "varname": "trollbecomesenraged",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Drone"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 20.0,
+            "textDefault": "",
+            "comment": "Range: 0 to 100 (Percent)",
+            "vardisplay": "Chance Troll will calm down from rage when hurt",
+            "varname": "enragedbecomestroll",
+            "enablecomment": true,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Drone"
+          }
+        ]
+      },
+      {
+        "category": "extra death conditions",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 0,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Vampires explode from burning",
+            "varname": "vampiresexplode",
+            "enablecomment": false,
+            "onlyComment": false,
+            "entityType": "CUSTOM:Drone"
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 0,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "Trolls petrify when hurt under sunlight",
+            "varname": "trollspetrify",
+            "enablecomment": false,
             "onlyComment": false,
             "entityType": "CUSTOM:Drone"
           },

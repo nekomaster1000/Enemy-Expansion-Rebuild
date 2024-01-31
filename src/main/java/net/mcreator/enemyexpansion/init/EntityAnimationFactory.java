@@ -14,7 +14,6 @@ import net.mcreator.enemyexpansion.entity.TarantulaEntity;
 import net.mcreator.enemyexpansion.entity.StarvedEntity;
 import net.mcreator.enemyexpansion.entity.SprinterEntity;
 import net.mcreator.enemyexpansion.entity.SluggerEntity;
-import net.mcreator.enemyexpansion.entity.SilverqueendefensiveEntity;
 import net.mcreator.enemyexpansion.entity.SilverqueenbodilessEntity;
 import net.mcreator.enemyexpansion.entity.SilverqueenattackingEntity;
 import net.mcreator.enemyexpansion.entity.ScorpionEntity;
@@ -166,13 +165,6 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof SilverqueenattackingEntity syncable) {
-				String animation = syncable.getSyncedAnimation();
-				if (!animation.equals("undefined")) {
-					syncable.setAnimation("undefined");
-					syncable.animationprocedure = animation;
-				}
-			}
-			if (event.getEntity() instanceof SilverqueendefensiveEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

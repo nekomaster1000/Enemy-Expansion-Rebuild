@@ -1,8 +1,10 @@
 {
   "type": "forge:add_spawns",
-  "biomes": {
-    "type": "forge:any"
-  },
+  "biomes": [
+    "sunflower_plains",
+    "snowy_plains",
+    "plains"
+  ],
   "spawners": {
     "type": "enemyexpansion:equestrian",
     "weight": 20,

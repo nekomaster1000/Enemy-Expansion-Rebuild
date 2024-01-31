@@ -6,6 +6,8 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.GameType;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
@@ -13,13 +15,16 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
+import net.minecraft.client.Minecraft;
 
 import net.mcreator.enemyexpansion.init.EnemyexpansionModEntities;
 import net.mcreator.enemyexpansion.entity.TrollEntity;
 import net.mcreator.enemyexpansion.entity.MeatureEntity;
+import net.mcreator.enemyexpansion.configuration.BetterConfigConfiguration;
 import net.mcreator.enemyexpansion.EnemyexpansionMod;
 
 import java.util.stream.Collectors;
@@ -79,13 +84,25 @@ public class TrollHurtProcedure {
 									.collect(Collectors.toList());
 							for (Entity entityiterator : _entfound) {
 								if (!(entityiterator instanceof TrollEntity)) {
-									entityiterator.setDeltaMovement(new Vec3((Math.sin(Math.toRadians(entity.getYRot() + 180)) * 1.6), 0.65, (Math.cos(Math.toRadians(entity.getYRot())) * 1.6)));
-									if (entityiterator instanceof Mob _entity && entity instanceof LivingEntity _ent)
-										_entity.setTarget(_ent);
+									if (!(new Object() {
+										public boolean checkGamemode(Entity _ent) {
+											if (_ent instanceof ServerPlayer _serverPlayer) {
+												return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.CREATIVE;
+											} else if (_ent.level.isClientSide() && _ent instanceof Player _player) {
+												return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
+														&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.CREATIVE;
+											}
+											return false;
+										}
+									}.checkGamemode(entityiterator))) {
+										entityiterator.setDeltaMovement(new Vec3((Math.sin(Math.toRadians(entity.getYRot() + 180)) * 1.6), 0.65, (Math.cos(Math.toRadians(entity.getYRot())) * 1.6)));
+										if (entityiterator instanceof Mob _entity && entity instanceof LivingEntity _ent)
+											_entity.setTarget(_ent);
+									}
 								}
 							}
 						}
-						if (Math.random() < 0.2) {
+						if (Math.random() < (double) BetterConfigConfiguration.TROLLBECOMESENRAGED.get() / 100) {
 							EnemyexpansionMod.queueServerWork(18, () -> {
 								if (entity.isAlive()) {
 									SpawnTrollEnragedProcedure.execute(world, x, y, z, entity, sourceentity);
@@ -94,7 +111,7 @@ public class TrollHurtProcedure {
 						}
 					}
 				});
-			} else if (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.MOVEMENT_SLOWDOWN) : false) {
+			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.MOVEMENT_SLOWDOWN) : false) && !(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.POISON) : false)) {
 				SpawnTrollEnragedProcedure.execute(world, x, y, z, entity, sourceentity);
 			}
 		}

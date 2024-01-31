@@ -1,11 +1,19 @@
 {
   "type": "forge:add_spawns",
-  "biomes": {
-    "type": "forge:any"
-  },
+  "biomes": [
+    "old_growth_birch_forest",
+    "forest",
+    "sunflower_plains",
+    "snowy_plains",
+    "dark_forest",
+    "plains",
+    "birch_forest",
+    "flower_forest",
+    "windswept_forest"
+  ],
   "spawners": {
     "type": "enemyexpansion:troll",
-    "weight": 20,
+    "weight": 10,
     "minCount": 1,
     "maxCount": 1
   }

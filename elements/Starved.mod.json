@@ -54,7 +54,7 @@
     "attackStrength": 5,
     "attackKnockback": 1.0,
     "knockbackResistance": 0.0,
-    "movementSpeed": 0.32,
+    "movementSpeed": 0.36,
     "armorBaseValue": 0.0,
     "trackingRange": 64,
     "followRange": 12,
@@ -148,11 +148,24 @@
     "height": 1.0,
     "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
+    "spawningCondition": {
+      "name": "IfCanSeeSky"
+    },
     "spawningProbability": 50,
     "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 1,
-    "restrictionBiomes": [],
+    "restrictionBiomes": [
+      {
+        "value": "desert"
+      },
+      {
+        "value": "desert_hills"
+      },
+      {
+        "value": "mutated_desert"
+      }
+    ],
     "spawnInDungeons": false
   }
 }
