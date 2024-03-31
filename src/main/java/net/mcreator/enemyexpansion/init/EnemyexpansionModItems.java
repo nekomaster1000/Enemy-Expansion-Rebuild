@@ -73,6 +73,7 @@ public class EnemyexpansionModItems {
 	public static final RegistryObject<Item> TROLLFACE = REGISTRY.register("trollface", () -> new TrollfaceItem());
 	public static final RegistryObject<Item> TROLL_MOLAR = REGISTRY.register("troll_molar", () -> new TrollMolarItem());
 	public static final RegistryObject<Item> DEATHSTICK = REGISTRY.register("deathstick", () -> new DeathstickItem());
+	public static final RegistryObject<Item> DIREWOLF_SPAWN_EGG = REGISTRY.register("direwolf_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.DIREWOLF, -9541525, -11844283, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

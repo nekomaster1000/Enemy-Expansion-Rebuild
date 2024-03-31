@@ -1,25 +1,10 @@
 {
   "type": "forge:add_spawns",
-  "biomes": [
-    "forest",
-    "snowy_plains",
-    "sparse_jungle",
-    "birch_forest",
-    "flower_forest",
-    "snowy_taiga",
-    "old_growth_birch_forest",
-    "bamboo_jungle",
-    "windswept_hills",
-    "dark_forest",
-    "plains",
-    "windswept_forest",
-    "jungle",
-    "snowy_beach"
-  ],
+  "biomes": "#forge:is_general",
   "spawners": {
-    "type": "enemyexpansion:huntsman",
-    "weight": 50,
+    "type": "enemyexpansion:huntsmanskeleton",
+    "weight": 40,
     "minCount": 1,
-    "maxCount": 1
+    "maxCount": 2
   }
 }

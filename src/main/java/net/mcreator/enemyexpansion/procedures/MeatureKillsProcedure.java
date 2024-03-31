@@ -17,7 +17,7 @@ public class MeatureKillsProcedure {
 		String max_health = "";
 		String attribute_command = "";
 		if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) < 50) {
-			max_health = new java.text.DecimalFormat("##.##").format((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) + 2);
+			max_health = new java.text.DecimalFormat("##.##").format((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) + 1);
 			attribute_command = "/attribute @s minecraft:generic.max_health base set (max_health)".replace("(max_health)", max_health);
 			{
 				Entity _ent = sourceentity;

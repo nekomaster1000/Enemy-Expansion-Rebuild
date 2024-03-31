@@ -1,21 +1,10 @@
 {
   "type": "forge:add_spawns",
-  "biomes": [
-    "old_growth_birch_forest",
-    "forest",
-    "bamboo_jungle",
-    "dark_forest",
-    "sparse_jungle",
-    "plains",
-    "birch_forest",
-    "flower_forest",
-    "windswept_forest",
-    "jungle"
-  ],
+  "biomes": "#forge:is_generalcave",
   "spawners": {
     "type": "enemyexpansion:meature",
-    "weight": 20,
+    "weight": 35,
     "minCount": 1,
-    "maxCount": 5
+    "maxCount": 4
   }
 }

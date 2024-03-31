@@ -59,6 +59,7 @@ import net.mcreator.enemyexpansion.procedures.RareAttackGoalProcedure;
 import net.mcreator.enemyexpansion.procedures.LadybugTradeProcedure;
 import net.mcreator.enemyexpansion.procedures.LadybugTickProcedure;
 import net.mcreator.enemyexpansion.procedures.IfCantSeeSkyProcedure;
+import net.mcreator.enemyexpansion.procedures.FlutterflyKilledProcedure;
 import net.mcreator.enemyexpansion.init.EnemyexpansionModEntities;
 
 public class LadybugEntity extends Monster implements IAnimatable {
@@ -162,6 +163,12 @@ public class LadybugEntity extends Monster implements IAnimatable {
 		if (source == DamageSource.FALL)
 			return false;
 		return super.hurt(source, amount);
+	}
+
+	@Override
+	public void die(DamageSource source) {
+		super.die(source);
+		FlutterflyKilledProcedure.execute(source.getEntity());
 	}
 
 	@Override

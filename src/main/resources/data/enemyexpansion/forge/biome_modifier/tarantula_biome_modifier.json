@@ -1,9 +1,9 @@
 {
   "type": "forge:add_spawns",
-  "biomes": "dripstone_caves",
+  "biomes": "#forge:is_generalnotempcave",
   "spawners": {
     "type": "enemyexpansion:tarantula",
-    "weight": 100,
+    "weight": 45,
     "minCount": 1,
     "maxCount": 1
   }

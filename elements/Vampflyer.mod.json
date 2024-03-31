@@ -57,7 +57,7 @@
     "movementSpeed": 0.34,
     "armorBaseValue": 0.0,
     "trackingRange": 64,
-    "followRange": 24,
+    "followRange": 48,
     "health": 30,
     "xpAmount": 5,
     "waterMob": false,
@@ -97,7 +97,7 @@
       "value": "entity.phantom.death"
     },
     "stepSound": {
-      "value": "entity.zombie.step"
+      "value": ""
     },
     "whenMobFalls": {
       "name": "VampireLands"
@@ -115,7 +115,7 @@
     "groupName": "head",
     "animation1": "idle",
     "animation2": "walk",
-    "animation3": "",
+    "animation3": "death",
     "animation4": "",
     "animation5": "",
     "animation6": "",
@@ -124,7 +124,7 @@
     "animation9": "",
     "animation10": "",
     "enable2": true,
-    "enable3": false,
+    "enable3": true,
     "enable4": false,
     "enable5": false,
     "enable6": false,
@@ -134,7 +134,7 @@
     "enable10": false,
     "breedable": false,
     "tameable": false,
-    "disableDeathRotation": false,
+    "disableDeathRotation": true,
     "headMovement": true,
     "eyeHeight": false,
     "breedTriggerItems": [],

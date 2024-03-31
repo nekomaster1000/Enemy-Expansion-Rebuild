@@ -13,7 +13,7 @@
 			"bones": [
 				{
 					"name": "all",
-					"pivot": [0, 0, 1]
+					"pivot": [0, 12, 1]
 				},
 				{
 					"name": "biter",

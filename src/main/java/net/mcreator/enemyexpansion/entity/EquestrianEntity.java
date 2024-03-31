@@ -19,7 +19,7 @@ import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
@@ -49,7 +49,7 @@ import net.mcreator.enemyexpansion.procedures.IfCanSeeSkyProcedure;
 import net.mcreator.enemyexpansion.procedures.EquestrianHurtProcedure;
 import net.mcreator.enemyexpansion.init.EnemyexpansionModEntities;
 
-public class EquestrianEntity extends Monster implements IAnimatable {
+public class EquestrianEntity extends Zombie implements IAnimatable {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(EquestrianEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(EquestrianEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(EquestrianEntity.class, EntityDataSerializers.STRING);
@@ -148,6 +148,12 @@ public class EquestrianEntity extends Monster implements IAnimatable {
 		return super.getDimensions(p_33597_).scale((float) 1);
 	}
 
+	@Override
+	public void aiStep() {
+		super.aiStep();
+		this.updateSwingTime();
+	}
+
 	public static void init() {
 		SpawnPlacements.register(EnemyexpansionModEntities.EQUESTRIAN.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> {
 			int x = pos.getX();
@@ -165,6 +171,7 @@ public class EquestrianEntity extends Monster implements IAnimatable {
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 5);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 1);
+		builder = builder.add(Attributes.SPAWN_REINFORCEMENTS_CHANCE);
 		return builder;
 	}
 

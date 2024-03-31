@@ -14,7 +14,6 @@ import software.bernie.geckolib3.core.IAnimatable;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.common.DungeonHooks;
 
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.ServerLevelAccessor;
@@ -67,6 +66,7 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 
 import net.mcreator.enemyexpansion.procedures.MeatureSpawnProcedure;
+import net.mcreator.enemyexpansion.procedures.MeatureOnEntityTickUpdateProcedure;
 import net.mcreator.enemyexpansion.procedures.MeatureKillsProcedure;
 import net.mcreator.enemyexpansion.init.EnemyexpansionModEntities;
 
@@ -211,6 +211,7 @@ public class MeatureEntity extends TamableAnimal implements IAnimatable {
 	@Override
 	public void baseTick() {
 		super.baseTick();
+		MeatureOnEntityTickUpdateProcedure.execute(this.level, this);
 		this.refreshDimensions();
 	}
 
@@ -240,7 +241,6 @@ public class MeatureEntity extends TamableAnimal implements IAnimatable {
 	public static void init() {
 		SpawnPlacements.register(EnemyexpansionModEntities.MEATURE.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
 				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
-		DungeonHooks.addDungeonMob(EnemyexpansionModEntities.MEATURE.get(), 180);
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {

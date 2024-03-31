@@ -1,0 +1,64 @@
+{
+  "minecraft:recipes/transportation/acacia_boat": {
+    "criteria": {
+      "in_water": "2024-03-31 18:10:44 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/oak_boat": {
+    "criteria": {
+      "in_water": "2024-03-31 18:10:44 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/dark_oak_boat": {
+    "criteria": {
+      "in_water": "2024-03-31 18:10:44 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/birch_boat": {
+    "criteria": {
+      "in_water": "2024-03-31 18:10:44 +0100"
+    },
+    "done": true
+  },
+  "miningmaster:miningmaster/root": {
+    "criteria": {
+      "tick": "2024-03-31 18:09:07 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/jungle_boat": {
+    "criteria": {
+      "in_water": "2024-03-31 18:10:44 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/mangrove_boat": {
+    "criteria": {
+      "in_water": "2024-03-31 18:10:44 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/spruce_boat": {
+    "criteria": {
+      "in_water": "2024-03-31 18:10:44 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:old_growth_pine_taiga": "2024-03-31 18:09:08 +0100",
+      "minecraft:taiga": "2024-03-31 18:11:52 +0100",
+      "minecraft:beach": "2024-03-31 18:10:59 +0100",
+      "minecraft:river": "2024-03-31 18:11:30 +0100",
+      "minecraft:forest": "2024-03-31 18:12:18 +0100",
+      "minecraft:lush_caves": "2024-03-31 18:10:43 +0100",
+      "minecraft:windswept_forest": "2024-03-31 18:13:14 +0100",
+      "minecraft:plains": "2024-03-31 18:12:48 +0100"
+    },
+    "done": false
+  },
+  "DataVersion": 3120
+}

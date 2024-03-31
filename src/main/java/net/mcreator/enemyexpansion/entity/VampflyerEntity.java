@@ -194,11 +194,6 @@ public class VampflyerEntity extends Monster implements IAnimatable {
 	}
 
 	@Override
-	public void playStepSound(BlockPos pos, BlockState blockIn) {
-		this.playSound(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.zombie.step")), 0.15f, 1);
-	}
-
-	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.phantom.hurt"));
 	}
@@ -273,7 +268,7 @@ public class VampflyerEntity extends Monster implements IAnimatable {
 		builder = builder.add(Attributes.MAX_HEALTH, 30);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 6);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 24);
+		builder = builder.add(Attributes.FOLLOW_RANGE, 48);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 1);
 		builder = builder.add(Attributes.FLYING_SPEED, 0.34);
 		return builder;
@@ -285,6 +280,10 @@ public class VampflyerEntity extends Monster implements IAnimatable {
 
 			) {
 				event.getController().setAnimation(new AnimationBuilder().addAnimation("walk", EDefaultLoopTypes.LOOP));
+				return PlayState.CONTINUE;
+			}
+			if (this.isDeadOrDying()) {
+				event.getController().setAnimation(new AnimationBuilder().addAnimation("death", EDefaultLoopTypes.PLAY_ONCE));
 				return PlayState.CONTINUE;
 			}
 			event.getController().setAnimation(new AnimationBuilder().addAnimation("idle", EDefaultLoopTypes.LOOP));

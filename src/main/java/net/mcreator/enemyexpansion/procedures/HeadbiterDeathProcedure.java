@@ -43,7 +43,7 @@ public class HeadbiterDeathProcedure {
 			return;
 		if ((sourceentity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == EnemyexpansionModItems.HEADBITER_HELMET.get()) {
 			if (sourceentity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 110, 1, (false), (false)));
+				_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 110, 0, (false), (false)));
 		}
 		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == EnemyexpansionModItems.HEADBITER_HELMET.get()) {
 			if (world instanceof ServerLevel _serverLevelForEntitySpawn) {

@@ -27,4 +27,9 @@ public class VampflyerRenderer extends GeoEntityRenderer<VampflyerEntity> {
 		stack.scale(1f, 1f, 1f);
 		return RenderType.entityTranslucent(getTextureLocation(entity));
 	}
+
+	@Override
+	protected float getDeathMaxRotation(VampflyerEntity entityLivingBaseIn) {
+		return 0.0F;
+	}
 }

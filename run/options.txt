@@ -48,7 +48,7 @@ chatLineSpacing:0.0
 textBackgroundOpacity:0.5
 backgroundForChatOnly:true
 hideServerAddress:false
-advancedItemTooltips:false
+advancedItemTooltips:true
 pauseOnLostFocus:true
 overrideWidth:0
 overrideHeight:0
@@ -118,7 +118,7 @@ key_key.jade.toggle_liquid:key.keyboard.keypad.2
 key_key.jade.narrate:key.keyboard.keypad.5
 key_key.jade.show_details:key.keyboard.left.shift
 key_key.mobhealthbar.chooser:key.keyboard.h
-soundCategory_master:0.50413907
+soundCategory_master:0.027317882
 soundCategory_music:0.0
 soundCategory_record:1.0
 soundCategory_weather:1.0

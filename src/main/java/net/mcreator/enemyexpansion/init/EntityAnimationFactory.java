@@ -25,6 +25,7 @@ import net.mcreator.enemyexpansion.entity.GoblinEntity;
 import net.mcreator.enemyexpansion.entity.FlutterflyEntity;
 import net.mcreator.enemyexpansion.entity.EquestrianEntity;
 import net.mcreator.enemyexpansion.entity.DroneEntity;
+import net.mcreator.enemyexpansion.entity.DirewolfEntity;
 
 @Mod.EventBusSubscriber
 public class EntityAnimationFactory {
@@ -172,6 +173,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof SilverqueenbodilessEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof DirewolfEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

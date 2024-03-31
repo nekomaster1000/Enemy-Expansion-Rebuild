@@ -14,17 +14,21 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
+import net.minecraft.advancements.AdvancementProgress;
+import net.minecraft.advancements.Advancement;
 
 import net.mcreator.enemyexpansion.entity.TrollEntity;
 import net.mcreator.enemyexpansion.EnemyexpansionMod;
 
 import java.util.stream.Collectors;
 import java.util.List;
+import java.util.Iterator;
 import java.util.Comparator;
 
 public class TrollPotatoedProcedure {
@@ -33,6 +37,15 @@ public class TrollPotatoedProcedure {
 			return;
 		if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.POISON) : false)) {
 			if (sourceentity instanceof Player && (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.POISONOUS_POTATO) {
+				if (sourceentity instanceof ServerPlayer _player) {
+					Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("enemyexpansion:you_make_me_sick"));
+					AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+					if (!_ap.isDone()) {
+						Iterator _iterator = _ap.getRemainingCriteria().iterator();
+						while (_iterator.hasNext())
+							_player.getAdvancements().award(_adv, (String) _iterator.next());
+					}
+				}
 				(itemstack).shrink(1);
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
@@ -76,7 +89,7 @@ public class TrollPotatoedProcedure {
 							}
 						}
 						if (entity instanceof LivingEntity _entity)
-							_entity.addEffect(new MobEffectInstance(MobEffects.HARM, 1, 4));
+							_entity.addEffect(new MobEffectInstance(MobEffects.HARM, 1, 3));
 						{
 							Entity _ent = entity;
 							if (!_ent.level.isClientSide() && _ent.getServer() != null) {

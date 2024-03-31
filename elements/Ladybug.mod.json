@@ -99,6 +99,9 @@
     "stepSound": {
       "value": "entity.spider.step"
     },
+    "whenMobDies": {
+      "name": "FlutterflyKilled"
+    },
     "onRightClickedOn": {
       "name": "LadybugTrade"
     },

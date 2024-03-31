@@ -102,6 +102,9 @@
     "whenThisMobKillsAnother": {
       "name": "MeatureKills"
     },
+    "onMobTickUpdate": {
+      "name": "MeatureOnEntityTickUpdate"
+    },
     "onInitialSpawn": {
       "name": "MeatureSpawn"
     },
@@ -206,6 +209,6 @@
         "value": "jungle_edge"
       }
     ],
-    "spawnInDungeons": true
+    "spawnInDungeons": false
   }
 }

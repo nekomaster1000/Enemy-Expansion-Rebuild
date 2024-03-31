@@ -33,6 +33,7 @@ import net.mcreator.enemyexpansion.client.renderer.GoblinFearRenderer;
 import net.mcreator.enemyexpansion.client.renderer.FlutterflyRenderer;
 import net.mcreator.enemyexpansion.client.renderer.EquestrianRenderer;
 import net.mcreator.enemyexpansion.client.renderer.DroneRenderer;
+import net.mcreator.enemyexpansion.client.renderer.DirewolfRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class EnemyexpansionModEntityRenderers {
@@ -63,5 +64,6 @@ public class EnemyexpansionModEntityRenderers {
 		event.registerEntityRenderer(EnemyexpansionModEntities.PHANTOM_EYE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.HEALING_EYE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.WASP_THORAX.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.DIREWOLF.get(), DirewolfRenderer::new);
 	}
 }

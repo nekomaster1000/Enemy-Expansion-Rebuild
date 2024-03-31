@@ -18,4 +18,6 @@
 	"Trolls petrify when hurt under sunlight" = true
 	#Range: 0 to 100 (Percent)
 	"Chance Botflies will spawn from a slain Zombie" = 5.0
+	#Range: 0 to 100 (Percent)
+	"Chance Phantoms drop their Eyes" = 15.0
 

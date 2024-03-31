@@ -114,7 +114,7 @@ public class VampireHurtProcedure {
 							}
 						}
 						if (_entityForSpawning instanceof LivingEntity _entity)
-							_entity.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 30, 0, (false), (false)));
+							_entity.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 50, 0, (false), (false)));
 						if (!entity.level.isClientSide())
 							entity.discard();
 						if (_entityForSpawning instanceof Mob _mobForSpawning)

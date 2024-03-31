@@ -2,6 +2,7 @@
 "values": [
 "#minecraft:is_forest",
 "#forge:is_dense/overworld",
-"#forge:is_swamp"
+"#forge:is_swamp",
+"#forge:is_plains"
  ]	
 }

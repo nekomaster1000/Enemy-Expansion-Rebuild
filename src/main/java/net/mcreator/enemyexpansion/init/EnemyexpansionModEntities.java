@@ -41,6 +41,7 @@ import net.mcreator.enemyexpansion.entity.GoblinEntity;
 import net.mcreator.enemyexpansion.entity.FlutterflyEntity;
 import net.mcreator.enemyexpansion.entity.EquestrianEntity;
 import net.mcreator.enemyexpansion.entity.DroneEntity;
+import net.mcreator.enemyexpansion.entity.DirewolfEntity;
 import net.mcreator.enemyexpansion.EnemyexpansionMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -117,7 +118,7 @@ public class EnemyexpansionModEntities {
 	public static final RegistryObject<EntityType<VampbiterEntity>> VAMPBITER = register("vampbiter",
 			EntityType.Builder.<VampbiterEntity>of(VampbiterEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(VampbiterEntity::new)
 
-					.sized(0.6f, 0.45f));
+					.sized(0.9f, 0.9f));
 	public static final RegistryObject<EntityType<TrollEntity>> TROLL = register("troll",
 			EntityType.Builder.<TrollEntity>of(TrollEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TrollEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<TrollenragedEntity>> TROLLENRAGED = register("trollenraged", EntityType.Builder.<TrollenragedEntity>of(TrollenragedEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
@@ -137,6 +138,10 @@ public class EnemyexpansionModEntities {
 			EntityType.Builder.<HealingEyeEntity>of(HealingEyeEntity::new, MobCategory.MISC).setCustomClientFactory(HealingEyeEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<WaspThoraxEntity>> WASP_THORAX = register("projectile_wasp_thorax",
 			EntityType.Builder.<WaspThoraxEntity>of(WaspThoraxEntity::new, MobCategory.MISC).setCustomClientFactory(WaspThoraxEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<DirewolfEntity>> DIREWOLF = register("direwolf",
+			EntityType.Builder.<DirewolfEntity>of(DirewolfEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DirewolfEntity::new)
+
+					.sized(0.95f, 0.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -167,6 +172,7 @@ public class EnemyexpansionModEntities {
 			TrollenragedEntity.init();
 			SilverqueenattackingEntity.init();
 			SilverqueenbodilessEntity.init();
+			DirewolfEntity.init();
 		});
 	}
 
@@ -194,5 +200,6 @@ public class EnemyexpansionModEntities {
 		event.put(TROLLENRAGED.get(), TrollenragedEntity.createAttributes().build());
 		event.put(SILVERQUEEN.get(), SilverqueenattackingEntity.createAttributes().build());
 		event.put(SILVERQUEENBODILESS.get(), SilverqueenbodilessEntity.createAttributes().build());
+		event.put(DIREWOLF.get(), DirewolfEntity.createAttributes().build());
 	}
 }
