@@ -10,7 +10,11 @@ import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.world.effect.MobEffect;
 
+import net.mcreator.enemyexpansion.potion.TimerMobEffect;
 import net.mcreator.enemyexpansion.potion.SwiftFlightMobEffect;
+import net.mcreator.enemyexpansion.potion.SandstormMobEffect;
+import net.mcreator.enemyexpansion.potion.DespawnerMobEffect;
+import net.mcreator.enemyexpansion.potion.CardiacMobEffect;
 import net.mcreator.enemyexpansion.potion.BittenMobEffect;
 import net.mcreator.enemyexpansion.EnemyexpansionMod;
 
@@ -18,4 +22,8 @@ public class EnemyexpansionModMobEffects {
 	public static final DeferredRegister<MobEffect> REGISTRY = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, EnemyexpansionMod.MODID);
 	public static final RegistryObject<MobEffect> SWIFT_FLIGHT = REGISTRY.register("swift_flight", () -> new SwiftFlightMobEffect());
 	public static final RegistryObject<MobEffect> BITTEN = REGISTRY.register("bitten", () -> new BittenMobEffect());
+	public static final RegistryObject<MobEffect> DESPAWNER = REGISTRY.register("despawner", () -> new DespawnerMobEffect());
+	public static final RegistryObject<MobEffect> TIMER = REGISTRY.register("timer", () -> new TimerMobEffect());
+	public static final RegistryObject<MobEffect> CARDIAC = REGISTRY.register("cardiac", () -> new CardiacMobEffect());
+	public static final RegistryObject<MobEffect> SANDSTORM = REGISTRY.register("sandstorm", () -> new SandstormMobEffect());
 }

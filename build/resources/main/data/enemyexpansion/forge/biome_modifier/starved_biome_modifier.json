@@ -1,6 +1,6 @@
 {
   "type": "forge:add_spawns",
-  "biomes": "#forge:is_dry/overworld",
+  "biomes": "#forge:is_desert",
   "spawners": {
     "type": "enemyexpansion:starved",
     "weight": 100,

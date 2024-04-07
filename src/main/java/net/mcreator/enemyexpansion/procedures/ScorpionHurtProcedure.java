@@ -11,6 +11,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 
+import net.mcreator.enemyexpansion.init.EnemyexpansionModMobEffects;
 import net.mcreator.enemyexpansion.entity.ScorpionEntity;
 
 import javax.annotation.Nullable;
@@ -34,6 +35,8 @@ public class ScorpionHurtProcedure {
 		if (sourceentity instanceof Player && entity instanceof ScorpionEntity) {
 			if (entity instanceof LivingEntity _entity)
 				_entity.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 120, 0));
+			if (entity instanceof LivingEntity _entity)
+				_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.SANDSTORM.get(), 120, 0));
 		} else if (entity instanceof Player && sourceentity instanceof ScorpionEntity) {
 			if (entity instanceof LivingEntity _entity)
 				_entity.addEffect(new MobEffectInstance(MobEffects.POISON, 120, 0));

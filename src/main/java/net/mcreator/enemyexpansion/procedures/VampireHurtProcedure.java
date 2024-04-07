@@ -43,51 +43,49 @@ public class VampireHurtProcedure {
 			}
 			VampireIgnitionProcedure.execute(world, x, y, z, entity);
 			if (Math.random() < (double) BetterConfigConfiguration.VAMPIRETOFLYER.get() / 100) {
-				EnemyexpansionMod.queueServerWork(1, () -> {
-					if (world instanceof ServerLevel _serverLevelForEntitySpawn) {
-						Entity _entityForSpawning = new VampflyerEntity(EnemyexpansionModEntities.VAMPFLYER.get(), _serverLevelForEntitySpawn);
-						_entityForSpawning.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
-						{
-							Entity _ent = _entityForSpawning;
-							if (!_ent.level.isClientSide() && _ent.getServer() != null) {
-								_ent.getServer().getCommands()
-										.performPrefixedCommand(
-												new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(),
-														_ent.getDisplayName(), _ent.level.getServer(), _ent),
-												("/data merge entity @s {Health:20f}".replace("{Health:20f}", "{Health:" + ("" + (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1)) + "f}")));
+				if (world instanceof ServerLevel _serverLevelForEntitySpawn) {
+					Entity _entityForSpawning = new VampflyerEntity(EnemyexpansionModEntities.VAMPFLYER.get(), _serverLevelForEntitySpawn);
+					_entityForSpawning.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
+					{
+						Entity _ent = _entityForSpawning;
+						if (!_ent.level.isClientSide() && _ent.getServer() != null) {
+							_ent.getServer().getCommands()
+									.performPrefixedCommand(
+											new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(),
+													_ent.getDisplayName(), _ent.level.getServer(), _ent),
+											("/data merge entity @s {Health:20f}".replace("{Health:20f}", "{Health:" + ("" + (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1)) + "f}")));
+						}
+					}
+					if (entity instanceof LivingEntity _entity)
+						_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.DESPAWNER.get(), 1, 0, (false), (false)));
+					_entityForSpawning.setDeltaMovement(new Vec3((Math.sin(Math.toRadians(sourceentity.getYRot() + 180)) * 1.3), 0.1, (Math.cos(Math.toRadians(sourceentity.getYRot())) * 1.3)));
+					EnemyexpansionMod.queueServerWork(20, () -> {
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.phantom.ambient")), SoundSource.HOSTILE, 1, 2);
+							} else {
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.phantom.ambient")), SoundSource.HOSTILE, 1, 2, false);
 							}
 						}
-						if (!entity.level.isClientSide())
-							entity.discard();
-						_entityForSpawning.setDeltaMovement(new Vec3((Math.sin(Math.toRadians(sourceentity.getYRot() + 180)) * 1.3), 0.1, (Math.cos(Math.toRadians(sourceentity.getYRot())) * 1.3)));
-						EnemyexpansionMod.queueServerWork(20, () -> {
-							if (world instanceof Level _level) {
-								if (!_level.isClientSide()) {
-									_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.phantom.ambient")), SoundSource.HOSTILE, 1, 2);
-								} else {
-									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.phantom.ambient")), SoundSource.HOSTILE, 1, 2, false);
-								}
-							}
-							if (_entityForSpawning instanceof LivingEntity _entity)
-								_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get(), 50, 2, (false), (true)));
-						});
-						if (_entityForSpawning instanceof Mob _mobForSpawning)
-							_mobForSpawning.finalizeSpawn(_serverLevelForEntitySpawn, world.getCurrentDifficultyAt(_entityForSpawning.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-						world.addFreshEntity(_entityForSpawning);
-					}
-				});
+						if (_entityForSpawning instanceof LivingEntity _entity)
+							_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get(), 50, 2, (false), (true)));
+					});
+					if (_entityForSpawning instanceof Mob _mobForSpawning)
+						_mobForSpawning.finalizeSpawn(_serverLevelForEntitySpawn, world.getCurrentDifficultyAt(_entityForSpawning.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+					world.addFreshEntity(_entityForSpawning);
+				}
 			} else if (Math.random() < (double) BetterConfigConfiguration.VAMPIRETOBITER.get() / 100) {
-				EnemyexpansionMod.queueServerWork(2, () -> {
-					if (world instanceof ServerLevel _serverLevelForEntitySpawn) {
-						Entity _entityForSpawning = new VampbiterEntity(EnemyexpansionModEntities.VAMPBITER.get(), _serverLevelForEntitySpawn);
-						_entityForSpawning.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
-						if (!entity.level.isClientSide())
-							entity.discard();
-						if (_entityForSpawning instanceof Mob _mobForSpawning)
-							_mobForSpawning.finalizeSpawn(_serverLevelForEntitySpawn, world.getCurrentDifficultyAt(_entityForSpawning.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-						world.addFreshEntity(_entityForSpawning);
-					}
-				});
+				if (entity instanceof LivingEntity _entity)
+					_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.DESPAWNER.get(), 2, 0, (false), (false)));
+				if (world instanceof ServerLevel _serverLevelForEntitySpawn) {
+					Entity _entityForSpawning = new VampbiterEntity(EnemyexpansionModEntities.VAMPBITER.get(), _serverLevelForEntitySpawn);
+					_entityForSpawning.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
+					if (_entityForSpawning instanceof LivingEntity _entity)
+						_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get(), 10, 0, (false), (true)));
+					if (_entityForSpawning instanceof Mob _mobForSpawning)
+						_mobForSpawning.finalizeSpawn(_serverLevelForEntitySpawn, world.getCurrentDifficultyAt(_entityForSpawning.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+					world.addFreshEntity(_entityForSpawning);
+				}
 			}
 		} else if (entity instanceof VampflyerEntity) {
 			VampireIgnitionProcedure.execute(world, x, y, z, entity);
@@ -99,29 +97,27 @@ public class VampireHurtProcedure {
 					_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get(), (int) Mth.nextDouble(RandomSource.create(), 40, 80), (int) Mth.nextDouble(RandomSource.create(), 0, 2), (false), (false)));
 			});
 			if (Math.random() < (double) BetterConfigConfiguration.FLYERTOVAMPIRE.get() / 100) {
-				EnemyexpansionMod.queueServerWork(1, () -> {
-					if (world instanceof ServerLevel _serverLevelForEntitySpawn) {
-						Entity _entityForSpawning = new VampireEntity(EnemyexpansionModEntities.VAMPIRE.get(), _serverLevelForEntitySpawn);
-						_entityForSpawning.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
-						{
-							Entity _ent = _entityForSpawning;
-							if (!_ent.level.isClientSide() && _ent.getServer() != null) {
-								_ent.getServer().getCommands()
-										.performPrefixedCommand(
-												new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(),
-														_ent.getDisplayName(), _ent.level.getServer(), _ent),
-												("/data merge entity @s {Health:20f}".replace("{Health:20f}", "{Health:" + ("" + (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1)) + "f}")));
-							}
+				if (world instanceof ServerLevel _serverLevelForEntitySpawn) {
+					Entity _entityForSpawning = new VampireEntity(EnemyexpansionModEntities.VAMPIRE.get(), _serverLevelForEntitySpawn);
+					_entityForSpawning.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
+					{
+						Entity _ent = _entityForSpawning;
+						if (!_ent.level.isClientSide() && _ent.getServer() != null) {
+							_ent.getServer().getCommands()
+									.performPrefixedCommand(
+											new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(),
+													_ent.getDisplayName(), _ent.level.getServer(), _ent),
+											("/data merge entity @s {Health:20f}".replace("{Health:20f}", "{Health:" + ("" + (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1)) + "f}")));
 						}
-						if (_entityForSpawning instanceof LivingEntity _entity)
-							_entity.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 50, 0, (false), (false)));
-						if (!entity.level.isClientSide())
-							entity.discard();
-						if (_entityForSpawning instanceof Mob _mobForSpawning)
-							_mobForSpawning.finalizeSpawn(_serverLevelForEntitySpawn, world.getCurrentDifficultyAt(_entityForSpawning.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-						world.addFreshEntity(_entityForSpawning);
 					}
-				});
+					if (_entityForSpawning instanceof LivingEntity _entity)
+						_entity.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 50, 0, (false), (false)));
+					if (entity instanceof LivingEntity _entity)
+						_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.DESPAWNER.get(), 1, 0, (false), (false)));
+					if (_entityForSpawning instanceof Mob _mobForSpawning)
+						_mobForSpawning.finalizeSpawn(_serverLevelForEntitySpawn, world.getCurrentDifficultyAt(_entityForSpawning.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+					world.addFreshEntity(_entityForSpawning);
+				}
 			} else if (Math.random() < (double) BetterConfigConfiguration.VAMPIRETOBITER.get() / 100) {
 				if (world instanceof ServerLevel _serverLevelForEntitySpawn) {
 					Entity _entityForSpawning = new VampbiterEntity(EnemyexpansionModEntities.VAMPBITER.get(), _serverLevelForEntitySpawn);

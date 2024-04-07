@@ -1,9 +1,6 @@
 {
   "type": "forge:add_spawns",
-  "biomes": [
-    "windswept_hills",
-    "windswept_gravelly_hills"
-  ],
+  "biomes": "#forge:is_generalnotempcave",
   "spawners": {
     "type": "enemyexpansion:silverqueen",
     "weight": 10,

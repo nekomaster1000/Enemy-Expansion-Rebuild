@@ -23,7 +23,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 
-import net.mcreator.enemyexpansion.procedures.GoblinFearDespawnProcedure;
+import net.mcreator.enemyexpansion.procedures.GoblinFearTimerProcedure;
 import net.mcreator.enemyexpansion.init.EnemyexpansionModEntities;
 
 import javax.annotation.Nullable;
@@ -68,7 +68,7 @@ public class GoblinFearEntity extends Monster {
 	@Override
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
-		GoblinFearDespawnProcedure.execute(world, this);
+		GoblinFearTimerProcedure.execute(this);
 		return retval;
 	}
 

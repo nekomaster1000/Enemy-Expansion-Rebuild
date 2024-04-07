@@ -1,4 +1,47 @@
 {
+  "enemyexpansion:wasp_drone_summon": {
+    "criteria": {
+      "wasp_drone_summon": "2024-04-03 15:28:15 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/dark_oak_boat": {
+    "criteria": {
+      "in_water": "2024-03-31 18:10:44 +0100"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/root": {
+    "criteria": {
+      "consumed_item": "2024-04-03 15:43:38 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/birch_boat": {
+    "criteria": {
+      "in_water": "2024-03-31 18:10:44 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/kill_a_mob": {
+    "criteria": {
+      "minecraft:silverfish": "2024-04-03 15:39:00 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/mangrove_boat": {
+    "criteria": {
+      "in_water": "2024-03-31 18:10:44 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/kill_all_mobs": {
+    "criteria": {
+      "minecraft:husk": "2024-04-03 15:43:17 +0100",
+      "minecraft:silverfish": "2024-04-03 15:39:00 +0100"
+    },
+    "done": false
+  },
   "minecraft:recipes/transportation/acacia_boat": {
     "criteria": {
       "in_water": "2024-03-31 18:10:44 +0100"
@@ -11,15 +54,15 @@
     },
     "done": true
   },
-  "minecraft:recipes/transportation/dark_oak_boat": {
+  "minecraft:husbandry/balanced_diet": {
     "criteria": {
-      "in_water": "2024-03-31 18:10:44 +0100"
+      "rotten_flesh": "2024-04-03 15:43:38 +0100"
     },
-    "done": true
+    "done": false
   },
-  "minecraft:recipes/transportation/birch_boat": {
+  "minecraft:adventure/root": {
     "criteria": {
-      "in_water": "2024-03-31 18:10:44 +0100"
+      "killed_by_something": "2024-04-03 14:43:10 +0100"
     },
     "done": true
   },
@@ -35,12 +78,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/transportation/mangrove_boat": {
-    "criteria": {
-      "in_water": "2024-03-31 18:10:44 +0100"
-    },
-    "done": true
-  },
   "minecraft:recipes/transportation/spruce_boat": {
     "criteria": {
       "in_water": "2024-03-31 18:10:44 +0100"
@@ -51,10 +88,15 @@
     "criteria": {
       "minecraft:old_growth_pine_taiga": "2024-03-31 18:09:08 +0100",
       "minecraft:taiga": "2024-03-31 18:11:52 +0100",
+      "minecraft:eroded_badlands": "2024-04-07 04:04:00 +0100",
+      "minecraft:badlands": "2024-04-07 04:03:10 +0100",
       "minecraft:beach": "2024-03-31 18:10:59 +0100",
       "minecraft:river": "2024-03-31 18:11:30 +0100",
+      "minecraft:swamp": "2024-04-03 14:45:40 +0100",
+      "minecraft:cold_ocean": "2024-04-03 14:45:24 +0100",
       "minecraft:forest": "2024-03-31 18:12:18 +0100",
       "minecraft:lush_caves": "2024-03-31 18:10:43 +0100",
+      "minecraft:desert": "2024-04-07 04:02:27 +0100",
       "minecraft:windswept_forest": "2024-03-31 18:13:14 +0100",
       "minecraft:plains": "2024-03-31 18:12:48 +0100"
     },

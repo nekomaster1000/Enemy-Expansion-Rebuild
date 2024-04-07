@@ -421,30 +421,6 @@
       "path": "~/Mobs/Other"
     },
     {
-      "name": "GoblinFearDespawn",
-      "type": "procedure",
-      "sortid": 46,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "goblin_fear_despawn",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/enemyexpansion/procedures/GoblinFearDespawnProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Mobs/Other"
-    },
-    {
       "name": "Tarantula",
       "type": "animatedentity",
       "sortid": 7,
@@ -3686,6 +3662,185 @@
         ]
       },
       "path": "~/Mobs/Other"
+    },
+    {
+      "name": "GoblinFearTimer",
+      "type": "procedure",
+      "sortid": 162,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_fear_timer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/GoblinFearTimerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Other"
+    },
+    {
+      "name": "Despawner",
+      "type": "potioneffect",
+      "sortid": 164,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "despawner",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/potion/DespawnerMobEffect.java"
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "DespawnerActivates",
+      "type": "procedure",
+      "sortid": 165,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "despawner_activates",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/DespawnerActivatesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "Timer",
+      "type": "potioneffect",
+      "sortid": 166,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "timer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/potion/TimerMobEffect.java"
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "CardiacActivate",
+      "type": "procedure",
+      "sortid": 167,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cardiac_activate",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/CardiacActivateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "Cardiac",
+      "type": "potioneffect",
+      "sortid": 168,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cardiac",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/potion/CardiacMobEffect.java"
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "SilverfriendsStart",
+      "type": "procedure",
+      "sortid": 170,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silverfriends_start",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/SilverfriendsStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Sandstorm",
+      "type": "potioneffect",
+      "sortid": 172,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sandstorm",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/potion/SandstormMobEffect.java"
+        ]
+      },
+      "path": "~/Effects"
+    },
+    {
+      "name": "SandstormActive",
+      "type": "procedure",
+      "sortid": 173,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sandstorm_active",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/SandstormActiveProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Effects"
     }
   ],
   "variable_elements": [],
@@ -3740,8 +3895,8 @@
       "entity.enemyexpansion.wasp": "Wasp",
       "item.enemyexpansion.headbiter_helmet": "Headbiter",
       "item.enemyexpansion.phantasm_chestplate": "Phantasm Cape",
-      "advancements.goblin_villager_reversion.descr": "Release a Villager from their Goblified curse.",
       "entity.enemyexpansion.silverqueenbodiless": "Dethroned Silverqueen",
+      "advancements.goblin_villager_reversion.descr": "Release a Villager from their Goblified curse.",
       "item.enemyexpansion.silverqueenbodiless_spawn_egg": "Dethroned Silverqueen Spawn Egg",
       "entity.enemyexpansion.huntsman": "Huntsman",
       "item.enemyexpansion.meathead_leggings": "-",
@@ -3755,23 +3910,24 @@
       "item.enemyexpansion.headbiter_boots": "-",
       "advancements.hunted.title": "Hunted",
       "item.enemyexpansion.scorpion_tail": "Scorpion Tail",
-      "item.enemyexpansion.headbiter_chestplate": "-",
       "item.enemyexpansion.wasp_thorax": "Wasp Thorax",
+      "item.enemyexpansion.headbiter_chestplate": "-",
       "advancements.ladybug_feeding.descr": "Recieving a Healing Eye from a Ladybug",
-      "entity.enemyexpansion.vampbiter": "Vampire Biter",
       "item.enemyexpansion.starved_spawn_egg": "Starved Spawn Egg",
+      "entity.enemyexpansion.vampbiter": "Vampire Biter",
       "advancements.tarancher.title": "Tarancher",
       "entity.enemyexpansion.trollenraged": "Enraged Troll",
       "entity.enemyexpansion.starved": "Starved",
-      "item.enemyexpansion.horsehead_leggings": "-",
       "item.minecraft.lingering_potion.effect.swift_flight_potion": "Lingering Potion of Swift Flight",
+      "item.enemyexpansion.horsehead_leggings": "-",
       "item.enemyexpansion.ladybug_spawn_egg": "Ladybug Spawn Egg",
       "advancements.regicide.title": "Regicide",
       "entity.enemyexpansion.equestrian": "Equestrian",
       "advancements.regicide.descr": "Kill a Bodiless Silverqueen!",
+      "effect.enemyexpansion.despawner": "Despawner",
       "item.enemyexpansion.headbiter_leggings": "-",
-      "item.enemyexpansion.flutterfly_spawn_egg": "Flutteryfly Spawn Egg",
       "item.enemyexpansion.trollenraged_spawn_egg": "Enraged Troll Spawn Egg",
+      "item.enemyexpansion.flutterfly_spawn_egg": "Flutteryfly Spawn Egg",
       "advancements.troll_hunter.title": "Troll Hunter",
       "advancements.you_make_me_sick.title": "You Make Me Sick!",
       "item.enemyexpansion.horsehead_chestplate": "-",
@@ -3795,6 +3951,7 @@
       "item.minecraft.splash_potion.effect.swift_flight_potion": "Splash Potion of Swift Flight",
       "item.enemyexpansion.phantasm_boots": "Phantasm Boots",
       "item.enemyexpansion.phantasm_leggings": "Phantasm Leggings",
+      "effect.enemyexpansion.cardiac": "Cardiac",
       "entity.enemyexpansion.slugger": "Slugger",
       "advancements.ladybug_feeding.title": "Ladybug\u0027s Gift",
       "item.enemyexpansion.trollface": "Trollface",
@@ -3820,6 +3977,7 @@
       "item.enemyexpansion.silverhead_helmet": "Silverhat",
       "advancements.starved_steal.descr": "Steal from the mouth of a Starved!",
       "entity.enemyexpansion.flutterfly": "Flutteryfly",
+      "effect.enemyexpansion.timer": "Timer",
       "advancements.flutterfly_collection.descr": "Catch a Flutterfly in a Bottle!",
       "item.enemyexpansion.bottled_flutterfly": "Bottled Flutterfly",
       "entity.enemyexpansion.goblin": "Goblin Thief",
@@ -3837,6 +3995,7 @@
       "item.enemyexpansion.drone_spawn_egg": "Drone Spawn Egg",
       "entity.enemyexpansion.goblin_fear": "Goblin Fear",
       "entity.enemyexpansion.ladybug": "Ladybug",
+      "effect.enemyexpansion.sandstorm": "Sandstorm",
       "item.enemyexpansion.wasp_spawn_egg": "Wasp Spawn Egg",
       "item.enemyexpansion.troll_molar": "Troll Molar",
       "item.enemyexpansion.tarantula_spawn_egg": "Tarantula Spawn Egg",
@@ -3907,7 +4066,7 @@
   "workspaceSettings": {
     "modid": "enemyexpansion",
     "modName": "Enemy Expansion",
-    "version": "2.1.0",
+    "version": "2.2.1",
     "description": "Adding more enemies to Minecraft!",
     "author": "nekomaster1000",
     "websiteURL": "https://infernalstudios.org/",

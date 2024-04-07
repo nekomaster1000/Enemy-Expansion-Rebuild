@@ -1,1 +1,1 @@
-team leave Silverfriends
+team leave Silverfriends @s

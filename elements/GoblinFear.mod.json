@@ -96,7 +96,7 @@
       "value": ""
     },
     "onInitialSpawn": {
-      "name": "GoblinFearDespawn"
+      "name": "GoblinFearTimer"
     },
     "hasAI": true,
     "aiBase": "(none)",

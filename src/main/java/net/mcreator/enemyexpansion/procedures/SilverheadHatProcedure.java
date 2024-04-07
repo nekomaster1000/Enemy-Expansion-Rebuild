@@ -17,7 +17,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.server.level.ServerLevel;
@@ -27,6 +27,7 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 import net.minecraft.commands.CommandFunction;
 
+import net.mcreator.enemyexpansion.init.EnemyexpansionModMobEffects;
 import net.mcreator.enemyexpansion.init.EnemyexpansionModItems;
 import net.mcreator.enemyexpansion.EnemyexpansionMod;
 
@@ -61,9 +62,8 @@ public class SilverheadHatProcedure {
 					_entityForSpawning.setDeltaMovement(new Vec3((Mth.nextDouble(RandomSource.create(), -0.3, 0.3)), (Mth.nextDouble(RandomSource.create(), 0.1, 0.3)), (Mth.nextDouble(RandomSource.create(), -0.3, 0.3))));
 					if (_entityForSpawning instanceof Mob _entity && sourceentity instanceof LivingEntity _ent)
 						_entity.setTarget(_ent);
-					EnemyexpansionMod.queueServerWork((int) Mth.nextDouble(RandomSource.create(), 160, 320), () -> {
-						_entityForSpawning.hurt((new DamageSource("even_more_magic")), 20);
-					});
+					if (_entityForSpawning instanceof LivingEntity _entity)
+						_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.CARDIAC.get(), (int) Mth.nextDouble(RandomSource.create(), 160, 320), 0));
 					if (_entityForSpawning instanceof Mob _mobForSpawning)
 						_mobForSpawning.finalizeSpawn(_serverLevelForEntitySpawn, world.getCurrentDifficultyAt(_entityForSpawning.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
 					world.addFreshEntity(_entityForSpawning);

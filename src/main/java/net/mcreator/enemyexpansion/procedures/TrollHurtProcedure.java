@@ -45,11 +45,6 @@ public class TrollHurtProcedure {
 				if (entity instanceof TrollEntity) {
 					((TrollEntity) entity).setAnimation("roar");
 				}
-				EnemyexpansionMod.queueServerWork(20, () -> {
-					if (entity instanceof TrollEntity) {
-						((TrollEntity) entity).setAnimation("empty");
-					}
-				});
 				EnemyexpansionMod.queueServerWork(10, () -> {
 					if (entity.isAlive()) {
 						if (world instanceof Level _level) {

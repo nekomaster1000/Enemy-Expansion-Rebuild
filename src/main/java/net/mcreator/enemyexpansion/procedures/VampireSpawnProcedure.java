@@ -45,10 +45,8 @@ public class VampireSpawnProcedure {
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles(ParticleTypes.LARGE_SMOKE, x, y, z, 20, 0.3, 0.3, 0.3, 0.3);
 		if (entity.isInWall()) {
-			EnemyexpansionMod.queueServerWork(1, () -> {
-				if (!entity.level.isClientSide())
-					entity.discard();
-			});
+			if (entity instanceof LivingEntity _entity)
+				_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.DESPAWNER.get(), 1, 0, (false), (false)));
 		}
 		VampireIgnitionProcedure.execute(world, x, y, z, entity);
 		if (entity instanceof VampbiterEntity) {

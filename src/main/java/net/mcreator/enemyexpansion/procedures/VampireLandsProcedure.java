@@ -13,7 +13,7 @@ public class VampireLandsProcedure {
 			return;
 		if (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.HEALTH_BOOST) : false) {
 			if (entity instanceof LivingEntity _entity)
-				_entity.removeAllEffects();
+				_entity.removeEffect(MobEffects.HEALTH_BOOST);
 			if (entity instanceof VampireEntity) {
 				((VampireEntity) entity).setAnimation("land");
 			}
