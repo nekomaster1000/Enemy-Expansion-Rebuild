@@ -20,10 +20,10 @@ public class ScorpionTailHitProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(MobEffects.POISON, 80, 0, (false), (false)));
-		if (entity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 80, 0, (false), (false)));
+		if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+			_entity.addEffect(new MobEffectInstance(MobEffects.POISON, 80, 0, false, false));
+		if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+			_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 80, 0, false, false));
 		if (entity instanceof Player _player) {
 			ItemStack _stktoremove = new ItemStack(EnemyexpansionModItems.SCORPION_TAIL.get());
 			_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());

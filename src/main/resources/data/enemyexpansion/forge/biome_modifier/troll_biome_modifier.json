@@ -1,14 +1,14 @@
 {
   "type": "forge:add_spawns",
   "biomes": [
-    "old_growth_birch_forest",
-    "forest",
-    "sunflower_plains",
-    "snowy_plains",
-    "dark_forest",
     "plains",
+    "snowy_plains",
+    "sunflower_plains",
     "birch_forest",
+    "dark_forest",
     "flower_forest",
+    "forest",
+    "old_growth_birch_forest",
     "windswept_forest"
   ],
   "spawners": {

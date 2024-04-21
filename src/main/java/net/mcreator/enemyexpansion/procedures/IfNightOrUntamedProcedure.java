@@ -9,7 +9,7 @@ public class IfNightOrUntamedProcedure {
 	public static boolean execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return false;
-		if (!(world instanceof Level _lvl && _lvl.isDay()) && !(entity instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false)) {
+		if (!(world instanceof Level _lvl0 && _lvl0.isDay()) && !(entity instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false)) {
 			return true;
 		}
 		return false;

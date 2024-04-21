@@ -1,4 +1,3 @@
-
 package net.mcreator.enemyexpansion.potion;
 
 import net.minecraftforge.client.extensions.common.IClientMobEffectExtensions;
@@ -16,11 +15,6 @@ import com.mojang.blaze3d.vertex.PoseStack;
 public class SandstormMobEffect extends MobEffect {
 	public SandstormMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -13312);
-	}
-
-	@Override
-	public String getDescriptionId() {
-		return "effect.enemyexpansion.sandstorm";
 	}
 
 	@Override

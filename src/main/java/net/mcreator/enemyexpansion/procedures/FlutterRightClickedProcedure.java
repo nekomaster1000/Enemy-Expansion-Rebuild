@@ -23,8 +23,6 @@ import net.minecraft.advancements.Advancement;
 
 import net.mcreator.enemyexpansion.init.EnemyexpansionModItems;
 
-import java.util.Iterator;
-
 public class FlutterRightClickedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity, ItemStack itemstack) {
 		if (entity == null || sourceentity == null)
@@ -38,10 +36,10 @@ public class FlutterRightClickedProcedure {
 		}
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles(ParticleTypes.HEART, x, y, z, 5, 0.5, 0.5, 0.5, 0.3);
-		if (sourceentity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 0, (false), (false)));
+		if (sourceentity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+			_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 0, false, false));
 		if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.GLASS_BOTTLE) {
-			(itemstack).shrink(1);
+			itemstack.shrink(1);
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
 					_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.bottle.fill")), SoundSource.NEUTRAL, 1, 1);
@@ -52,7 +50,7 @@ public class FlutterRightClickedProcedure {
 			if (!entity.level.isClientSide())
 				entity.discard();
 			if (sourceentity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(EnemyexpansionModItems.BOTTLED_FLUTTERFLY.get());
+				ItemStack _setstack = new ItemStack(EnemyexpansionModItems.BOTTLED_FLUTTERFLY.get()).copy();
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
@@ -60,9 +58,8 @@ public class FlutterRightClickedProcedure {
 				Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("enemyexpansion:flutterfly_collection"));
 				AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 				if (!_ap.isDone()) {
-					Iterator _iterator = _ap.getRemainingCriteria().iterator();
-					while (_iterator.hasNext())
-						_player.getAdvancements().award(_adv, (String) _iterator.next());
+					for (String criteria : _ap.getRemainingCriteria())
+						_player.getAdvancements().award(_adv, criteria);
 				}
 			}
 		}

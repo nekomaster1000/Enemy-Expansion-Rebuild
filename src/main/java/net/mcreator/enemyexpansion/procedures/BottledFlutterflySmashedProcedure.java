@@ -34,12 +34,12 @@ public class BottledFlutterflySmashedProcedure {
 			entityToSpawn.setYHeadRot(0);
 			entityToSpawn.setDeltaMovement(0, 0, 0);
 			if (entityToSpawn instanceof Mob _mobToSpawn)
-				_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-			world.addFreshEntity(entityToSpawn);
+				_mobToSpawn.finalizeSpawn(_level, _level.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+			_level.addFreshEntity(entityToSpawn);
 		}
-		if (entity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(MobEffects.HEAL, 1, 0, (false), (false)));
-		if (entity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 210, 0, (false), (false)));
+		if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+			_entity.addEffect(new MobEffectInstance(MobEffects.HEAL, 1, 0, false, false));
+		if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+			_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 210, 0, false, false));
 	}
 }

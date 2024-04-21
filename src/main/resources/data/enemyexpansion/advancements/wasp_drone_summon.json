@@ -15,7 +15,7 @@
     "hidden": false
   },
   "criteria": {
-    "wasp_drone_summon": {
+    "wasp_drone_summon_0": {
       "trigger": "minecraft:impossible"
     }
   },

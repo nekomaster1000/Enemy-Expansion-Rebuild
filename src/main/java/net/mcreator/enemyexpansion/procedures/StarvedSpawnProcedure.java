@@ -17,7 +17,7 @@ public class StarvedSpawnProcedure {
 			return;
 		{
 			final int _slotid = 0;
-			final ItemStack _setstack = new ItemStack((ForgeRegistries.ITEMS.tags().getTag(ItemTags.create(new ResourceLocation("enemyexpansion:starved_stomach"))).getRandomElement(RandomSource.create()).orElseGet(() -> Items.AIR)));
+			final ItemStack _setstack = new ItemStack((ForgeRegistries.ITEMS.tags().getTag(ItemTags.create(new ResourceLocation("enemyexpansion:starved_stomach"))).getRandomElement(RandomSource.create()).orElseGet(() -> Items.AIR))).copy();
 			_setstack.setCount(1);
 			entity.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 				if (capability instanceof IItemHandlerModifiable _modHandler)

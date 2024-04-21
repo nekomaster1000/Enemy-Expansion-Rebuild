@@ -7,6 +7,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.common.brewing.IBrewingRecipe;
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraft.world.item.Items;
@@ -30,7 +31,7 @@ public class NightVisionPotionBrewingRecipe implements IBrewingRecipe {
 
 	@Override
 	public boolean isIngredient(ItemStack ingredient) {
-		return ingredient.getItem() == EnemyexpansionModItems.PHANTOM_EYE.get();
+		return Ingredient.of(new ItemStack(EnemyexpansionModItems.PHANTOM_EYE.get())).test(ingredient);
 	}
 
 	@Override

@@ -16,7 +16,7 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
-import net.mcreator.enemyexpansion.entity.WaspThoraxEntity;
+import net.mcreator.enemyexpansion.entity.WaspThoraxProjectileEntity;
 import net.mcreator.enemyexpansion.entity.WaspEntity;
 import net.mcreator.enemyexpansion.entity.VampireEntity;
 import net.mcreator.enemyexpansion.entity.VampflyerEntity;
@@ -30,12 +30,12 @@ import net.mcreator.enemyexpansion.entity.SluggerEntity;
 import net.mcreator.enemyexpansion.entity.SilverqueenbodilessEntity;
 import net.mcreator.enemyexpansion.entity.SilverqueenattackingEntity;
 import net.mcreator.enemyexpansion.entity.ScorpionEntity;
-import net.mcreator.enemyexpansion.entity.PhantomEyeEntity;
+import net.mcreator.enemyexpansion.entity.PhantomEyeProjectileEntity;
 import net.mcreator.enemyexpansion.entity.MeatureEntity;
 import net.mcreator.enemyexpansion.entity.LadybugEntity;
 import net.mcreator.enemyexpansion.entity.HuntsmanEntity;
 import net.mcreator.enemyexpansion.entity.HouseflyEntity;
-import net.mcreator.enemyexpansion.entity.HealingEyeEntity;
+import net.mcreator.enemyexpansion.entity.HealingEyeProjectileEntity;
 import net.mcreator.enemyexpansion.entity.GoblinFearEntity;
 import net.mcreator.enemyexpansion.entity.GoblinEntity;
 import net.mcreator.enemyexpansion.entity.FlutterflyEntity;
@@ -58,7 +58,7 @@ public class EnemyexpansionModEntities {
 	public static final RegistryObject<EntityType<MeatureEntity>> MEATURE = register("meature",
 			EntityType.Builder.<MeatureEntity>of(MeatureEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MeatureEntity::new)
 
-					.sized(0.7999999999999999f, 0.7999999999999999f));
+					.sized(0.8f, 0.8f));
 	public static final RegistryObject<EntityType<EquestrianEntity>> EQUESTRIAN = register("equestrian",
 			EntityType.Builder.<EquestrianEntity>of(EquestrianEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(EquestrianEntity::new)
 
@@ -132,16 +132,16 @@ public class EnemyexpansionModEntities {
 			EntityType.Builder.<SilverqueenbodilessEntity>of(SilverqueenbodilessEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SilverqueenbodilessEntity::new)
 
 					.sized(0.6f, 0.8f));
-	public static final RegistryObject<EntityType<PhantomEyeEntity>> PHANTOM_EYE = register("projectile_phantom_eye",
-			EntityType.Builder.<PhantomEyeEntity>of(PhantomEyeEntity::new, MobCategory.MISC).setCustomClientFactory(PhantomEyeEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<HealingEyeEntity>> HEALING_EYE = register("projectile_healing_eye",
-			EntityType.Builder.<HealingEyeEntity>of(HealingEyeEntity::new, MobCategory.MISC).setCustomClientFactory(HealingEyeEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<WaspThoraxEntity>> WASP_THORAX = register("projectile_wasp_thorax",
-			EntityType.Builder.<WaspThoraxEntity>of(WaspThoraxEntity::new, MobCategory.MISC).setCustomClientFactory(WaspThoraxEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<DirewolfEntity>> DIREWOLF = register("direwolf",
 			EntityType.Builder.<DirewolfEntity>of(DirewolfEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(DirewolfEntity::new)
 
 					.sized(0.95f, 0.8f));
+	public static final RegistryObject<EntityType<HealingEyeProjectileEntity>> HEALING_EYE_PROJECTILE = register("healing_eye_projectile", EntityType.Builder.<HealingEyeProjectileEntity>of(HealingEyeProjectileEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(HealingEyeProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<WaspThoraxProjectileEntity>> WASP_THORAX_PROJECTILE = register("wasp_thorax_projectile", EntityType.Builder.<WaspThoraxProjectileEntity>of(WaspThoraxProjectileEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(WaspThoraxProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<PhantomEyeProjectileEntity>> PHANTOM_EYE_PROJECTILE = register("phantom_eye_projectile", EntityType.Builder.<PhantomEyeProjectileEntity>of(PhantomEyeProjectileEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(PhantomEyeProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

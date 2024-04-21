@@ -1,4 +1,3 @@
-
 package net.mcreator.enemyexpansion.entity;
 
 import net.minecraftforge.registries.ForgeRegistries;
@@ -35,6 +34,7 @@ public class GoblinFearEntity extends Monster {
 
 	public GoblinFearEntity(EntityType<GoblinFearEntity> type, Level world) {
 		super(type, world);
+		maxUpStep = 0.6f;
 		xpReward = 0;
 		setNoAi(false);
 	}

@@ -602,22 +602,6 @@
       "path": "~/Mobs/Arthropod"
     },
     {
-      "name": "HealingEye",
-      "type": "rangeditem",
-      "sortid": 28,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "healing_eye",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/enemyexpansion/models/item/healing_eye.json",
-          "src/main/java/net/mcreator/enemyexpansion/item/HealingEyeItem.java",
-          "src/main/java/net/mcreator/enemyexpansion/entity/HealingEyeEntity.java"
-        ]
-      },
-      "path": "~/Items and Armour"
-    },
-    {
       "name": "HealingEyeHeals",
       "type": "procedure",
       "sortid": 52,
@@ -762,22 +746,6 @@
           {
             "name": "sourceentity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -1112,22 +1080,6 @@
       "path": "~/Mobs/Arthropod"
     },
     {
-      "name": "WaspThorax",
-      "type": "rangeditem",
-      "sortid": 29,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "wasp_thorax",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/enemyexpansion/models/item/wasp_thorax.json",
-          "src/main/java/net/mcreator/enemyexpansion/item/WaspThoraxItem.java",
-          "src/main/java/net/mcreator/enemyexpansion/entity/WaspThoraxEntity.java"
-        ]
-      },
-      "path": "~/Items and Armour"
-    },
-    {
       "name": "WaspThoraxExplode",
       "type": "procedure",
       "sortid": 67,
@@ -1138,24 +1090,7 @@
         "files": [
           "src/main/java/net/mcreator/enemyexpansion/procedures/WaspThoraxExplodeProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Items and Armour"
     },
@@ -1747,10 +1682,6 @@
             "type": "entity"
           },
           {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -2039,22 +1970,6 @@
           {
             "name": "sourceentity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -2188,32 +2103,7 @@
         "files": [
           "src/main/java/net/mcreator/enemyexpansion/procedures/SpawnTrollEnragedProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Mobs/MultiForm"
     },
@@ -2253,23 +2143,6 @@
             "name": "sourceentity",
             "type": "entity"
           }
-        ]
-      },
-      "path": "~/Mobs/MultiForm"
-    },
-    {
-      "name": "TrollStatue",
-      "type": "block",
-      "sortid": 24,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "troll_statue",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/enemyexpansion/models/block/troll_statue.json",
-          "src/main/java/net/mcreator/enemyexpansion/block/TrollStatueBlock.java",
-          "src/main/resources/assets/enemyexpansion/models/item/troll_statue.json",
-          "src/main/resources/assets/enemyexpansion/blockstates/troll_statue.json"
         ]
       },
       "path": "~/Mobs/MultiForm"
@@ -2459,46 +2332,6 @@
       "path": "~/Items and Armour"
     },
     {
-      "name": "SilverqueenParry",
-      "type": "procedure",
-      "sortid": 105,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "silverqueen_parry",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/enemyexpansion/procedures/SilverqueenParryProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Mobs/MultiForm"
-    },
-    {
       "name": "SpawnSilverfish",
       "type": "procedure",
       "sortid": 107,
@@ -2510,10 +2343,6 @@
           "src/main/java/net/mcreator/enemyexpansion/procedures/SpawnSilverfishProcedure.java"
         ],
         "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
           {
             "name": "x",
             "type": "number"
@@ -2570,30 +2399,6 @@
       "path": "~/Mobs/MultiForm"
     },
     {
-      "name": "SpawnSilverfishX5",
-      "type": "procedure",
-      "sortid": 111,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "spawn_silverfish_x_5",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/enemyexpansion/procedures/SpawnSilverfishX5Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Mobs/MultiForm"
-    },
-    {
       "name": "Silverhead",
       "type": "armor",
       "sortid": 33,
@@ -2623,26 +2428,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -2713,22 +2498,6 @@
           "src/main/resources/data/enemyexpansion/functions/silver_exes.mcfunction"
         ]
       }
-    },
-    {
-      "name": "PhantomEye",
-      "type": "rangeditem",
-      "sortid": 27,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "phantom_eye",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/enemyexpansion/item/PhantomEyeItem.java",
-          "src/main/java/net/mcreator/enemyexpansion/entity/PhantomEyeEntity.java",
-          "src/main/resources/assets/enemyexpansion/models/item/phantom_eye.json"
-        ]
-      },
-      "path": "~/Items and Armour"
     },
     {
       "name": "PhantomEyeOpens",
@@ -3398,30 +3167,6 @@
       "path": "~/Spawning"
     },
     {
-      "name": "SpawnSilverfishX3",
-      "type": "procedure",
-      "sortid": 148,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "spawn_silverfish_x_3",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/enemyexpansion/procedures/SpawnSilverfishX3Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Mobs/MultiForm"
-    },
-    {
       "name": "TrollPotatoed",
       "type": "procedure",
       "sortid": 151,
@@ -3746,6 +3491,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -3841,6 +3590,87 @@
         ]
       },
       "path": "~/Effects"
+    },
+    {
+      "name": "HealingEyeProjectile",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healing_eye_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/entity/HealingEyeProjectileEntity.java"
+        ]
+      },
+      "path": "~/Items and Armour"
+    },
+    {
+      "name": "HealingEye",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "healing_eye",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/enemyexpansion/models/item/healing_eye.json",
+          "src/main/java/net/mcreator/enemyexpansion/item/HealingEyeItem.java"
+        ]
+      },
+      "path": "~/Items and Armour"
+    },
+    {
+      "name": "WaspThoraxProjectile",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wasp_thorax_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/entity/WaspThoraxProjectileEntity.java"
+        ]
+      },
+      "path": "~/Items and Armour"
+    },
+    {
+      "name": "WaspThorax",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wasp_thorax",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/enemyexpansion/models/item/wasp_thorax.json",
+          "src/main/java/net/mcreator/enemyexpansion/item/WaspThoraxItem.java"
+        ]
+      },
+      "path": "~/Items and Armour"
+    },
+    {
+      "name": "PhantomEyeProjectile",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phantom_eye_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/entity/PhantomEyeProjectileEntity.java"
+        ]
+      },
+      "path": "~/Items and Armour"
+    },
+    {
+      "name": "PhantomEye",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "phantom_eye",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/item/PhantomEyeItem.java",
+          "src/main/resources/assets/enemyexpansion/models/item/phantom_eye.json"
+        ]
+      },
+      "path": "~/Items and Armour"
     }
   ],
   "variable_elements": [],
@@ -3887,6 +3717,7 @@
       "subtitle": "Troll groans"
     }
   ],
+  "tag_elements": {},
   "language_map": {
     "en_us": {
       "item.enemyexpansion.healing_eye": "Healing Eye",
@@ -3895,50 +3726,39 @@
       "entity.enemyexpansion.wasp": "Wasp",
       "item.enemyexpansion.headbiter_helmet": "Headbiter",
       "item.enemyexpansion.phantasm_chestplate": "Phantasm Cape",
-      "entity.enemyexpansion.silverqueenbodiless": "Dethroned Silverqueen",
       "advancements.goblin_villager_reversion.descr": "Release a Villager from their Goblified curse.",
+      "entity.enemyexpansion.silverqueenbodiless": "Dethroned Silverqueen",
       "item.enemyexpansion.silverqueenbodiless_spawn_egg": "Dethroned Silverqueen Spawn Egg",
       "entity.enemyexpansion.huntsman": "Huntsman",
-      "item.enemyexpansion.meathead_leggings": "-",
       "item.enemyexpansion.direwolf_spawn_egg": "Direwolf Spawn Egg",
       "item.enemyexpansion.sprinter_spawn_egg": "Sprinter Spawn Egg",
       "item.enemyexpansion.phantom_eye": "Phantom Eye",
       "subtitles.troll.roar": "Troll bellows",
-      "item.enemyexpansion.goblin_fear_spawn_egg": "Goblin Fear Spawn Egg",
       "entity.enemyexpansion.direwolf": "Direwolf",
-      "item.enemyexpansion.meathead_boots": "-",
-      "item.enemyexpansion.headbiter_boots": "-",
       "advancements.hunted.title": "Hunted",
       "item.enemyexpansion.scorpion_tail": "Scorpion Tail",
       "item.enemyexpansion.wasp_thorax": "Wasp Thorax",
-      "item.enemyexpansion.headbiter_chestplate": "-",
       "advancements.ladybug_feeding.descr": "Recieving a Healing Eye from a Ladybug",
-      "item.enemyexpansion.starved_spawn_egg": "Starved Spawn Egg",
       "entity.enemyexpansion.vampbiter": "Vampire Biter",
+      "item.enemyexpansion.starved_spawn_egg": "Starved Spawn Egg",
       "advancements.tarancher.title": "Tarancher",
       "entity.enemyexpansion.trollenraged": "Enraged Troll",
       "entity.enemyexpansion.starved": "Starved",
       "item.minecraft.lingering_potion.effect.swift_flight_potion": "Lingering Potion of Swift Flight",
-      "item.enemyexpansion.horsehead_leggings": "-",
       "item.enemyexpansion.ladybug_spawn_egg": "Ladybug Spawn Egg",
       "advancements.regicide.title": "Regicide",
       "entity.enemyexpansion.equestrian": "Equestrian",
       "advancements.regicide.descr": "Kill a Bodiless Silverqueen!",
       "effect.enemyexpansion.despawner": "Despawner",
-      "item.enemyexpansion.headbiter_leggings": "-",
-      "item.enemyexpansion.trollenraged_spawn_egg": "Enraged Troll Spawn Egg",
       "item.enemyexpansion.flutterfly_spawn_egg": "Flutteryfly Spawn Egg",
+      "item.enemyexpansion.trollenraged_spawn_egg": "Enraged Troll Spawn Egg",
       "advancements.troll_hunter.title": "Troll Hunter",
       "advancements.you_make_me_sick.title": "You Make Me Sick!",
-      "item.enemyexpansion.horsehead_chestplate": "-",
       "item.enemyexpansion.huntsman_spawn_egg": "Huntsman Spawn Egg",
       "item.enemyexpansion.botfly_spawn_egg": "Botfly Spawn Egg",
       "advancements.troll_petrified.title": "Trolled!",
       "advancements.wasp_drone_summon.descr": "Hatch a Wasp Drone from a Wasp Thorax!",
-      "item.enemyexpansion.meathead_chestplate": "-",
-      "block.enemyexpansion.troll_statue": "Troll Statue",
       "advancements.you_make_me_sick.descr": "Poison a Troll with a Poisonous Potato",
-      "item.enemyexpansion.silverhead_leggings": "-",
       "item.enemyexpansion.goblin_spawn_egg": "Goblin Thief Spawn Egg",
       "item.enemyexpansion.vampire_spawn_egg": "Vampire Spawn Egg",
       "item.enemyexpansion.slugger_spawn_egg": "Slugger Spawn Egg",
@@ -3956,7 +3776,6 @@
       "advancements.ladybug_feeding.title": "Ladybug\u0027s Gift",
       "item.enemyexpansion.trollface": "Trollface",
       "item.enemyexpansion.equestrian_spawn_egg": "Equestrian Spawn Egg",
-      "item.enemyexpansion.horsehead_boots": "-",
       "entity.enemyexpansion.silverqueen": "Silverqueen",
       "advancements.hunted.descr": "Defeat a Huntsman!",
       "item.enemyexpansion.meature_spawn_egg": "Meature Spawn Egg",
@@ -3966,8 +3785,6 @@
       "advancements.troll_hunter.descr": "Defeat a Troll!",
       "advancements.enemy_expansion_advancement.title": "Enemy Expansion",
       "item.enemyexpansion.troll_spawn_egg": "Troll Spawn Egg",
-      "item.enemyexpansion.silverhead_boots": "-",
-      "item.enemyexpansion.silverhead_chestplate": "-",
       "entity.enemyexpansion.troll": "Troll",
       "entity.enemyexpansion.vampire": "Vampire",
       "item.enemyexpansion.silverqueen_spawn_egg": "Silverqueen Spawn Egg",
@@ -4071,7 +3888,6 @@
     "author": "nekomaster1000",
     "websiteURL": "https://infernalstudios.org/",
     "license": "All Rights Reserved",
-    "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "modPicture": "meature",
     "requiredMods": [
@@ -4080,13 +3896,11 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
-      "geckolib",
-      "allmods"
+      "geckolib"
     ],
     "currentGenerator": "forge-1.19.2",
     "credits": "Made with MCreator!",
-    "modElementsPackage": "net.mcreator.enemyexpansion",
-    "lockBaseModFiles": false
+    "modElementsPackage": "net.mcreator.enemyexpansion"
   },
-  "mcreatorVersion": 202300110610
+  "mcreatorVersion": 202400115821
 }

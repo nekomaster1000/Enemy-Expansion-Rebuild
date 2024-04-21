@@ -15,7 +15,7 @@
     "hidden": false
   },
   "criteria": {
-    "tarancher": {
+    "tarancher_0": {
       "trigger": "minecraft:impossible"
     }
   },

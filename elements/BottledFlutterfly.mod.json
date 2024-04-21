@@ -1,10 +1,12 @@
 {
-  "_fv": 39,
+  "_fv": 60,
   "_type": "item",
   "definition": {
     "renderType": 0,
     "texture": "bottled_flutterflies",
     "customModelName": "Normal",
+    "customProperties": {},
+    "states": [],
     "name": "Bottled Flutterfly",
     "rarity": "COMMON",
     "creativeTab": {
@@ -24,8 +26,9 @@
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "specialInfo": [],
-    "hasGlow": false,
+    "specialInformation": {
+      "fixedValue": []
+    },
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
@@ -38,6 +41,8 @@
     "onFinishUsingItem": {
       "name": "BottledFlutterflyEaten"
     },
+    "enableRanged": false,
+    "shootConstantly": false,
     "isFood": true,
     "nutritionalValue": 4,
     "saturation": 0.3,

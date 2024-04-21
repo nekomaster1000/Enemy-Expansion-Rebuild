@@ -1,6 +1,9 @@
 {
   "type": "forge:add_spawns",
-  "biomes": "#forge:is_desert",
+  "biomes": [
+    "desert",
+    "plains"
+  ],
   "spawners": {
     "type": "enemyexpansion:scorpion",
     "weight": 100,

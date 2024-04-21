@@ -19,9 +19,7 @@ import net.mcreator.enemyexpansion.procedures.BottledFlutterflyEatenProcedure;
 
 public class BottledFlutterflyItem extends Item {
 	public BottledFlutterflyItem() {
-		super(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(4).saturationMod(0.3f).alwaysEat()
-
-				.build()));
+		super(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(4).saturationMod(0.3f).alwaysEat().build()));
 	}
 
 	@Override
@@ -31,7 +29,6 @@ public class BottledFlutterflyItem extends Item {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-
 		BottledFlutterflyEatenProcedure.execute(entity);
 		if (itemstack.isEmpty()) {
 			return retval;

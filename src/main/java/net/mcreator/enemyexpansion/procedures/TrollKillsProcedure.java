@@ -9,7 +9,7 @@ public class TrollKillsProcedure {
 	public static void execute(Entity sourceentity) {
 		if (sourceentity == null)
 			return;
-		if (sourceentity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(MobEffects.HEAL, 1, 4, (false), (false)));
+		if (sourceentity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+			_entity.addEffect(new MobEffectInstance(MobEffects.HEAL, 1, 4, false, false));
 	}
 }

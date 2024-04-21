@@ -16,7 +16,7 @@
     "hidden": false
   },
   "criteria": {
-    "enemy_expansion_advancement": {
+    "enemy_expansion_advancement_0": {
       "trigger": "minecraft:impossible"
     }
   }

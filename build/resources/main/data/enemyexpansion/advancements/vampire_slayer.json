@@ -15,7 +15,7 @@
     "hidden": false
   },
   "criteria": {
-    "vampire_slayer": {
+    "vampire_slayer_0": {
       "trigger": "minecraft:impossible"
     }
   },

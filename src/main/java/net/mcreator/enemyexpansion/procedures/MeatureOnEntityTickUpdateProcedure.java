@@ -10,7 +10,7 @@ public class MeatureOnEntityTickUpdateProcedure {
 		if (entity == null)
 			return;
 		if (Math.random() < 0.01) {
-			if (world instanceof Level _lvl && _lvl.isDay()) {
+			if (world instanceof Level _lvl0 && _lvl0.isDay()) {
 				if (!(entity instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false)) {
 					if (!entity.level.isClientSide())
 						entity.discard();

@@ -8,7 +8,6 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
@@ -16,16 +15,11 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
-import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.commands.CommandSource;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.enemyexpansion.init.EnemyexpansionModEntities;
 import net.mcreator.enemyexpansion.entity.TrollenragedEntity;
-import net.mcreator.enemyexpansion.entity.TrollEntity;
 import net.mcreator.enemyexpansion.configuration.BetterConfigConfiguration;
 import net.mcreator.enemyexpansion.EnemyexpansionMod;
 
@@ -39,10 +33,10 @@ public class TrollEnragedHurtProcedure {
 			return;
 		TrollPetrificationProcedure.execute(world, x, y, z, entity, sourceentity);
 		if (entity instanceof TrollenragedEntity) {
-			if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.DAMAGE_RESISTANCE) : false)) {
-				if (entity instanceof LivingEntity _entity)
+			if (!(entity instanceof LivingEntity _livEnt1 && _livEnt1.hasEffect(MobEffects.DAMAGE_RESISTANCE))) {
+				if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 20, 4));
-				if (entity instanceof LivingEntity _entity)
+				if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, 0));
 				if (entity instanceof TrollenragedEntity) {
 					((TrollenragedEntity) entity).setAnimation("roar");
@@ -83,26 +77,6 @@ public class TrollEnragedHurtProcedure {
 						if (Math.random() < (double) BetterConfigConfiguration.ENRAGEDBECOMESTROLL.get() / 100) {
 							EnemyexpansionMod.queueServerWork(10, () -> {
 								if (entity.isAlive()) {
-									if (world instanceof ServerLevel _serverLevelForEntitySpawn) {
-										Entity _entityForSpawning = new TrollEntity(EnemyexpansionModEntities.TROLL.get(), _serverLevelForEntitySpawn);
-										_entityForSpawning.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
-										{
-											Entity _ent = _entityForSpawning;
-											if (!_ent.level.isClientSide() && _ent.getServer() != null) {
-												_ent.getServer().getCommands().performPrefixedCommand(
-														new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(),
-																_ent.getDisplayName(), _ent.level.getServer(), _ent),
-														("/data merge entity @s {Health:20f}".replace("{Health:20f}", "{Health:" + ("" + (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1)) + "f}")));
-											}
-										}
-										if (!entity.level.isClientSide())
-											entity.discard();
-										if (_entityForSpawning instanceof Mob _entity && sourceentity instanceof LivingEntity _ent)
-											_entity.setTarget(_ent);
-										if (_entityForSpawning instanceof Mob _mobForSpawning)
-											_mobForSpawning.finalizeSpawn(_serverLevelForEntitySpawn, world.getCurrentDifficultyAt(_entityForSpawning.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-										world.addFreshEntity(_entityForSpawning);
-									}
 								}
 							});
 						}

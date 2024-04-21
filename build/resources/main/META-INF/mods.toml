@@ -4,15 +4,16 @@ license="All Rights Reserved"
 
 [[mods]]
 modId="enemyexpansion"
-version="2.1.0"
+version="2.2.1"
 displayName="Enemy Expansion"
-credits="Made with MCreator!"
 displayURL="https://infernalstudios.org/"
 logoFile="logo.png"
+credits="Made with MCreator!"
 authors="nekomaster1000"
-description='''
-Adding more enemies to Minecraft!
-'''
+description="Adding more enemies to Minecraft!"
+
+# Start of user code block mod configuration
+# End of user code block mod configuration
 
 [[dependencies.enemyexpansion]]
     modId="minecraft"
@@ -20,7 +21,6 @@ Adding more enemies to Minecraft!
     versionRange="[1.19.2]"
     ordering="NONE"
     side="BOTH"
-
 
 [[dependencies.enemyexpansion]]
     modId="geckolib3"
@@ -31,12 +31,6 @@ Adding more enemies to Minecraft!
 
 [[dependencies.enemyexpansion]]
     modId="geckolib"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.enemyexpansion]]
-    modId="allmods"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"

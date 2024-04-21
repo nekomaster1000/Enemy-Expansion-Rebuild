@@ -13,7 +13,7 @@ public class HouseflyTickProcedure {
 		if (entity == null)
 			return;
 		if (Math.random() < 0.05) {
-			if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get()) : false)) {
+			if (!(entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get()))) {
 				entity.setDeltaMovement(new Vec3((Mth.nextDouble(RandomSource.create(), -0.5, 0.5)), (Mth.nextDouble(RandomSource.create(), -0.3, 0.25)), (Mth.nextDouble(RandomSource.create(), -0.5, 0.5))));
 			}
 		}

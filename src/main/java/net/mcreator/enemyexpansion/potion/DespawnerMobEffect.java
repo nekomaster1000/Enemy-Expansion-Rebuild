@@ -1,4 +1,3 @@
-
 package net.mcreator.enemyexpansion.potion;
 
 import net.minecraftforge.client.extensions.common.IClientMobEffectExtensions;
@@ -17,11 +16,6 @@ import com.mojang.blaze3d.vertex.PoseStack;
 public class DespawnerMobEffect extends MobEffect {
 	public DespawnerMobEffect() {
 		super(MobEffectCategory.HARMFUL, -65485);
-	}
-
-	@Override
-	public String getDescriptionId() {
-		return "effect.enemyexpansion.despawner";
 	}
 
 	@Override

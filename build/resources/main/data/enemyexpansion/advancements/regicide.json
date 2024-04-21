@@ -15,7 +15,7 @@
     "hidden": false
   },
   "criteria": {
-    "regicide": {
+    "regicide_0": {
       "trigger": "minecraft:impossible"
     }
   },

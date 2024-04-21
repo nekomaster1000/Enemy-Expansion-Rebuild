@@ -22,15 +22,15 @@ public class SprinterHurtProcedure {
 			((SprinterEntity) entity).setAnimation("empty");
 		}
 		if (sourceentity instanceof LivingEntity && !(sourceentity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
-			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 1, (false), (true)));
-			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.UNLUCK, 35, 1, (false), (true)));
+			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 40, 1, false, true));
+			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.UNLUCK, 35, 1, false, true));
 			if (entity instanceof SprinterEntity) {
 				((SprinterEntity) entity).setAnimation("staggered_used");
 			}
 			EnemyexpansionMod.queueServerWork(36, () -> {
-				if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.UNLUCK) : false)) {
+				if (!(entity instanceof LivingEntity _livEnt7 && _livEnt7.hasEffect(MobEffects.UNLUCK))) {
 					if (world instanceof ServerLevel _level)
 						_level.sendParticles(ParticleTypes.ANGRY_VILLAGER, (entity.getX()), (entity.getY()), (entity.getZ()), 5, 1, 1, 1, 0.6);
 					if (entity instanceof SprinterEntity) {

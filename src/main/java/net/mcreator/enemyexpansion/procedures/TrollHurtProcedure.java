@@ -37,10 +37,10 @@ public class TrollHurtProcedure {
 			return;
 		TrollPetrificationProcedure.execute(world, x, y, z, entity, sourceentity);
 		if (entity instanceof TrollEntity) {
-			if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.DAMAGE_RESISTANCE) : false)) {
-				if (entity instanceof LivingEntity _entity)
+			if (!(entity instanceof LivingEntity _livEnt1 && _livEnt1.hasEffect(MobEffects.DAMAGE_RESISTANCE))) {
+				if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 20, 4));
-				if (entity instanceof LivingEntity _entity)
+				if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 60, 0));
 				if (entity instanceof TrollEntity) {
 					((TrollEntity) entity).setAnimation("roar");
@@ -62,8 +62,8 @@ public class TrollHurtProcedure {
 								entityToSpawn.setYHeadRot(0);
 								entityToSpawn.setDeltaMovement(0, 0, 0);
 								if (entityToSpawn instanceof Mob _mobToSpawn)
-									_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-								world.addFreshEntity(entityToSpawn);
+									_mobToSpawn.finalizeSpawn(_level, _level.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+								_level.addFreshEntity(entityToSpawn);
 							}
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
@@ -100,14 +100,14 @@ public class TrollHurtProcedure {
 						if (Math.random() < (double) BetterConfigConfiguration.TROLLBECOMESENRAGED.get() / 100) {
 							EnemyexpansionMod.queueServerWork(18, () -> {
 								if (entity.isAlive()) {
-									SpawnTrollEnragedProcedure.execute(world, x, y, z, entity, sourceentity);
+									SpawnTrollEnragedProcedure.execute();
 								}
 							});
 						}
 					}
 				});
-			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.MOVEMENT_SLOWDOWN) : false) && !(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.POISON) : false)) {
-				SpawnTrollEnragedProcedure.execute(world, x, y, z, entity, sourceentity);
+			} else if (entity instanceof LivingEntity _livEnt20 && _livEnt20.hasEffect(MobEffects.MOVEMENT_SLOWDOWN) && !(entity instanceof LivingEntity _livEnt21 && _livEnt21.hasEffect(MobEffects.POISON))) {
+				SpawnTrollEnragedProcedure.execute();
 			}
 		}
 	}

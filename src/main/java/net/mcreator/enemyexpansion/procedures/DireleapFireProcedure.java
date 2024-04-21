@@ -9,7 +9,7 @@ public class DireleapFireProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		if (entity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 20, 1, (false), (false)));
+		if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+			_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 20, 1, false, false));
 	}
 }

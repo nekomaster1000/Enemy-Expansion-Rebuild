@@ -17,7 +17,6 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
@@ -57,7 +56,6 @@ public class HuntsmanHurtProcedure {
 								}
 							}
 							entityiterator.setDeltaMovement(new Vec3((Math.sin(Math.toRadians(entity.getYRot() + 180)) * 1.3), 0.3, (Math.cos(Math.toRadians(entity.getYRot())) * 1.3)));
-							entityiterator.hurt((new DamageSource("mob")), 2);
 						}
 					});
 				}
@@ -69,7 +67,7 @@ public class HuntsmanHurtProcedure {
 			}
 			if (Math.random() < 0.2) {
 				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack = new ItemStack(Items.ARROW);
+					ItemStack _setstack = new ItemStack(Items.ARROW).copy();
 					_setstack.setCount(1);
 					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 					if (_entity instanceof Player _player)
@@ -77,11 +75,11 @@ public class HuntsmanHurtProcedure {
 				}
 				if (entity instanceof HuntsmanEntity animatable)
 					animatable.setTexture("huntsman_bowless");
-				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 60, 0, (false), (true)));
+				if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 60, 0, false, true));
 				EnemyexpansionMod.queueServerWork(60, () -> {
 					if (entity instanceof LivingEntity _entity) {
-						ItemStack _setstack = new ItemStack(Items.BOW);
+						ItemStack _setstack = new ItemStack(Items.BOW).copy();
 						_setstack.setCount(1);
 						_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 						if (_entity instanceof Player _player)
@@ -95,7 +93,7 @@ public class HuntsmanHurtProcedure {
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.BOW) {
 					EnemyexpansionMod.queueServerWork(30, () -> {
 						if (entity.isAlive() && sourceentity.isAlive()) {
-							for (int index0 = 0; index0 < (int) (5); index0++) {
+							for (int index0 = 0; index0 < 5; index0++) {
 								{
 									Entity _shootFrom = entity;
 									Level projectileLevel = _shootFrom.level;

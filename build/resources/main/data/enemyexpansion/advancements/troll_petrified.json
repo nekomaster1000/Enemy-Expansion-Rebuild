@@ -15,7 +15,7 @@
     "hidden": false
   },
   "criteria": {
-    "troll_petrified": {
+    "troll_petrified_0": {
       "trigger": "minecraft:impossible"
     }
   },

@@ -1,6 +1,6 @@
 {
   "type": "forge:add_spawns",
-  "biomes": "#forge:is_generalnotempcave",
+  "biomes": "plains",
   "spawners": {
     "type": "enemyexpansion:silverqueen",
     "weight": 10,

@@ -12,7 +12,7 @@ public class BittenActiveProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (world instanceof Level _lvl && _lvl.isDay()) {
+		if (world instanceof Level _lvl0 && _lvl0.isDay()) {
 			if (world.canSeeSkyFromBelowWater(new BlockPos(x, y, z))) {
 				if (world.getMaxLocalRawBrightness(new BlockPos(x, y, z)) > 12) {
 					if (!entity.isInWaterRainOrBubble()) {

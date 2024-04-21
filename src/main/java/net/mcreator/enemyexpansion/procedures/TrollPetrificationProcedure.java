@@ -18,10 +18,8 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
 
-import net.mcreator.enemyexpansion.init.EnemyexpansionModBlocks;
+import net.mcreator.enemyexpansion.init.EnemyexpansionModItems;
 import net.mcreator.enemyexpansion.configuration.BetterConfigConfiguration;
-
-import java.util.Iterator;
 
 public class TrollPetrificationProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
@@ -30,9 +28,9 @@ public class TrollPetrificationProcedure {
 		if (BetterConfigConfiguration.TROLLSPETRIFY.get() == true) {
 			if (world.getMaxLocalRawBrightness(new BlockPos(x, y + 1, z)) > 13) {
 				if (world.canSeeSkyFromBelowWater(new BlockPos(x, y, z))) {
-					if (world instanceof Level _lvl && _lvl.isDay()) {
-						if (world instanceof Level _level && !_level.isClientSide()) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(EnemyexpansionModBlocks.TROLL_STATUE.get()));
+					if (world instanceof Level _lvl3 && _lvl3.isDay()) {
+						if (world instanceof ServerLevel _level) {
+							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(EnemyexpansionModItems.TROLLFACE.get()));
 							entityToSpawn.setPickUpDelay(10);
 							_level.addFreshEntity(entityToSpawn);
 						}
@@ -66,9 +64,8 @@ public class TrollPetrificationProcedure {
 							Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("enemyexpansion:troll_petrified"));
 							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 							if (!_ap.isDone()) {
-								Iterator _iterator = _ap.getRemainingCriteria().iterator();
-								while (_iterator.hasNext())
-									_player.getAdvancements().award(_adv, (String) _iterator.next());
+								for (String criteria : _ap.getRemainingCriteria())
+									_player.getAdvancements().award(_adv, criteria);
 							}
 						}
 					}

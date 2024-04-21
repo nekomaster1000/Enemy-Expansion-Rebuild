@@ -1,5 +1,5 @@
 {
-  "_fv": 39,
+  "_fv": 60,
   "_type": "animatedentity",
   "definition": {
     "mobName": "Vampire in Flight",
@@ -12,10 +12,12 @@
     "boundingBoxScale": {
       "fixedValue": 1.0
     },
+    "entityDataEntries": [],
     "modelWidth": 0.7,
     "modelHeight": 1.95,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
+    "stepHeight": 0.6,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
       "value": -13883323,

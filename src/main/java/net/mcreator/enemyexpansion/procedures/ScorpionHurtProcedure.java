@@ -33,14 +33,14 @@ public class ScorpionHurtProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		if (sourceentity instanceof Player && entity instanceof ScorpionEntity) {
-			if (entity instanceof LivingEntity _entity)
+			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 120, 0));
-			if (entity instanceof LivingEntity _entity)
+			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 				_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.SANDSTORM.get(), 120, 0));
 		} else if (entity instanceof Player && sourceentity instanceof ScorpionEntity) {
-			if (entity instanceof LivingEntity _entity)
+			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.POISON, 120, 0));
-			if (entity instanceof LivingEntity _entity)
+			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 120, 0));
 		}
 	}

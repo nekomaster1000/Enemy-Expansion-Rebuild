@@ -24,15 +24,13 @@ import net.minecraft.advancements.Advancement;
 import net.mcreator.enemyexpansion.init.EnemyexpansionModItems;
 import net.mcreator.enemyexpansion.EnemyexpansionMod;
 
-import java.util.Iterator;
-
 public class LadybugTradeProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity, ItemStack itemstack) {
 		if (entity == null || sourceentity == null)
 			return;
-		if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.REGENERATION) : false)) {
+		if (!(entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(MobEffects.REGENERATION))) {
 			if (sourceentity instanceof Player && (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.SPIDER_EYE) {
-				(itemstack).shrink(1);
+				itemstack.shrink(1);
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.eat")), SoundSource.NEUTRAL, 1, 1);
@@ -40,7 +38,7 @@ public class LadybugTradeProcedure {
 						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.eat")), SoundSource.NEUTRAL, 1, 1, false);
 					}
 				}
-				if (entity instanceof LivingEntity _entity)
+				if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 30, 1));
 				if (Math.random() < 0.3) {
 					EnemyexpansionMod.queueServerWork(20, () -> {
@@ -51,7 +49,7 @@ public class LadybugTradeProcedure {
 								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.llama.spit")), SoundSource.NEUTRAL, 1, 1, false);
 							}
 						}
-						if (world instanceof Level _level && !_level.isClientSide()) {
+						if (world instanceof ServerLevel _level) {
 							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(EnemyexpansionModItems.HEALING_EYE.get()));
 							entityToSpawn.setPickUpDelay(10);
 							_level.addFreshEntity(entityToSpawn);
@@ -60,9 +58,8 @@ public class LadybugTradeProcedure {
 							Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("enemyexpansion:ladybug_feeding"));
 							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 							if (!_ap.isDone()) {
-								Iterator _iterator = _ap.getRemainingCriteria().iterator();
-								while (_iterator.hasNext())
-									_player.getAdvancements().award(_adv, (String) _iterator.next());
+								for (String criteria : _ap.getRemainingCriteria())
+									_player.getAdvancements().award(_adv, criteria);
 							}
 						}
 					});

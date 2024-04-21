@@ -1,4 +1,3 @@
-
 package net.mcreator.enemyexpansion.potion;
 
 import net.minecraftforge.client.extensions.common.IClientMobEffectExtensions;
@@ -20,14 +19,9 @@ public class CardiacMobEffect extends MobEffect {
 	}
 
 	@Override
-	public String getDescriptionId() {
-		return "effect.enemyexpansion.cardiac";
-	}
-
-	@Override
 	public void removeAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
 		super.removeAttributeModifiers(entity, attributeMap, amplifier);
-		CardiacActivateProcedure.execute(entity);
+		CardiacActivateProcedure.execute(entity.level, entity);
 	}
 
 	@Override

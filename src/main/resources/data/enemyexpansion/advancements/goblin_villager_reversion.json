@@ -15,7 +15,7 @@
     "hidden": false
   },
   "criteria": {
-    "goblin_villager_reversion": {
+    "goblin_villager_reversion_0": {
       "trigger": "minecraft:impossible"
     }
   },

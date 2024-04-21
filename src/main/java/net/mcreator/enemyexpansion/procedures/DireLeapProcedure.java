@@ -28,8 +28,8 @@ public class DireLeapProcedure {
 			if (entity instanceof DirewolfEntity) {
 				((DirewolfEntity) entity).setAnimation("leap");
 			}
-			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 5, 3, (false), (false)));
+			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 5, 3, false, false));
 		}
 		if ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(MobEffects.MOVEMENT_SLOWDOWN) ? _livEnt.getEffect(MobEffects.MOVEMENT_SLOWDOWN).getDuration() : 0) == 1) {
 			if (entity.isAlive() && entity.isOnGround()) {
@@ -49,10 +49,10 @@ public class DireLeapProcedure {
 				}
 				entity.setDeltaMovement(
 						new Vec3((entity.getLookAngle().x * Mth.nextDouble(RandomSource.create(), 1.25, 2)), (Mth.nextDouble(RandomSource.create(), 0.3, 0.6)), (entity.getLookAngle().z * Mth.nextDouble(RandomSource.create(), 1.25, 2))));
-				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 50, 0, (false), (true)));
-				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 50, 0, (false), (true)));
+				if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 50, 0, false, true));
+				if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 50, 0, false, true));
 			}
 		}
 	}

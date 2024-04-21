@@ -1,5 +1,5 @@
 {
-  "_fv": 39,
+  "_fv": 60,
   "_type": "config",
   "definition": {
     "pools": [
@@ -20,9 +20,7 @@
             "comment": "Range: -64 to 318",
             "vardisplay": "Topmost Y-level at which Cave Mobs can spawn",
             "varname": "cavemobspawndepth",
-            "enablecomment": true,
-            "onlyComment": false,
-            "entityType": "CUSTOM:Drone"
+            "enablecomment": true
           },
           {
             "item": {
@@ -38,9 +36,7 @@
             "comment": "Range: 0 to 100 (Percent)",
             "vardisplay": "Chance Vampires will start flying when hurt",
             "varname": "vampiretoflyer",
-            "enablecomment": true,
-            "onlyComment": false,
-            "entityType": "CUSTOM:Drone"
+            "enablecomment": true
           },
           {
             "item": {
@@ -56,9 +52,7 @@
             "comment": "Range: 0 to 100 (Percent)",
             "vardisplay": "Chance Vampires will stop flying when hurt",
             "varname": "flyertovampire",
-            "enablecomment": true,
-            "onlyComment": false,
-            "entityType": "CUSTOM:Drone"
+            "enablecomment": true
           },
           {
             "item": {
@@ -74,9 +68,7 @@
             "comment": "Range: 0 to 100 (Percent)",
             "vardisplay": "Chance Vampire will turn into a Biter, regenerating it's health",
             "varname": "vampiretobiter",
-            "enablecomment": true,
-            "onlyComment": false,
-            "entityType": "CUSTOM:Drone"
+            "enablecomment": true
           },
           {
             "item": {
@@ -92,9 +84,7 @@
             "comment": "Range: 0 to 100 (Percent)",
             "vardisplay": "Chance Troll will become enraged when hurt",
             "varname": "trollbecomesenraged",
-            "enablecomment": true,
-            "onlyComment": false,
-            "entityType": "CUSTOM:Drone"
+            "enablecomment": true
           },
           {
             "item": {
@@ -110,9 +100,7 @@
             "comment": "Range: 0 to 100 (Percent)",
             "vardisplay": "Chance Troll will calm down from rage when hurt",
             "varname": "enragedbecomestroll",
-            "enablecomment": true,
-            "onlyComment": false,
-            "entityType": "CUSTOM:Drone"
+            "enablecomment": true
           }
         ]
       },
@@ -133,9 +121,7 @@
             "comment": "",
             "vardisplay": "Vampires explode from burning",
             "varname": "vampiresexplode",
-            "enablecomment": false,
-            "onlyComment": false,
-            "entityType": "CUSTOM:Drone"
+            "enablecomment": false
           },
           {
             "item": {
@@ -151,9 +137,7 @@
             "comment": "",
             "vardisplay": "Trolls petrify when hurt under sunlight",
             "varname": "trollspetrify",
-            "enablecomment": false,
-            "onlyComment": false,
-            "entityType": "CUSTOM:Drone"
+            "enablecomment": false
           },
           {
             "item": {
@@ -169,9 +153,7 @@
             "comment": "Range: 0 to 100 (Percent)",
             "vardisplay": "Chance Botflies will spawn from a slain Zombie",
             "varname": "spawnfliesondeath",
-            "enablecomment": true,
-            "onlyComment": false,
-            "entityType": "CUSTOM:Drone"
+            "enablecomment": true
           },
           {
             "item": {
@@ -187,9 +169,7 @@
             "comment": "Range: 0 to 100 (Percent)",
             "vardisplay": "Chance Phantoms drop their Eyes",
             "varname": "phantomeye",
-            "enablecomment": true,
-            "onlyComment": false,
-            "entityType": "CUSTOM:Drone"
+            "enablecomment": true
           }
         ]
       }

@@ -1,4 +1,3 @@
-
 /*
  *    MCreator note: This file will be REGENERATED on each build.
  */
@@ -61,9 +60,9 @@ public class EnemyexpansionModEntityRenderers {
 		event.registerEntityRenderer(EnemyexpansionModEntities.TROLLENRAGED.get(), TrollenragedRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.SILVERQUEEN.get(), SilverqueenattackingRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.SILVERQUEENBODILESS.get(), SilverqueenbodilessRenderer::new);
-		event.registerEntityRenderer(EnemyexpansionModEntities.PHANTOM_EYE.get(), ThrownItemRenderer::new);
-		event.registerEntityRenderer(EnemyexpansionModEntities.HEALING_EYE.get(), ThrownItemRenderer::new);
-		event.registerEntityRenderer(EnemyexpansionModEntities.WASP_THORAX.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.DIREWOLF.get(), DirewolfRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.HEALING_EYE_PROJECTILE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.WASP_THORAX_PROJECTILE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.PHANTOM_EYE_PROJECTILE.get(), ThrownItemRenderer::new);
 	}
 }

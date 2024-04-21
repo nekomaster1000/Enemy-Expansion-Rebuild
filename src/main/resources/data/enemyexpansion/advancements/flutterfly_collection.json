@@ -15,7 +15,7 @@
     "hidden": false
   },
   "criteria": {
-    "flutterfly_collection": {
+    "flutterfly_collection_0": {
       "trigger": "minecraft:impossible"
     }
   },

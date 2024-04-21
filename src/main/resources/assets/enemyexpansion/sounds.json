@@ -1,6 +1,5 @@
 {
   "starved.chomp": {
-    "category": "hostile",
     "subtitle": "subtitles.starved.chomp",
     "sounds": [
       {
@@ -10,7 +9,6 @@
     ]
   },
   "troll.idle": {
-    "category": "hostile",
     "subtitle": "subtitles.troll.idle",
     "sounds": [
       {
@@ -20,7 +18,6 @@
     ]
   },
   "troll.hurt": {
-    "category": "hostile",
     "subtitle": "subtitles.troll.hurt",
     "sounds": [
       {
@@ -34,7 +31,6 @@
     ]
   },
   "troll.roar": {
-    "category": "neutral",
     "subtitle": "subtitles.troll.roar",
     "sounds": [
       {
@@ -44,7 +40,6 @@
     ]
   },
   "troll.death": {
-    "category": "hostile",
     "subtitle": "subtitles.troll.death",
     "sounds": [
       {

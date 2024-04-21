@@ -35,7 +35,6 @@ import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
@@ -43,9 +42,9 @@ import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.Packet;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.enemyexpansion.procedures.SpawnSilverfishX5Procedure;
 import net.mcreator.enemyexpansion.procedures.SpawnSilverfishProcedure;
 import net.mcreator.enemyexpansion.init.EnemyexpansionModEntities;
 
@@ -67,6 +66,7 @@ public class SilverqueenbodilessEntity extends Monster implements IAnimatable {
 		super(type, world);
 		xpReward = 10;
 		setNoAi(false);
+		maxUpStep = 0.6f;
 	}
 
 	@Override
@@ -135,14 +135,21 @@ public class SilverqueenbodilessEntity extends Monster implements IAnimatable {
 
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
-		SpawnSilverfishProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
+		SpawnSilverfishProcedure.execute(this.level, this.getX(), this.getY(), this.getZ());
 		return super.hurt(source, amount);
 	}
 
 	@Override
-	public void die(DamageSource source) {
-		super.die(source);
-		SpawnSilverfishX5Procedure.execute(this.level, this);
+	public void addAdditionalSaveData(CompoundTag compound) {
+		super.addAdditionalSaveData(compound);
+		compound.putString("Texture", this.getTexture());
+	}
+
+	@Override
+	public void readAdditionalSaveData(CompoundTag compound) {
+		super.readAdditionalSaveData(compound);
+		if (compound.contains("Texture"))
+			this.setTexture(compound.getString("Texture"));
 	}
 
 	@Override
@@ -184,28 +191,11 @@ public class SilverqueenbodilessEntity extends Monster implements IAnimatable {
 	}
 
 	private <E extends IAnimatable> PlayState procedurePredicate(AnimationEvent<E> event) {
-		Entity entity = this;
-		Level world = entity.level;
-		boolean loop = false;
-		double x = entity.getX();
-		double y = entity.getY();
-		double z = entity.getZ();
-		if (!loop && this.lastloop) {
-			this.lastloop = false;
-			event.getController().setAnimation(new AnimationBuilder().addAnimation(this.animationprocedure, EDefaultLoopTypes.PLAY_ONCE));
-			event.getController().clearAnimationCache();
-			return PlayState.STOP;
-		}
 		if (!this.animationprocedure.equals("empty") && event.getController().getAnimationState().equals(software.bernie.geckolib3.core.AnimationState.Stopped)) {
-			if (!loop) {
-				event.getController().setAnimation(new AnimationBuilder().addAnimation(this.animationprocedure, EDefaultLoopTypes.PLAY_ONCE));
-				if (event.getController().getAnimationState().equals(software.bernie.geckolib3.core.AnimationState.Stopped)) {
-					this.animationprocedure = "empty";
-					event.getController().markNeedsReload();
-				}
-			} else {
-				event.getController().setAnimation(new AnimationBuilder().addAnimation(this.animationprocedure, EDefaultLoopTypes.LOOP));
-				this.lastloop = true;
+			event.getController().setAnimation(new AnimationBuilder().addAnimation(this.animationprocedure, EDefaultLoopTypes.PLAY_ONCE));
+			if (event.getController().getAnimationState().equals(software.bernie.geckolib3.core.AnimationState.Stopped)) {
+				this.animationprocedure = "empty";
+				event.getController().markNeedsReload();
 			}
 		}
 		return PlayState.CONTINUE;

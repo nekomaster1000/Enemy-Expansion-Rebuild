@@ -22,8 +22,8 @@ public class DroneSpawnProcedure {
 		if (entity instanceof DroneEntity) {
 			((DroneEntity) entity).setAnimation("spawn");
 		}
-		if (entity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 2, 0, (false), (false)));
+		if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+			_entity.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 2, 0, false, false));
 		world.levelEvent(2001, new BlockPos(x, y, z), Block.getId((world.getBlockState(new BlockPos(x, y - 2, z)))));
 		if (world instanceof Level _level) {
 			if (!_level.isClientSide()) {

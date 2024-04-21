@@ -18,8 +18,8 @@ public class LadybugTickProcedure {
 			if (entity instanceof LadybugEntity) {
 				((LadybugEntity) entity).setAnimation("fly");
 			}
-			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 30, 0, (false), (false)));
+			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 30, 0, false, false));
 		}
 	}
 }

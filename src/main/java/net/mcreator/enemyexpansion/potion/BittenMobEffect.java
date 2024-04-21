@@ -1,4 +1,3 @@
-
 package net.mcreator.enemyexpansion.potion;
 
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
@@ -12,11 +11,6 @@ import net.mcreator.enemyexpansion.procedures.BittenActiveProcedure;
 public class BittenMobEffect extends MobEffect {
 	public BittenMobEffect() {
 		super(MobEffectCategory.HARMFUL, -12241793);
-	}
-
-	@Override
-	public String getDescriptionId() {
-		return "effect.enemyexpansion.bitten";
 	}
 
 	@Override

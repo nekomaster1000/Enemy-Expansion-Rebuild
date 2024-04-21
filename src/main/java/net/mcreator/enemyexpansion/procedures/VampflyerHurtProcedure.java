@@ -11,7 +11,6 @@ import net.minecraft.world.entity.projectile.ThrownTrident;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 
@@ -45,8 +44,8 @@ public class VampflyerHurtProcedure {
 				((VampflyerEntity) entity).setAnimation("swiftflight");
 			}
 			EnemyexpansionMod.queueServerWork((int) Mth.nextDouble(RandomSource.create(), 15, 25), () -> {
-				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get(), (int) Mth.nextDouble(RandomSource.create(), 40, 80), (int) Mth.nextDouble(RandomSource.create(), 0, 2), (false), (false)));
+				if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+					_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get(), (int) Mth.nextDouble(RandomSource.create(), 40, 80), (int) Mth.nextDouble(RandomSource.create(), 0, 2), false, false));
 			});
 		} else if (sourceentity instanceof VampflyerEntity) {
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) > 11) {
@@ -59,7 +58,6 @@ public class VampflyerHurtProcedure {
 			sourceentity.setDeltaMovement(new Vec3((Mth.nextDouble(RandomSource.create(), -1.5, 1.5)), (Mth.nextInt(RandomSource.create(), (int) (-0.1), (int) 0.1)), (Mth.nextDouble(RandomSource.create(), -1.5, 1.5))));
 		}
 		if (immediatesourceentity instanceof ThrownTrident) {
-			entity.hurt((new DamageSource("trident")), 16);
 		}
 	}
 }

@@ -17,7 +17,7 @@ public class HouseflyHurtProcedure {
 			_entity.removeEffect(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get());
 		entity.setDeltaMovement(new Vec3((Math.sin(Math.toRadians(sourceentity.getYRot() + 180)) * 2.5), (-0.3), (Math.cos(Math.toRadians(sourceentity.getYRot())) * 2.5)));
 		EnemyexpansionMod.queueServerWork(20, () -> {
-			if (entity instanceof LivingEntity _entity)
+			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 				_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get(), 60, 0));
 		});
 	}

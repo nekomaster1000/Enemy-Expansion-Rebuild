@@ -6,11 +6,11 @@ import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.monster.Phantom;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerLevel;
 
 import net.mcreator.enemyexpansion.init.EnemyexpansionModItems;
 import net.mcreator.enemyexpansion.configuration.BetterConfigConfiguration;
@@ -35,7 +35,7 @@ public class PhantomEyeDropFromPhantomProcedure {
 			return;
 		if (entity instanceof Phantom) {
 			if (Math.random() < (double) BetterConfigConfiguration.PHANTOMEYE.get() / 100) {
-				if (world instanceof Level _level && !_level.isClientSide()) {
+				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(EnemyexpansionModItems.PHANTOM_EYE.get()));
 					entityToSpawn.setPickUpDelay(10);
 					_level.addFreshEntity(entityToSpawn);

@@ -35,8 +35,8 @@ public class WaspHurtProcedure {
 							_entity.removeEffect(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get());
 						entityiterator.setDeltaMovement(new Vec3((Mth.nextDouble(RandomSource.create(), -1.5, 1.5)), 0, (Mth.nextDouble(RandomSource.create(), -1.5, 1.5))));
 						EnemyexpansionMod.queueServerWork((int) Mth.nextDouble(RandomSource.create(), 15, 25), () -> {
-							if (entityiterator instanceof LivingEntity _entity)
-								_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get(), (int) Mth.nextDouble(RandomSource.create(), 40, 80), (int) Mth.nextDouble(RandomSource.create(), 0, 2), (false), (false)));
+							if (entityiterator instanceof LivingEntity _entity && !_entity.level.isClientSide())
+								_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.SWIFT_FLIGHT.get(), (int) Mth.nextDouble(RandomSource.create(), 40, 80), (int) Mth.nextDouble(RandomSource.create(), 0, 2), false, false));
 							if (entityiterator instanceof WaspEntity animatable)
 								animatable.setTexture("wasp_hostile");
 						});

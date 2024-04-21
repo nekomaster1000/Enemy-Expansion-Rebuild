@@ -1,5 +1,5 @@
 {
-  "_fv": 39,
+  "_fv": 60,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -30,18 +30,26 @@
     "bodyName": "Phantasm Cape",
     "leggingsName": "Phantasm Leggings",
     "bootsName": "Phantasm Boots",
-    "helmetSpecialInfo": [
-      "See clearly in the dark!"
-    ],
-    "bodySpecialInfo": [
-      "Become stronger in the dark!"
-    ],
-    "leggingsSpecialInfo": [
-      "Jump higher in the dark!"
-    ],
-    "bootsSpecialInfo": [
-      "Move faster in the dark!"
-    ],
+    "helmetSpecialInformation": {
+      "fixedValue": [
+        "See clearly in the dark!"
+      ]
+    },
+    "bodySpecialInformation": {
+      "fixedValue": [
+        "Become stronger in the dark!"
+      ]
+    },
+    "leggingsSpecialInformation": {
+      "fixedValue": [
+        "Jump higher in the dark!"
+      ]
+    },
+    "bootsSpecialInformation": {
+      "fixedValue": [
+        "Move faster in the dark!"
+      ]
+    },
     "helmetModelName": "Default",
     "helmetModelPart": "Helmet",
     "helmetModelTexture": "From armor",

@@ -15,7 +15,7 @@
     "hidden": false
   },
   "criteria": {
-    "starved_steal": {
+    "starved_steal_0": {
       "trigger": "minecraft:impossible"
     }
   },

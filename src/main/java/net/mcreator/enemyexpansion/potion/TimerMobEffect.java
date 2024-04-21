@@ -1,4 +1,3 @@
-
 package net.mcreator.enemyexpansion.potion;
 
 import net.minecraftforge.client.extensions.common.IClientMobEffectExtensions;
@@ -13,11 +12,6 @@ import com.mojang.blaze3d.vertex.PoseStack;
 public class TimerMobEffect extends MobEffect {
 	public TimerMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -1);
-	}
-
-	@Override
-	public String getDescriptionId() {
-		return "effect.enemyexpansion.timer";
 	}
 
 	@Override

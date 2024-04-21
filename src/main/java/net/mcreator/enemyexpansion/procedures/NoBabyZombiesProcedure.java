@@ -31,7 +31,7 @@ public class NoBabyZombiesProcedure {
 		if (entity == null)
 			return;
 		if (entity.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("enemyexpansion:disabled_baby_zombies")))) {
-			if (entity instanceof LivingEntity _livEnt ? _livEnt.isBaby() : false) {
+			if (entity instanceof LivingEntity _livEnt1 && _livEnt1.isBaby()) {
 				EnemyexpansionMod.queueServerWork(1, () -> {
 					if (!entity.level.isClientSide())
 						entity.discard();

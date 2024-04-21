@@ -1,16 +1,20 @@
 {
-  "_fv": 39,
+  "_fv": 60,
   "_type": "tool",
   "definition": {
+    "toolType": "Pickaxe",
     "renderType": 0,
+    "blockingRenderType": 0,
     "texture": "troll_molar",
     "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
     "name": "Troll Molar",
-    "specialInfo": [],
+    "specialInformation": {
+      "fixedValue": []
+    },
     "creativeTab": {
       "value": "TOOLS"
     },
-    "toolType": "Pickaxe",
     "harvestLevel": 1,
     "efficiency": 10.0,
     "attackSpeed": 1.0,
@@ -18,7 +22,6 @@
     "damageVsEntity": 4.0,
     "usageCount": 505,
     "blocksAffected": [],
-    "hasGlow": false,
     "repairItems": [
       {
         "value": "Blocks.BONE_BLOCK"

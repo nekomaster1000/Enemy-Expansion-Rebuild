@@ -15,7 +15,7 @@
     "hidden": false
   },
   "criteria": {
-    "you_make_me_sick": {
+    "you_make_me_sick_0": {
       "trigger": "minecraft:impossible"
     }
   },

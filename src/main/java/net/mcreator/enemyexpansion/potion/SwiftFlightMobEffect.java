@@ -1,4 +1,3 @@
-
 package net.mcreator.enemyexpansion.potion;
 
 import net.minecraft.world.entity.LivingEntity;
@@ -10,11 +9,6 @@ import net.mcreator.enemyexpansion.procedures.SwiftFlightActiveProcedure;
 public class SwiftFlightMobEffect extends MobEffect {
 	public SwiftFlightMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -3342337);
-	}
-
-	@Override
-	public String getDescriptionId() {
-		return "effect.enemyexpansion.swift_flight";
 	}
 
 	@Override

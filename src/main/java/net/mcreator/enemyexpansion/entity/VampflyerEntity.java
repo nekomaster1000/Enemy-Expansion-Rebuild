@@ -46,7 +46,6 @@ import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.util.RandomSource;
@@ -87,6 +86,7 @@ public class VampflyerEntity extends Monster implements IAnimatable {
 		super(type, world);
 		xpReward = 5;
 		setNoAi(false);
+		maxUpStep = 0.6f;
 		this.moveControl = new FlyingMoveControl(this, 10, true);
 	}
 
@@ -211,7 +211,7 @@ public class VampflyerEntity extends Monster implements IAnimatable {
 
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
-		VampireHurtProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this, source.getEntity());
+		VampireHurtProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
 		if (source == DamageSource.FALL)
 			return false;
 		if (source == DamageSource.WITHER)
@@ -226,6 +226,19 @@ public class VampflyerEntity extends Monster implements IAnimatable {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
 		VampireSpawnProcedure.execute(world, this.getX(), this.getY(), this.getZ(), this);
 		return retval;
+	}
+
+	@Override
+	public void addAdditionalSaveData(CompoundTag compound) {
+		super.addAdditionalSaveData(compound);
+		compound.putString("Texture", this.getTexture());
+	}
+
+	@Override
+	public void readAdditionalSaveData(CompoundTag compound) {
+		super.readAdditionalSaveData(compound);
+		if (compound.contains("Texture"))
+			this.setTexture(compound.getString("Texture"));
 	}
 
 	@Override
@@ -293,28 +306,11 @@ public class VampflyerEntity extends Monster implements IAnimatable {
 	}
 
 	private <E extends IAnimatable> PlayState procedurePredicate(AnimationEvent<E> event) {
-		Entity entity = this;
-		Level world = entity.level;
-		boolean loop = false;
-		double x = entity.getX();
-		double y = entity.getY();
-		double z = entity.getZ();
-		if (!loop && this.lastloop) {
-			this.lastloop = false;
-			event.getController().setAnimation(new AnimationBuilder().addAnimation(this.animationprocedure, EDefaultLoopTypes.PLAY_ONCE));
-			event.getController().clearAnimationCache();
-			return PlayState.STOP;
-		}
 		if (!this.animationprocedure.equals("empty") && event.getController().getAnimationState().equals(software.bernie.geckolib3.core.AnimationState.Stopped)) {
-			if (!loop) {
-				event.getController().setAnimation(new AnimationBuilder().addAnimation(this.animationprocedure, EDefaultLoopTypes.PLAY_ONCE));
-				if (event.getController().getAnimationState().equals(software.bernie.geckolib3.core.AnimationState.Stopped)) {
-					this.animationprocedure = "empty";
-					event.getController().markNeedsReload();
-				}
-			} else {
-				event.getController().setAnimation(new AnimationBuilder().addAnimation(this.animationprocedure, EDefaultLoopTypes.LOOP));
-				this.lastloop = true;
+			event.getController().setAnimation(new AnimationBuilder().addAnimation(this.animationprocedure, EDefaultLoopTypes.PLAY_ONCE));
+			if (event.getController().getAnimationState().equals(software.bernie.geckolib3.core.AnimationState.Stopped)) {
+				this.animationprocedure = "empty";
+				event.getController().markNeedsReload();
 			}
 		}
 		return PlayState.CONTINUE;

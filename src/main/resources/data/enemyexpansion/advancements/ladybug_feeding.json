@@ -15,7 +15,7 @@
     "hidden": false
   },
   "criteria": {
-    "ladybug_feeding": {
+    "ladybug_feeding_0": {
       "trigger": "minecraft:impossible"
     }
   },

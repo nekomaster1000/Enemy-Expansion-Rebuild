@@ -60,17 +60,17 @@ public class LadybugHurtProcedure {
 				}
 				if (entity instanceof LivingEntity _entity)
 					_entity.setHealth(entity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1);
-				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(MobEffects.WITHER, 50000, 0, (false), (false)));
-				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 50000, 0, (false), (false)));
-				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 50000, 0, (false), (false)));
-				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 50000, 0, (false), (false)));
+				if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.WITHER, 50000, 0, false, false));
+				if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 50000, 0, false, false));
+				if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 50000, 0, false, false));
+				if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 50000, 0, false, false));
 			}
 		}
-		if (entity instanceof LadybugEntity && (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.WITHER) : false)) {
+		if (entity instanceof LadybugEntity && entity instanceof LivingEntity _livEnt14 && _livEnt14.hasEffect(MobEffects.WITHER)) {
 			if (entity instanceof LadybugEntity animatable)
 				animatable.setTexture("zadybug");
 		}

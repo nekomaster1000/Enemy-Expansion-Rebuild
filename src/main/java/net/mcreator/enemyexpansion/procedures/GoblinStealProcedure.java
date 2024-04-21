@@ -43,8 +43,8 @@ public class GoblinStealProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		if (sourceentity instanceof GoblinEntity) {
-			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 110, 0, (false), (true)));
+			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 110, 0, false, true));
 			if (entity instanceof Player) {
 				if (entity instanceof Player _player)
 					_player.giveExperiencePoints(-(20));
@@ -60,8 +60,8 @@ public class GoblinStealProcedure {
 				Entity entityToSpawn = new GoblinFearEntity(EnemyexpansionModEntities.GOBLIN_FEAR.get(), _level);
 				entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
 				if (entityToSpawn instanceof Mob _mobToSpawn)
-					_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-				world.addFreshEntity(entityToSpawn);
+					_mobToSpawn.finalizeSpawn(_level, _level.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+				_level.addFreshEntity(entityToSpawn);
 			}
 			if (sourceentity instanceof GoblinEntity) {
 				((GoblinEntity) sourceentity).setAnimation("sprint");

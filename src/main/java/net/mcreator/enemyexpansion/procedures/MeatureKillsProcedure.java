@@ -31,23 +31,23 @@ public class MeatureKillsProcedure {
 			max_health = new java.text.DecimalFormat("##.##").format(sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1);
 		}
 		if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMaxHealth() : -1) < 30) {
-			if (sourceentity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 400, 0, (false), (false)));
-			if (sourceentity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 200, 0, (false), (true)));
-			if (sourceentity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 100, 0, (false), (false)));
-			if (sourceentity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.HARM, 10, 0, (false), (false)));
+			if (sourceentity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 400, 0, false, false));
+			if (sourceentity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 200, 0, false, true));
+			if (sourceentity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 100, 0, false, false));
+			if (sourceentity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.HARM, 10, 0, false, false));
 		} else {
-			if (sourceentity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 400, 1, (false), (false)));
-			if (sourceentity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 200, 1, (false), (true)));
-			if (sourceentity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 100, 1, (false), (false)));
-			if (sourceentity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.HARM, 10, 1, (false), (false)));
+			if (sourceentity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 400, 1, false, false));
+			if (sourceentity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 200, 1, false, true));
+			if (sourceentity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 100, 1, false, false));
+			if (sourceentity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.HARM, 10, 1, false, false));
 		}
 	}
 }

@@ -33,12 +33,12 @@ public class HorseheadDeathProcedure {
 		if (sourceentity == null)
 			return;
 		if ((sourceentity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == EnemyexpansionModItems.HORSEHEAD_HELMET.get()) {
-			if (sourceentity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 110, 1, (false), (false)));
-			if (sourceentity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 210, 0, (false), (false)));
-			if (sourceentity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.HUNGER, 210, 0, (false), (false)));
+			if (sourceentity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 110, 1, false, false));
+			if (sourceentity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 210, 0, false, false));
+			if (sourceentity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.HUNGER, 210, 0, false, false));
 		}
 	}
 }

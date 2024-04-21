@@ -53,41 +53,41 @@ public class VampireAttackProcedure {
 					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.phantom.bite")), SoundSource.HOSTILE, 1, 1, false);
 				}
 			}
-			if (!(entity instanceof LivingEntity _livEnt ? _livEnt.isBlocking() : false)) {
-				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 40, 0, (false), (true)));
+			if (!(entity instanceof LivingEntity _livEnt3 && _livEnt3.isBlocking())) {
+				if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 40, 0, false, true));
 				if (entity instanceof Player) {
-					if (world instanceof Level _lvl && _lvl.isDay()) {
-						if (entity instanceof LivingEntity _entity)
-							_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.BITTEN.get(), 90, 0, (false), (true)));
+					if (world instanceof Level _lvl6 && _lvl6.isDay()) {
+						if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+							_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.BITTEN.get(), 90, 0, false, true));
 					}
 				} else {
-					if (entity instanceof LivingEntity _entity)
-						_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.BITTEN.get(), 200, 0, (false), (true)));
+					if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+						_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.BITTEN.get(), 200, 0, false, true));
 				}
-				if (sourceentity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(MobEffects.HARM, 1, 0, (false), (false)));
+				if (sourceentity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.HARM, 1, 0, false, false));
 				if (world instanceof ServerLevel _level) {
 					Entity entityToSpawn = new GoblinFearEntity(EnemyexpansionModEntities.GOBLIN_FEAR.get(), _level);
 					entityToSpawn.moveTo((x - 2), y, (z - 2), world.getRandom().nextFloat() * 360F, 0);
 					if (entityToSpawn instanceof Mob _mobToSpawn)
-						_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-					world.addFreshEntity(entityToSpawn);
+						_mobToSpawn.finalizeSpawn(_level, _level.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+					_level.addFreshEntity(entityToSpawn);
 				}
 			}
 			if (entity instanceof Villager) {
-				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(MobEffects.POISON, 200, 0, (false), (true)));
-				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.BITTEN.get(), 200, 0, (false), (true)));
+				if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.POISON, 200, 0, false, true));
+				if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+					_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.BITTEN.get(), 200, 0, false, true));
 			}
 		} else if (entity instanceof VampireEntity || entity instanceof VampflyerEntity) {
 			if (world instanceof ServerLevel _level) {
 				Entity entityToSpawn = new GoblinFearEntity(EnemyexpansionModEntities.GOBLIN_FEAR.get(), _level);
 				entityToSpawn.moveTo((x - 2), y, (z - 2), world.getRandom().nextFloat() * 360F, 0);
 				if (entityToSpawn instanceof Mob _mobToSpawn)
-					_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-				world.addFreshEntity(entityToSpawn);
+					_mobToSpawn.finalizeSpawn(_level, _level.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+				_level.addFreshEntity(entityToSpawn);
 			}
 			VampireIgnitionProcedure.execute(world, x, y, z, entity);
 		}

@@ -1,5 +1,5 @@
 {
-  "_fv": 39,
+  "_fv": 60,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -18,12 +18,20 @@
     "bodyName": "-",
     "leggingsName": "-",
     "bootsName": "-",
-    "helmetSpecialInfo": [
-      "Gain HP on kill!"
-    ],
-    "bodySpecialInfo": [],
-    "leggingsSpecialInfo": [],
-    "bootsSpecialInfo": [],
+    "helmetSpecialInformation": {
+      "fixedValue": [
+        "Gain HP on kill!"
+      ]
+    },
+    "bodySpecialInformation": {
+      "fixedValue": []
+    },
+    "leggingsSpecialInformation": {
+      "fixedValue": []
+    },
+    "bootsSpecialInformation": {
+      "fixedValue": []
+    },
     "helmetModelName": "Modelheadbiter",
     "helmetModelPart": "all2",
     "helmetModelTexture": "headbiter.png",

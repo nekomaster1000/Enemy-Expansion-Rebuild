@@ -29,7 +29,7 @@ public class BottledFlutterflyReleasedProcedure {
 			_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 		}
 		if (entity instanceof Player _player) {
-			ItemStack _setstack = new ItemStack(Items.GLASS_BOTTLE);
+			ItemStack _setstack = new ItemStack(Items.GLASS_BOTTLE).copy();
 			_setstack.setCount(1);
 			ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 		}
@@ -40,8 +40,8 @@ public class BottledFlutterflyReleasedProcedure {
 			entityToSpawn.setYHeadRot(0);
 			entityToSpawn.setDeltaMovement(0, 0, 0);
 			if (entityToSpawn instanceof Mob _mobToSpawn)
-				_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-			world.addFreshEntity(entityToSpawn);
+				_mobToSpawn.finalizeSpawn(_level, _level.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+			_level.addFreshEntity(entityToSpawn);
 		}
 		if (world instanceof Level _level) {
 			if (!_level.isClientSide()) {

@@ -18,7 +18,7 @@ public class DeathstickItem extends SwordItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 98f;
+				return 96f;
 			}
 
 			public int getLevel() {
@@ -30,7 +30,7 @@ public class DeathstickItem extends SwordItem {
 			}
 
 			public Ingredient getRepairIngredient() {
-				return Ingredient.EMPTY;
+				return Ingredient.of();
 			}
 		}, 3, -3f, new Item.Properties().tab(null));
 	}

@@ -23,10 +23,10 @@ public class EquestrianHurtProcedure {
 		if (entity instanceof EquestrianEntity) {
 			((EquestrianEntity) entity).setAnimation("panicked");
 		}
-		if (entity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 110, 0, (false), (false)));
+		if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 110, 0, false, false));
 		EnemyexpansionMod.queueServerWork(111, () -> {
-			if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.MOVEMENT_SLOWDOWN) : false)) {
+			if (!(entity instanceof LivingEntity _livEnt3 && _livEnt3.hasEffect(MobEffects.MOVEMENT_SLOWDOWN))) {
 				if (entity instanceof EquestrianEntity animatable)
 					animatable.setTexture("equestrian");
 				if (world instanceof ServerLevel _level)

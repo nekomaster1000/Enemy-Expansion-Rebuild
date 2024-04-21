@@ -1,0 +1,22 @@
+{
+  "_fv": 60,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "CUSTOM:PhantomEye"
+    },
+    "showParticles": true,
+    "actionSound": {
+      "value": "entity.egg.throw"
+    },
+    "igniteFire": false,
+    "power": 0.6,
+    "damage": 0.0,
+    "knockback": 0,
+    "entityModel": "Default",
+    "customModelTexture": "",
+    "onHitsEntity": {
+      "name": "PhantomEyeOpens"
+    }
+  }
+}

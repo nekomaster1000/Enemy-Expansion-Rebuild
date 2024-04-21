@@ -15,7 +15,7 @@
     "hidden": false
   },
   "criteria": {
-    "troll_hunter": {
+    "troll_hunter_0": {
       "trigger": "minecraft:impossible"
     }
   },

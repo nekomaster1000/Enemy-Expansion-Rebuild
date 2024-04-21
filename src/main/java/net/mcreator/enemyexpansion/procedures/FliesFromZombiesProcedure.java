@@ -38,7 +38,7 @@ public class FliesFromZombiesProcedure {
 			return;
 		if (entity.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("enemyexpansion:spawns_flies_on_death")))) {
 			if (Math.random() < (double) BetterConfigConfiguration.SPAWNFLIESONDEATH.get() / 100) {
-				for (int index0 = 0; index0 < (int) (5); index0++) {
+				for (int index0 = 0; index0 < 5; index0++) {
 					if (world instanceof ServerLevel _level) {
 						Entity entityToSpawn = new HouseflyEntity(EnemyexpansionModEntities.BOTFLY.get(), _level);
 						entityToSpawn.moveTo(x, y, z, 0, 0);
@@ -46,8 +46,8 @@ public class FliesFromZombiesProcedure {
 						entityToSpawn.setYHeadRot(0);
 						entityToSpawn.setDeltaMovement(0, 0, 0);
 						if (entityToSpawn instanceof Mob _mobToSpawn)
-							_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-						world.addFreshEntity(entityToSpawn);
+							_mobToSpawn.finalizeSpawn(_level, _level.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+						_level.addFreshEntity(entityToSpawn);
 					}
 				}
 			}

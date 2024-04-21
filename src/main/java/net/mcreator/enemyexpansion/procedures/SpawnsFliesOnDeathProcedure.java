@@ -40,13 +40,13 @@ public class SpawnsFliesOnDeathProcedure {
 			return;
 		if (Math.random() < 0.01) {
 			if (sourceentity instanceof Player && entity.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("enemyexpansion:spawns_flies_on_death")))) {
-				for (int index0 = 0; index0 < (int) (Mth.nextDouble(RandomSource.create(), 1, 5)); index0++) {
+				for (int index0 = 0; index0 < (int) Mth.nextDouble(RandomSource.create(), 1, 5); index0++) {
 					if (world instanceof ServerLevel _level) {
 						Entity entityToSpawn = new HouseflyEntity(EnemyexpansionModEntities.BOTFLY.get(), _level);
 						entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
 						if (entityToSpawn instanceof Mob _mobToSpawn)
-							_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-						world.addFreshEntity(entityToSpawn);
+							_mobToSpawn.finalizeSpawn(_level, _level.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+						_level.addFreshEntity(entityToSpawn);
 					}
 				}
 			}

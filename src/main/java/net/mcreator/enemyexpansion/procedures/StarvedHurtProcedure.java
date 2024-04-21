@@ -16,7 +16,7 @@ public class StarvedHurtProcedure {
 			_player.getInventory().clearContent();
 		{
 			final int _slotid = 0;
-			final ItemStack _setstack = new ItemStack(Blocks.SAND);
+			final ItemStack _setstack = new ItemStack(Blocks.SAND).copy();
 			_setstack.setCount(1);
 			entity.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 				if (capability instanceof IItemHandlerModifiable _modHandler)

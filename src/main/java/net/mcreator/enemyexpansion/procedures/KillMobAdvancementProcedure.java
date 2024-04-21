@@ -22,8 +22,6 @@ import net.mcreator.enemyexpansion.entity.HuntsmanEntity;
 
 import javax.annotation.Nullable;
 
-import java.util.Iterator;
-
 @Mod.EventBusSubscriber
 public class KillMobAdvancementProcedure {
 	@SubscribeEvent
@@ -46,9 +44,8 @@ public class KillMobAdvancementProcedure {
 					Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("enemyexpansion:vampire_slayer"));
 					AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 					if (!_ap.isDone()) {
-						Iterator _iterator = _ap.getRemainingCriteria().iterator();
-						while (_iterator.hasNext())
-							_player.getAdvancements().award(_adv, (String) _iterator.next());
+						for (String criteria : _ap.getRemainingCriteria())
+							_player.getAdvancements().award(_adv, criteria);
 					}
 				}
 			} else if (entity instanceof VampflyerEntity) {
@@ -56,9 +53,8 @@ public class KillMobAdvancementProcedure {
 					Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("enemyexpansion:vampire_slayer"));
 					AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 					if (!_ap.isDone()) {
-						Iterator _iterator = _ap.getRemainingCriteria().iterator();
-						while (_iterator.hasNext())
-							_player.getAdvancements().award(_adv, (String) _iterator.next());
+						for (String criteria : _ap.getRemainingCriteria())
+							_player.getAdvancements().award(_adv, criteria);
 					}
 				}
 			} else if (entity instanceof VampbiterEntity) {
@@ -66,9 +62,8 @@ public class KillMobAdvancementProcedure {
 					Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("enemyexpansion:vampire_slayer"));
 					AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 					if (!_ap.isDone()) {
-						Iterator _iterator = _ap.getRemainingCriteria().iterator();
-						while (_iterator.hasNext())
-							_player.getAdvancements().award(_adv, (String) _iterator.next());
+						for (String criteria : _ap.getRemainingCriteria())
+							_player.getAdvancements().award(_adv, criteria);
 					}
 				}
 			}
@@ -77,9 +72,8 @@ public class KillMobAdvancementProcedure {
 					Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("enemyexpansion:troll_hunter"));
 					AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 					if (!_ap.isDone()) {
-						Iterator _iterator = _ap.getRemainingCriteria().iterator();
-						while (_iterator.hasNext())
-							_player.getAdvancements().award(_adv, (String) _iterator.next());
+						for (String criteria : _ap.getRemainingCriteria())
+							_player.getAdvancements().award(_adv, criteria);
 					}
 				}
 			} else if (entity instanceof TrollenragedEntity) {
@@ -87,9 +81,8 @@ public class KillMobAdvancementProcedure {
 					Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("enemyexpansion:troll_hunter"));
 					AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 					if (!_ap.isDone()) {
-						Iterator _iterator = _ap.getRemainingCriteria().iterator();
-						while (_iterator.hasNext())
-							_player.getAdvancements().award(_adv, (String) _iterator.next());
+						for (String criteria : _ap.getRemainingCriteria())
+							_player.getAdvancements().award(_adv, criteria);
 					}
 				}
 			}
@@ -98,9 +91,8 @@ public class KillMobAdvancementProcedure {
 					Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("enemyexpansion:regicide"));
 					AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 					if (!_ap.isDone()) {
-						Iterator _iterator = _ap.getRemainingCriteria().iterator();
-						while (_iterator.hasNext())
-							_player.getAdvancements().award(_adv, (String) _iterator.next());
+						for (String criteria : _ap.getRemainingCriteria())
+							_player.getAdvancements().award(_adv, criteria);
 					}
 				}
 			}
@@ -109,9 +101,8 @@ public class KillMobAdvancementProcedure {
 					Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("enemyexpansion:hunted"));
 					AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 					if (!_ap.isDone()) {
-						Iterator _iterator = _ap.getRemainingCriteria().iterator();
-						while (_iterator.hasNext())
-							_player.getAdvancements().award(_adv, (String) _iterator.next());
+						for (String criteria : _ap.getRemainingCriteria())
+							_player.getAdvancements().award(_adv, criteria);
 					}
 				}
 			}

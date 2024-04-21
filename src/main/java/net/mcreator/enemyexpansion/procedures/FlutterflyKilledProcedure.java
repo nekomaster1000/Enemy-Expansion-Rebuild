@@ -13,7 +13,7 @@ public class FlutterflyKilledProcedure {
 		if (sourceentity instanceof Player) {
 			if (sourceentity instanceof LivingEntity _entity)
 				_entity.removeEffect(MobEffects.WITHER);
-			if (sourceentity instanceof LivingEntity _entity)
+			if (sourceentity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 600, 0));
 		}
 	}

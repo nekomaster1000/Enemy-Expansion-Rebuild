@@ -11,13 +11,13 @@ public class VampireLandsProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		if (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.HEALTH_BOOST) : false) {
+		if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(MobEffects.HEALTH_BOOST)) {
 			if (entity instanceof LivingEntity _entity)
 				_entity.removeEffect(MobEffects.HEALTH_BOOST);
 			if (entity instanceof VampireEntity) {
 				((VampireEntity) entity).setAnimation("land");
 			}
-			if (entity instanceof LivingEntity _entity)
+			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 12, 4));
 		}
 	}

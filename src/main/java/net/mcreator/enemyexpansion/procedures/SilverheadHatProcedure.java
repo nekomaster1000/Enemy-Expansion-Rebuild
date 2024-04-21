@@ -11,13 +11,10 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.monster.Silverfish;
-import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.server.level.ServerLevel;
@@ -27,7 +24,6 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 import net.minecraft.commands.CommandFunction;
 
-import net.mcreator.enemyexpansion.init.EnemyexpansionModMobEffects;
 import net.mcreator.enemyexpansion.init.EnemyexpansionModItems;
 import net.mcreator.enemyexpansion.EnemyexpansionMod;
 
@@ -55,19 +51,7 @@ public class SilverheadHatProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == EnemyexpansionModItems.SILVERHEAD_HELMET.get()) {
-			for (int index0 = 0; index0 < (int) (Mth.nextDouble(RandomSource.create(), 1, 3)); index0++) {
-				if (world instanceof ServerLevel _serverLevelForEntitySpawn) {
-					Entity _entityForSpawning = new Silverfish(EntityType.SILVERFISH, _serverLevelForEntitySpawn);
-					_entityForSpawning.moveTo(x, (y + 2), z, world.getRandom().nextFloat() * 360F, 0);
-					_entityForSpawning.setDeltaMovement(new Vec3((Mth.nextDouble(RandomSource.create(), -0.3, 0.3)), (Mth.nextDouble(RandomSource.create(), 0.1, 0.3)), (Mth.nextDouble(RandomSource.create(), -0.3, 0.3))));
-					if (_entityForSpawning instanceof Mob _entity && sourceentity instanceof LivingEntity _ent)
-						_entity.setTarget(_ent);
-					if (_entityForSpawning instanceof LivingEntity _entity)
-						_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.CARDIAC.get(), (int) Mth.nextDouble(RandomSource.create(), 160, 320), 0));
-					if (_entityForSpawning instanceof Mob _mobForSpawning)
-						_mobForSpawning.finalizeSpawn(_serverLevelForEntitySpawn, world.getCurrentDifficultyAt(_entityForSpawning.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-					world.addFreshEntity(_entityForSpawning);
-				}
+			for (int index0 = 0; index0 < (int) Mth.nextDouble(RandomSource.create(), 1, 3); index0++) {
 			}
 			EnemyexpansionMod.queueServerWork(20, () -> {
 				if (world instanceof ServerLevel _level && _level.getServer() != null) {

@@ -16,7 +16,7 @@ public class SluggerHurtProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		if (!entity.isOnFire() && (sourceentity instanceof LivingEntity || sourceentity instanceof Arrow) && !(sourceentity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
-			if (entity instanceof LivingEntity _entity)
+			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 24, 6));
 			EnemyexpansionMod.queueServerWork(10, () -> {
 				if (entity instanceof SluggerEntity) {
