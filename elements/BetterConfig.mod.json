@@ -170,6 +170,22 @@
             "vardisplay": "Chance Phantoms drop their Eyes",
             "varname": "phantomeye",
             "enablecomment": true
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 0,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "",
+            "vardisplay": "New Creeper Mobs Survive Their Own Explosions",
+            "varname": "creepsdontdieexploding",
+            "enablecomment": false
           }
         ]
       },

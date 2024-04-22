@@ -15,6 +15,7 @@ public class BetterConfigConfiguration {
 	public static final ForgeConfigSpec.ConfigValue<Boolean> TROLLSPETRIFY;
 	public static final ForgeConfigSpec.ConfigValue<Double> SPAWNFLIESONDEATH;
 	public static final ForgeConfigSpec.ConfigValue<Double> PHANTOMEYE;
+	public static final ForgeConfigSpec.ConfigValue<Boolean> CREEPSDONTDIEEXPLODING;
 	public static final ForgeConfigSpec.ConfigValue<Boolean> OVERTIMEFORALL;
 	static {
 		BUILDER.push("mobs");
@@ -30,6 +31,7 @@ public class BetterConfigConfiguration {
 		TROLLSPETRIFY = BUILDER.define("Trolls petrify when hurt under sunlight", true);
 		SPAWNFLIESONDEATH = BUILDER.comment("Range: 0 to 100 (Percent)").define("Chance Botflies will spawn from a slain Zombie", (double) 5);
 		PHANTOMEYE = BUILDER.comment("Range: 0 to 100 (Percent)").define("Chance Phantoms drop their Eyes", (double) 15);
+		CREEPSDONTDIEEXPLODING = BUILDER.define("New Creeper Mobs Survive Their Own Explosions", true);
 		BUILDER.pop();
 		BUILDER.push("experimental");
 		OVERTIMEFORALL = BUILDER.comment("All hostile mobs get faster the longer they look at you, like Intruders.").define("Overtime for All", false);

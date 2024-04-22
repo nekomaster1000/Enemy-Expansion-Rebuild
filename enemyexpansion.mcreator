@@ -4081,6 +4081,25 @@
         ]
       },
       "path": "~/Mobs/MultiForm"
+    },
+    {
+      "name": "OvertimeKnockedOut",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "overtime_knocked_out",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/OvertimeKnockedOutProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Config"
     }
   ],
   "variable_elements": [],
