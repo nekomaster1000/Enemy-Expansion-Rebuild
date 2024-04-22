@@ -1,0 +1,20 @@
+{
+  "_fv": 60,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Overtime",
+    "icon": "overtime.png",
+    "color": {
+      "value": -16754658,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": false,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onExpired": {
+      "name": "OvertimeActivate"
+    }
+  }
+}

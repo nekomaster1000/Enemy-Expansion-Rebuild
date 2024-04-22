@@ -5,7 +5,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
@@ -32,12 +31,12 @@ public class ScorpionHurtProcedure {
 	private static void execute(@Nullable Event event, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
-		if (sourceentity instanceof Player && entity instanceof ScorpionEntity) {
+		if (entity instanceof ScorpionEntity) {
 			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 120, 0));
 			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 				_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.SANDSTORM.get(), 120, 0));
-		} else if (entity instanceof Player && sourceentity instanceof ScorpionEntity) {
+		} else if (sourceentity instanceof ScorpionEntity) {
 			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.POISON, 120, 0));
 			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())

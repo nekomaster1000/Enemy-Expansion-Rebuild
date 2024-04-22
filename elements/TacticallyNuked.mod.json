@@ -1,0 +1,25 @@
+{
+  "_fv": 60,
+  "_type": "achievement",
+  "definition": {
+    "achievementName": "Tactically Nuked",
+    "achievementDescription": "Shoot a Faller out of the sky!",
+    "achievementIcon": {
+      "value": "Items.ARROW"
+    },
+    "background": "Default",
+    "disableDisplay": false,
+    "showPopup": true,
+    "announceToChat": true,
+    "hideIfNotCompleted": false,
+    "rewardLoot": [],
+    "rewardRecipes": [],
+    "rewardFunction": "No function",
+    "rewardXP": 20,
+    "achievementType": "challenge",
+    "parent": {
+      "value": "CUSTOM:EnemyExpansionAdvancement"
+    },
+    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"advancement_trigger\" deletable=\"false\" x=\"343\" y=\"168\"><next><block type=\"custom_trigger\"></block></next></block></xml>"
+  }
+}

@@ -19,13 +19,16 @@ import net.mcreator.enemyexpansion.entity.SilverqueenattackingEntity;
 import net.mcreator.enemyexpansion.entity.ScorpionEntity;
 import net.mcreator.enemyexpansion.entity.MeatureEntity;
 import net.mcreator.enemyexpansion.entity.LadybugEntity;
+import net.mcreator.enemyexpansion.entity.IntruderEntity;
 import net.mcreator.enemyexpansion.entity.HuntsmanEntity;
 import net.mcreator.enemyexpansion.entity.HouseflyEntity;
 import net.mcreator.enemyexpansion.entity.GoblinEntity;
 import net.mcreator.enemyexpansion.entity.FlutterflyEntity;
+import net.mcreator.enemyexpansion.entity.FallerEntity;
 import net.mcreator.enemyexpansion.entity.EquestrianEntity;
 import net.mcreator.enemyexpansion.entity.DroneEntity;
 import net.mcreator.enemyexpansion.entity.DirewolfEntity;
+import net.mcreator.enemyexpansion.entity.CrawlerEntity;
 
 @Mod.EventBusSubscriber
 public class EntityAnimationFactory {
@@ -180,6 +183,27 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof DirewolfEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof CrawlerEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof FallerEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof IntruderEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

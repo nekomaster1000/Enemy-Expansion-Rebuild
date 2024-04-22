@@ -25,14 +25,18 @@ import net.mcreator.enemyexpansion.client.renderer.SilverqueenattackingRenderer;
 import net.mcreator.enemyexpansion.client.renderer.ScorpionRenderer;
 import net.mcreator.enemyexpansion.client.renderer.MeatureRenderer;
 import net.mcreator.enemyexpansion.client.renderer.LadybugRenderer;
+import net.mcreator.enemyexpansion.client.renderer.InvisicreeperRenderer;
+import net.mcreator.enemyexpansion.client.renderer.IntruderRenderer;
 import net.mcreator.enemyexpansion.client.renderer.HuntsmanRenderer;
 import net.mcreator.enemyexpansion.client.renderer.HouseflyRenderer;
 import net.mcreator.enemyexpansion.client.renderer.GoblinRenderer;
 import net.mcreator.enemyexpansion.client.renderer.GoblinFearRenderer;
 import net.mcreator.enemyexpansion.client.renderer.FlutterflyRenderer;
+import net.mcreator.enemyexpansion.client.renderer.FallerRenderer;
 import net.mcreator.enemyexpansion.client.renderer.EquestrianRenderer;
 import net.mcreator.enemyexpansion.client.renderer.DroneRenderer;
 import net.mcreator.enemyexpansion.client.renderer.DirewolfRenderer;
+import net.mcreator.enemyexpansion.client.renderer.CrawlerRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class EnemyexpansionModEntityRenderers {
@@ -64,5 +68,9 @@ public class EnemyexpansionModEntityRenderers {
 		event.registerEntityRenderer(EnemyexpansionModEntities.HEALING_EYE_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.WASP_THORAX_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.PHANTOM_EYE_PROJECTILE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.CRAWLER.get(), CrawlerRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.INVISICREEPER.get(), InvisicreeperRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.FALLER.get(), FallerRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.INTRUDER.get(), IntruderRenderer::new);
 	}
 }

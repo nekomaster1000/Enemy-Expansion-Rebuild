@@ -33,15 +33,19 @@ import net.mcreator.enemyexpansion.entity.ScorpionEntity;
 import net.mcreator.enemyexpansion.entity.PhantomEyeProjectileEntity;
 import net.mcreator.enemyexpansion.entity.MeatureEntity;
 import net.mcreator.enemyexpansion.entity.LadybugEntity;
+import net.mcreator.enemyexpansion.entity.InvisicreeperEntity;
+import net.mcreator.enemyexpansion.entity.IntruderEntity;
 import net.mcreator.enemyexpansion.entity.HuntsmanEntity;
 import net.mcreator.enemyexpansion.entity.HouseflyEntity;
 import net.mcreator.enemyexpansion.entity.HealingEyeProjectileEntity;
 import net.mcreator.enemyexpansion.entity.GoblinFearEntity;
 import net.mcreator.enemyexpansion.entity.GoblinEntity;
 import net.mcreator.enemyexpansion.entity.FlutterflyEntity;
+import net.mcreator.enemyexpansion.entity.FallerEntity;
 import net.mcreator.enemyexpansion.entity.EquestrianEntity;
 import net.mcreator.enemyexpansion.entity.DroneEntity;
 import net.mcreator.enemyexpansion.entity.DirewolfEntity;
+import net.mcreator.enemyexpansion.entity.CrawlerEntity;
 import net.mcreator.enemyexpansion.EnemyexpansionMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -142,6 +146,22 @@ public class EnemyexpansionModEntities {
 			.setCustomClientFactory(WaspThoraxProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<PhantomEyeProjectileEntity>> PHANTOM_EYE_PROJECTILE = register("phantom_eye_projectile", EntityType.Builder.<PhantomEyeProjectileEntity>of(PhantomEyeProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(PhantomEyeProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<CrawlerEntity>> CRAWLER = register("crawler",
+			EntityType.Builder.<CrawlerEntity>of(CrawlerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CrawlerEntity::new)
+
+					.sized(0.8f, 0.9f));
+	public static final RegistryObject<EntityType<InvisicreeperEntity>> INVISICREEPER = register("invisicreeper",
+			EntityType.Builder.<InvisicreeperEntity>of(InvisicreeperEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(InvisicreeperEntity::new)
+
+					.sized(0f, 0f));
+	public static final RegistryObject<EntityType<FallerEntity>> FALLER = register("faller",
+			EntityType.Builder.<FallerEntity>of(FallerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FallerEntity::new)
+
+					.sized(0.6f, 0.95f));
+	public static final RegistryObject<EntityType<IntruderEntity>> INTRUDER = register("intruder",
+			EntityType.Builder.<IntruderEntity>of(IntruderEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(IntruderEntity::new)
+
+					.sized(0.85f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -173,6 +193,10 @@ public class EnemyexpansionModEntities {
 			SilverqueenattackingEntity.init();
 			SilverqueenbodilessEntity.init();
 			DirewolfEntity.init();
+			CrawlerEntity.init();
+			InvisicreeperEntity.init();
+			FallerEntity.init();
+			IntruderEntity.init();
 		});
 	}
 
@@ -201,5 +225,9 @@ public class EnemyexpansionModEntities {
 		event.put(SILVERQUEEN.get(), SilverqueenattackingEntity.createAttributes().build());
 		event.put(SILVERQUEENBODILESS.get(), SilverqueenbodilessEntity.createAttributes().build());
 		event.put(DIREWOLF.get(), DirewolfEntity.createAttributes().build());
+		event.put(CRAWLER.get(), CrawlerEntity.createAttributes().build());
+		event.put(INVISICREEPER.get(), InvisicreeperEntity.createAttributes().build());
+		event.put(FALLER.get(), FallerEntity.createAttributes().build());
+		event.put(INTRUDER.get(), IntruderEntity.createAttributes().build());
 	}
 }

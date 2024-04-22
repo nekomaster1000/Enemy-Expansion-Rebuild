@@ -1,0 +1,26 @@
+{
+  "_fv": 60,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Explosive Launch",
+    "icon": "explosivelaunch.png",
+    "color": {
+      "value": -30435,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": false,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "ExplosiveLaunchStarted"
+    },
+    "onActiveTick": {
+      "name": "ExplosiveLaunchCountdown"
+    },
+    "onExpired": {
+      "name": "ExplosiveLaunchHappens"
+    }
+  }
+}

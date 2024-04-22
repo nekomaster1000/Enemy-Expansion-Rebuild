@@ -21,3 +21,7 @@
 	#Range: 0 to 100 (Percent)
 	"Chance Phantoms drop their Eyes" = 15.0
 
+[experimental]
+	#All hostile mobs get faster the longer they look at you, like Intruders.
+	"Overtime for All" = false
+

@@ -12,6 +12,8 @@ import net.minecraft.world.effect.MobEffect;
 import net.mcreator.enemyexpansion.potion.TimerMobEffect;
 import net.mcreator.enemyexpansion.potion.SwiftFlightMobEffect;
 import net.mcreator.enemyexpansion.potion.SandstormMobEffect;
+import net.mcreator.enemyexpansion.potion.OvertimeMobEffect;
+import net.mcreator.enemyexpansion.potion.ExplosiveLaunchMobEffect;
 import net.mcreator.enemyexpansion.potion.DespawnerMobEffect;
 import net.mcreator.enemyexpansion.potion.CardiacMobEffect;
 import net.mcreator.enemyexpansion.potion.BittenMobEffect;
@@ -25,4 +27,6 @@ public class EnemyexpansionModMobEffects {
 	public static final RegistryObject<MobEffect> TIMER = REGISTRY.register("timer", () -> new TimerMobEffect());
 	public static final RegistryObject<MobEffect> CARDIAC = REGISTRY.register("cardiac", () -> new CardiacMobEffect());
 	public static final RegistryObject<MobEffect> SANDSTORM = REGISTRY.register("sandstorm", () -> new SandstormMobEffect());
+	public static final RegistryObject<MobEffect> EXPLOSIVE_LAUNCH = REGISTRY.register("explosive_launch", () -> new ExplosiveLaunchMobEffect());
+	public static final RegistryObject<MobEffect> OVERTIME = REGISTRY.register("overtime", () -> new OvertimeMobEffect());
 }

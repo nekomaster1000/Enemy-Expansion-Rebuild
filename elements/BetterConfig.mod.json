@@ -172,6 +172,27 @@
             "enablecomment": true
           }
         ]
+      },
+      {
+        "category": "experimental",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 0,
+            "block": {
+              "value": ""
+            },
+            "logicField": 1,
+            "numberField": 0.0,
+            "textDefault": "",
+            "comment": "All hostile mobs get faster the longer they look at you, like Intruders.",
+            "vardisplay": "Overtime for All",
+            "varname": "overtimeforall",
+            "enablecomment": true
+          }
+        ]
       }
     ],
     "file": "enemyexpansion",

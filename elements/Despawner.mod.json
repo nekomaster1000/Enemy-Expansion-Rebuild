@@ -3,7 +3,7 @@
   "_type": "potioneffect",
   "definition": {
     "effectName": "Despawner",
-    "icon": "despawn.png",
+    "icon": "despawner.png",
     "color": {
       "value": -65485,
       "falpha": 0.0

@@ -1,10 +1,10 @@
 {
   "type": "forge:add_spawns",
-  "biomes": "#forge:is_generalcave",
+  "biomes": "#forge:is_general",
   "spawners": {
     "type": "enemyexpansion:crawler",
-    "weight": 45,
+    "weight": 50,
     "minCount": 1,
-    "maxCount": 1
+    "maxCount": 2
   }
 }
