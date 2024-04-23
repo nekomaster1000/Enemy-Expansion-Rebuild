@@ -13,6 +13,8 @@ import net.mcreator.enemyexpansion.potion.TimerMobEffect;
 import net.mcreator.enemyexpansion.potion.SwiftFlightMobEffect;
 import net.mcreator.enemyexpansion.potion.SandstormMobEffect;
 import net.mcreator.enemyexpansion.potion.OvertimeMobEffect;
+import net.mcreator.enemyexpansion.potion.MorphlockedMobEffect;
+import net.mcreator.enemyexpansion.potion.MetamorphosisMobEffect;
 import net.mcreator.enemyexpansion.potion.ExplosiveLaunchMobEffect;
 import net.mcreator.enemyexpansion.potion.DespawnerMobEffect;
 import net.mcreator.enemyexpansion.potion.CardiacMobEffect;
@@ -29,4 +31,6 @@ public class EnemyexpansionModMobEffects {
 	public static final RegistryObject<MobEffect> SANDSTORM = REGISTRY.register("sandstorm", () -> new SandstormMobEffect());
 	public static final RegistryObject<MobEffect> EXPLOSIVE_LAUNCH = REGISTRY.register("explosive_launch", () -> new ExplosiveLaunchMobEffect());
 	public static final RegistryObject<MobEffect> OVERTIME = REGISTRY.register("overtime", () -> new OvertimeMobEffect());
+	public static final RegistryObject<MobEffect> METAMORPHOSIS = REGISTRY.register("metamorphosis", () -> new MetamorphosisMobEffect());
+	public static final RegistryObject<MobEffect> MORPHLOCKED = REGISTRY.register("morphlocked", () -> new MorphlockedMobEffect());
 }

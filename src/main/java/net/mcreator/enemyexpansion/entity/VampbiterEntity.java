@@ -43,7 +43,6 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.enemyexpansion.procedures.VampireSpawnProcedure;
-import net.mcreator.enemyexpansion.procedures.VampireHurtProcedure;
 import net.mcreator.enemyexpansion.init.EnemyexpansionModEntities;
 
 import javax.annotation.Nullable;
@@ -125,12 +124,6 @@ public class VampbiterEntity extends Bat implements IAnimatable {
 	@Override
 	public boolean causeFallDamage(float l, float d, DamageSource source) {
 		return false;
-	}
-
-	@Override
-	public boolean hurt(DamageSource source, float amount) {
-		VampireHurtProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
-		return super.hurt(source, amount);
 	}
 
 	@Override

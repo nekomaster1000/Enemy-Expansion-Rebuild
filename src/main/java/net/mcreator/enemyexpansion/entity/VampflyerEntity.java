@@ -211,7 +211,7 @@ public class VampflyerEntity extends Monster implements IAnimatable {
 
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
-		VampireHurtProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
+		VampireHurtProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this, source.getEntity());
 		if (source == DamageSource.FALL)
 			return false;
 		if (source == DamageSource.WITHER)

@@ -6,10 +6,9 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
@@ -56,15 +55,8 @@ public class VampireAttackProcedure {
 			if (!(entity instanceof LivingEntity _livEnt3 && _livEnt3.isBlocking())) {
 				if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 40, 0, false, true));
-				if (entity instanceof Player) {
-					if (world instanceof Level _lvl6 && _lvl6.isDay()) {
-						if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-							_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.BITTEN.get(), 90, 0, false, true));
-					}
-				} else {
-					if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-						_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.BITTEN.get(), 200, 0, false, true));
-				}
+				if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+					_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.BITTEN.get(), 200, 0, false, true));
 				if (sourceentity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.HARM, 1, 0, false, false));
 				if (world instanceof ServerLevel _level) {
@@ -74,12 +66,9 @@ public class VampireAttackProcedure {
 						_mobToSpawn.finalizeSpawn(_level, _level.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
 					_level.addFreshEntity(entityToSpawn);
 				}
-			}
-			if (entity instanceof Villager) {
-				if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.POISON, 200, 0, false, true));
-				if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-					_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.BITTEN.get(), 200, 0, false, true));
+				if (sourceentity instanceof LivingEntity _entity)
+					_entity.removeAllEffects();
+				sourceentity.setDeltaMovement(new Vec3((Math.sin(Math.toRadians(entity.getYRot() + 180)) * 1.5 * 1), ((Math.sin(Math.toRadians(0 - entity.getXRot())) + 0.3) * 1), (Math.cos(Math.toRadians(entity.getYRot())) * 1.5 * 0.5)));
 			}
 		} else if (entity instanceof VampireEntity || entity instanceof VampflyerEntity) {
 			if (world instanceof ServerLevel _level) {

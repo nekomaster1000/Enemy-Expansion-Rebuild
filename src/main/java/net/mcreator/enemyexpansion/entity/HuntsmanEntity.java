@@ -117,7 +117,7 @@ public class HuntsmanEntity extends Skeleton implements IAnimatable {
 
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
-		HuntsmanHurtProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this, source.getEntity());
+		HuntsmanHurtProcedure.execute(this, source.getEntity());
 		return super.hurt(source, amount);
 	}
 

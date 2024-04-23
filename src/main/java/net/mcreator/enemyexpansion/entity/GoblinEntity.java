@@ -142,7 +142,7 @@ public class GoblinEntity extends Monster implements IAnimatable {
 
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
-		GoblinHurtProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this, source.getEntity());
+		GoblinHurtProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
 		return super.hurt(source, amount);
 	}
 
@@ -177,7 +177,7 @@ public class GoblinEntity extends Monster implements IAnimatable {
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.29);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.25);
 		builder = builder.add(Attributes.MAX_HEALTH, 20);
 		builder = builder.add(Attributes.ARMOR, 5);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 5);

@@ -101,9 +101,6 @@
     "stepSound": {
       "value": ""
     },
-    "whenMobIsHurt": {
-      "name": "VampireHurt"
-    },
     "onInitialSpawn": {
       "name": "VampireSpawn"
     },

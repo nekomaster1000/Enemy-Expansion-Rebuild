@@ -21,6 +21,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.enemyexpansion.init.EnemyexpansionModMobEffects;
 import net.mcreator.enemyexpansion.init.EnemyexpansionModEntities;
 import net.mcreator.enemyexpansion.entity.TrollEntity;
 import net.mcreator.enemyexpansion.entity.MeatureEntity;
@@ -98,16 +99,14 @@ public class TrollHurtProcedure {
 							}
 						}
 						if (Math.random() < (double) BetterConfigConfiguration.TROLLBECOMESENRAGED.get() / 100) {
-							EnemyexpansionMod.queueServerWork(18, () -> {
-								if (entity.isAlive()) {
-									SpawnTrollEnragedProcedure.execute();
-								}
-							});
+							if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+								_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.METAMORPHOSIS.get(), 18, 0, false, false));
 						}
 					}
 				});
-			} else if (entity instanceof LivingEntity _livEnt20 && _livEnt20.hasEffect(MobEffects.MOVEMENT_SLOWDOWN) && !(entity instanceof LivingEntity _livEnt21 && _livEnt21.hasEffect(MobEffects.POISON))) {
-				SpawnTrollEnragedProcedure.execute();
+			} else if (entity instanceof LivingEntity _livEnt19 && _livEnt19.hasEffect(MobEffects.MOVEMENT_SLOWDOWN) && !(entity instanceof LivingEntity _livEnt20 && _livEnt20.hasEffect(MobEffects.POISON))) {
+				if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+					_entity.addEffect(new MobEffectInstance(EnemyexpansionModMobEffects.METAMORPHOSIS.get(), 5, 0, false, false));
 			}
 		}
 	}
