@@ -4002,6 +4002,87 @@
         ]
       },
       "path": "~/Mobs/Other"
+    },
+    {
+      "name": "HuntsmanHurt",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "huntsman_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/HuntsmanHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Undead"
+    },
+    {
+      "name": "GoblinTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/GoblinTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Other"
+    },
+    {
+      "name": "TrollEnragedHurt",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "troll_enraged_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enemyexpansion/procedures/TrollEnragedHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/MultiForm"
     }
   ],
   "variable_elements": [],
@@ -4231,7 +4312,7 @@
   "workspaceSettings": {
     "modid": "enemyexpansion",
     "modName": "Enemy Expansion",
-    "version": "2.2.2",
+    "version": "2.3.1",
     "description": "Adding more enemies to Minecraft!",
     "author": "nekomaster1000",
     "websiteURL": "https://infernalstudios.org/",
