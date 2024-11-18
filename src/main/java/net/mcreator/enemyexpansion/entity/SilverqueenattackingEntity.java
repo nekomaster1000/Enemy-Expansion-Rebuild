@@ -167,7 +167,7 @@ public class SilverqueenattackingEntity extends Monster implements IAnimatable {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-			return IfBelowY50Procedure.execute(y);
+			return IfBelowY50Procedure.execute(world, x, y, z);
 		});
 	}
 

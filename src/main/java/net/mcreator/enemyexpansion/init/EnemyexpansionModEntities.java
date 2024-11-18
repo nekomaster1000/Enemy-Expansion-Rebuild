@@ -46,6 +46,7 @@ import net.mcreator.enemyexpansion.entity.EquestrianEntity;
 import net.mcreator.enemyexpansion.entity.DroneEntity;
 import net.mcreator.enemyexpansion.entity.DirewolfEntity;
 import net.mcreator.enemyexpansion.entity.CrawlerEntity;
+import net.mcreator.enemyexpansion.entity.AssassinEntity;
 import net.mcreator.enemyexpansion.EnemyexpansionMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -162,6 +163,10 @@ public class EnemyexpansionModEntities {
 			EntityType.Builder.<IntruderEntity>of(IntruderEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(IntruderEntity::new)
 
 					.sized(0.85f, 1.8f));
+	public static final RegistryObject<EntityType<AssassinEntity>> ASSASSIN = register("assassin",
+			EntityType.Builder.<AssassinEntity>of(AssassinEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(AssassinEntity::new)
+
+					.sized(0.6f, 1.95f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -197,6 +202,7 @@ public class EnemyexpansionModEntities {
 			InvisicreeperEntity.init();
 			FallerEntity.init();
 			IntruderEntity.init();
+			AssassinEntity.init();
 		});
 	}
 
@@ -229,5 +235,6 @@ public class EnemyexpansionModEntities {
 		event.put(INVISICREEPER.get(), InvisicreeperEntity.createAttributes().build());
 		event.put(FALLER.get(), FallerEntity.createAttributes().build());
 		event.put(INTRUDER.get(), IntruderEntity.createAttributes().build());
+		event.put(ASSASSIN.get(), AssassinEntity.createAttributes().build());
 	}
 }

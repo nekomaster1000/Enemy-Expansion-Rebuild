@@ -101,6 +101,9 @@
     "stepSound": {
       "value": ""
     },
+    "onRightClickedOn": {
+      "name": "MeatureRightClickedOnEntity"
+    },
     "whenThisMobKillsAnother": {
       "name": "MeatureKills"
     },

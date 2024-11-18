@@ -37,6 +37,7 @@ import net.mcreator.enemyexpansion.client.renderer.EquestrianRenderer;
 import net.mcreator.enemyexpansion.client.renderer.DroneRenderer;
 import net.mcreator.enemyexpansion.client.renderer.DirewolfRenderer;
 import net.mcreator.enemyexpansion.client.renderer.CrawlerRenderer;
+import net.mcreator.enemyexpansion.client.renderer.AssassinRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class EnemyexpansionModEntityRenderers {
@@ -72,5 +73,6 @@ public class EnemyexpansionModEntityRenderers {
 		event.registerEntityRenderer(EnemyexpansionModEntities.INVISICREEPER.get(), InvisicreeperRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.FALLER.get(), FallerRenderer::new);
 		event.registerEntityRenderer(EnemyexpansionModEntities.INTRUDER.get(), IntruderRenderer::new);
+		event.registerEntityRenderer(EnemyexpansionModEntities.ASSASSIN.get(), AssassinRenderer::new);
 	}
 }

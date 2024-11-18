@@ -29,6 +29,7 @@ import net.mcreator.enemyexpansion.entity.EquestrianEntity;
 import net.mcreator.enemyexpansion.entity.DroneEntity;
 import net.mcreator.enemyexpansion.entity.DirewolfEntity;
 import net.mcreator.enemyexpansion.entity.CrawlerEntity;
+import net.mcreator.enemyexpansion.entity.AssassinEntity;
 
 @Mod.EventBusSubscriber
 public class EntityAnimationFactory {
@@ -204,6 +205,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof IntruderEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof AssassinEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

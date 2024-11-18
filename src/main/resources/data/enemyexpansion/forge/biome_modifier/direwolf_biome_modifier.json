@@ -1,6 +1,6 @@
 {
   "type": "forge:add_spawns",
-  "biomes": "#forge:is_general",
+  "biomes": "plains",
   "spawners": {
     "type": "enemyexpansion:direwolf",
     "weight": 100,

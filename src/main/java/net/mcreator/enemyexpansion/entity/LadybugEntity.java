@@ -122,7 +122,7 @@ public class LadybugEntity extends Monster implements IAnimatable {
 		});
 		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, Spider.class, false, true));
 		this.goalSelector.addGoal(4, new LeapAtTargetGoal(this, (float) 0.5));
-		this.goalSelector.addGoal(5, new MeleeAttackGoal(this, 1.2, false) {
+		this.goalSelector.addGoal(5, new MeleeAttackGoal(this, 1, false) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
@@ -224,11 +224,11 @@ public class LadybugEntity extends Monster implements IAnimatable {
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.35);
 		builder = builder.add(Attributes.MAX_HEALTH, 28);
 		builder = builder.add(Attributes.ARMOR, 12);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 6);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
+		builder = builder.add(Attributes.FOLLOW_RANGE, 64);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 1);
 		return builder;
 	}

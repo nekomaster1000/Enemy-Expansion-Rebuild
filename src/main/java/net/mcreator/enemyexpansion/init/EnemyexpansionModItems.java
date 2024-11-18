@@ -74,6 +74,7 @@ public class EnemyexpansionModItems {
 	public static final RegistryObject<Item> CRAWLER_SPAWN_EGG = REGISTRY.register("crawler_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.CRAWLER, -10644939, -1709087, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> FALLER_SPAWN_EGG = REGISTRY.register("faller_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.FALLER, -6897354, -1709087, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> INTRUDER_SPAWN_EGG = REGISTRY.register("intruder_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.INTRUDER, -15580387, -1709087, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> ASSASSIN_SPAWN_EGG = REGISTRY.register("assassin_spawn_egg", () -> new ForgeSpawnEggItem(EnemyexpansionModEntities.ASSASSIN, -10066330, -13421773, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	// Start of user code block custom items
 	// End of user code block custom items
 }

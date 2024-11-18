@@ -1,6 +1,16 @@
 {
   "type": "forge:add_spawns",
-  "biomes": "#forge:is_flutterfly",
+  "biomes": [
+    "birch_forest",
+    "plains",
+    "dark_forest",
+    "flower_forest",
+    "forest",
+    "old_growth_birch_forest",
+    "windswept_forest",
+    "mangrove_swamp",
+    "swamp"
+  ],
   "spawners": {
     "type": "enemyexpansion:flutterfly",
     "weight": 1,

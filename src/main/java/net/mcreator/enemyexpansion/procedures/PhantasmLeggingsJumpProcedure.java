@@ -18,8 +18,6 @@ public class PhantasmLeggingsJumpProcedure {
 		if (world.getMaxLocalRawBrightness(new BlockPos(x, y + 1, z)) == 0) {
 			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 110, 0, false, false));
-		}
-		if (world.getMaxLocalRawBrightness(new BlockPos(x, y + 1, z)) < 8) {
 			if (entity.isShiftKeyDown()) {
 				if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == EnemyexpansionModItems.PHANTASM_HELMET.get()
 						&& (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).getItem() == EnemyexpansionModItems.PHANTASM_CHESTPLATE.get()) {

@@ -66,6 +66,7 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 
 import net.mcreator.enemyexpansion.procedures.MeatureSpawnProcedure;
+import net.mcreator.enemyexpansion.procedures.MeatureRightClickedOnEntityProcedure;
 import net.mcreator.enemyexpansion.procedures.MeatureOnEntityTickUpdateProcedure;
 import net.mcreator.enemyexpansion.procedures.MeatureKillsProcedure;
 import net.mcreator.enemyexpansion.init.EnemyexpansionModEntities;
@@ -213,6 +214,13 @@ public class MeatureEntity extends TamableAnimal implements IAnimatable {
 					this.setPersistenceRequired();
 			}
 		}
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Entity entity = this;
+		Level world = this.level;
+
+		MeatureRightClickedOnEntityProcedure.execute(entity, sourceentity);
 		return retval;
 	}
 
